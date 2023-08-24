@@ -16,7 +16,7 @@ const config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -85,15 +85,15 @@ const config = {
             items: [
               {
                 label: 'Features',
-                to: '/docs/category/features',
+                to: '/docs/features',
               },
               {
                 label: 'Hardware',
-                to: '/docs/category/hardware',
+                to: '/docs/hardware',
               },
               {
                 label: 'Software',
-                to: '/docs/category/software',
+                to: '/docs/software',
               },
               {
                 label: 'Blog',
@@ -128,7 +128,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Roberto Pompermaier`,
+        copyright: `Copyright © ${new Date().getFullYear()} Roberto Pompermaier | 1.0.0 `,
       },
       prism: {
         theme: lightCodeTheme,
