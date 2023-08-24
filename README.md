@@ -3,9 +3,11 @@
 This repository contains the Smart Van's Web Site source code used as [GitHub Pages](https://smart-van-2-0.github.io/)
 and at the [smartvan.johnosproject.org](https://smartvan.johnosproject.org) url.
 
-
 Repository that exports the [smartvan.johnosproject.org](https://smartvan.johnosproject.org)
 Web Site as GitHub Pages.
+
+* **WebSite Version:** 1.0.0
+* **Content Version:** 00000000
 
 Current repo contains the source code of the Web Site published at [smartvan.johnosproject.org](https://smartvan.johnosproject.org).
 This WebSite is based on [Docusaurus](https://docusaurus.io/)/[Node.js](https://nodejs.org/en)

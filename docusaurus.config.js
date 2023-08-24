@@ -16,7 +16,7 @@ const config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -128,7 +128,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Roberto Pompermaier`,
+        copyright: `Copyright © ${new Date().getFullYear()} Roberto Pompermaier | 1.0.0 `,
       },
       prism: {
         theme: lightCodeTheme,
