@@ -85,15 +85,15 @@ const config = {
             items: [
               {
                 label: 'Features',
-                to: '/docs/category/features',
+                to: '/docs/features',
               },
               {
                 label: 'Hardware',
-                to: '/docs/category/hardware',
+                to: '/docs/hardware',
               },
               {
                 label: 'Software',
-                to: '/docs/category/software',
+                to: '/docs/software',
               },
               {
                 label: 'Blog',
