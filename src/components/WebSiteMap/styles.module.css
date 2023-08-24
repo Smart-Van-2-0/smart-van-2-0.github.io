@@ -1,0 +1,9 @@
+.web_site_map {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+
+}

@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 4rem 2rem 12rem 2rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,12 +12,62 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 2rem 2rem 10rem 2rem;
   }
 }
 
-.buttons {
+.home_collaborate {
+  display: flex;
+}
+
+.home_collaborate_handsake {
+  margin: 0 2em
+}
+
+@media screen and (max-width: 996px) {
+  .home_collaborate {
+    flex-direction: column;
+  }
+
+  .home_collaborate_handsake {
+    margin: 2em 1em;
+  }
+}
+
+.header_img {
+  background-image: url('../../static/img/home/head_img.jpg');
+  background-color: #9dd3bf;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header_titles {
+  color: white;
+  text-shadow: 2px 2px 4px #000000, 0px 0px 10px #000000;
+}
+
+.home_section {
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding: 2rem 0;
+  width: 80%;
+  margin: 0 10%;
+}
+
+.home_section_sub_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.intro_text {
+  text-align: center;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 996px) {
+  .intro_text {
+    font-size: 1.5em;
+  }
 }
