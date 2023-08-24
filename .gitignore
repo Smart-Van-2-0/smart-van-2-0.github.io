@@ -1,3 +1,14 @@
+# Cusomization added for the SmartVan project
+
+# IntelliJ any file
+.idea
+*.iml
+
+#Draw.io backup files
+*.bkp
+*.dtmp
+
+
 # Copied from docusarus defaults
 
 # Dependencies
