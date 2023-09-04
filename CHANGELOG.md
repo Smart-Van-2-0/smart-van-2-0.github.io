@@ -5,6 +5,12 @@
 
 ## WebSite
 
+### Version 1.0.1
+
+* Fixed CNAME wrong position for GHActions
+* Fixed wrong links to README.md
+* Updated versions info on package.json file
+
 ### Version 1.0.0
 
 * Customized Docusaurus on `docusuarus.config.js`
