@@ -59,8 +59,8 @@ When you must update some content you can use the `content` branch and create a
 sub-branch to commit your work. Once you have terminated with the task, then you
 can merge you sub-branch to the `content` branch.<br/>
 Only when all content changes has been approved, the `content` branch can be
-merged into the `main` one. That triggers the [GitHub Actions](https://github.com/robypomper/robypomper.github.io/actions)
-that builds and deploys the live [www.robypomper.org](https://www.robypomper.org)
+merged into the `main` one. That triggers the [GitHub Actions](https://github.com/Smart-Van-2-0/smart-van-2-0.github.io/actions)
+that builds and deploys the live [smartvan.johnosproject.org](https://smartvan.johnosproject.org)
 WebSite.
 
 * **Features**:<br />
