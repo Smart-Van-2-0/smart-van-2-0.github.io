@@ -51,7 +51,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/logos/social_banner.jpg.jpg',
+      image: 'img/logos/social_banner.jpg',
       navbar: {
         title: 'Home',
         logo: {
