@@ -6,7 +6,7 @@ and at the [smartvan.johnosproject.org](https://smartvan.johnosproject.org) url.
 Repository that exports the [smartvan.johnosproject.org](https://smartvan.johnosproject.org)
 Web Site as GitHub Pages.
 
-* **WebSite Version:** 1.0.0
+* **WebSite Version:** 1.0.1
 * **Content Version:** 20230904
 
 [CHANGELOG](CHANGELOG.md) | [TODOs](TODOs.md) | [LICENCE](LICENCE.md)

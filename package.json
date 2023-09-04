@@ -1,6 +1,6 @@
 {
-  "name": "roby-pomper",
-  "version": "0.0.0",
+  "name": "smart-van-2-0.github.io",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
