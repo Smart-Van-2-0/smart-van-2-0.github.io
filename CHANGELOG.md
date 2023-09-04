@@ -36,6 +36,11 @@
 
 ## Content
 
+### Version 20230904
+
+* Fixed social banner
+* Added SV Logo with transparent spaces
+
 ### Version 00000000
 
 * Default Docusaurus contents
