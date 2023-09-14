@@ -12,13 +12,17 @@ function HardwareHeader(props) {
         <i>Follow instructions below to build your own {props.name}.</i>
       </p>
       <div className={styles.list_container}>
+        <h3>Photo</h3>
+        <ImageClickable
+          src={"/img/hardware/" + props.code + "/dev_img.jpg"}
+          alt="Panel Prototype's blocks Schema"
+          width="200px" />
+
         <h3>Links</h3>
         <ul className={styles.list}>
           <li className={styles.list_item}><a href={props.code + "/specs"}>Specifications</a></li>
-          <li className={styles.list_item}><a href={props.code + "/bom"}>BOM List</a></li>
-          <li className={styles.list_item}><a href={props.code + "/assembly"}>Assembly</a></li>
-          <li className={styles.list_item}><a href={props.code + "/wiring"}>Wiring</a></li>
-          <li className={styles.list_item}><a href={props.code + "/case"}>Case</a></li>
+          <li className={styles.list_item}><a href={props.code + "/guides"}>Guides</a></li>
+          <li className={styles.list_item}><a href={props.code + "/resources"}>Resources</a></li>
         </ul>
       </div>
     </div>
@@ -48,6 +52,10 @@ function HardwareBuilds(props) {
       <h4>2. Assembly your device</h4>
       <p>
         Follow the prototype's <a href={props.code + "/assembly"}>Assembly</a> tutorial.
+      </p>
+      <h4>2. Flash the JOD Smart Van Image on RaspberryPi SD Card</h4>
+      <p>
+        Follow the documentation on <a href="/docs/software/image/jod_smart_van_image">JOD Smart Van</a> page.
       </p>
     </div>
   );
