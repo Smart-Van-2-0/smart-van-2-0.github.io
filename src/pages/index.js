@@ -46,7 +46,7 @@ function HomePageWelcome() {
       <div className="container">
         <h1>Welcome</h1>
         <p>
-          The **SmartVan project** would provide the known-how and all required
+          The <b>SmartVan project</b> would provide the known-how and all required
           tools to create a DIY camper system including: resources management,
           services control and smart features.
         </p>
@@ -61,7 +61,7 @@ function HomePageWelcome() {
           info on the <MapFeatures /> page.
         </p>
         <p>
-          This is an Open Source project, so everything from sensors to the
+          <b>This is an Open Source project</b>, so everything from sensors to the
           mobile application can be customized and re-shared with the community.
           Go to <MapCollaborate /> page for more information on how to
           customize and collaborate on the project.
@@ -84,25 +84,25 @@ function HomePageWhatIsIt() {
           src="/img/home/installation_schema.png"
           alt="Hardware Installation Schema" />
         <p>
-          <i>What does Smartize mean? In the IT world, it means connecting a
-          physical object to an application or the web. This makes it possible
-          to monitor and control the object via software.</i>
+          <i>What does Smartize mean?</i><br/>
+          In the IT world, it means connecting a physical object to an
+          application or the web. This makes it possible to monitor and control
+          the object via software.
         </p>
         <p>
           So, in our case, we want to smartize a camper. By doing so, we can
           monitor its resources (energy, water, location...) and control its
           services (lights, fans, awning, fridge...).<br/>
-          Given that each camper or van is unique; its resources and services
+          Given that each camper or van is unique and the resources and services
           to manage also vary from vehicle to vehicle. For this reason we
           decided to start with the most common resources and services, and
-          then add more "exotic" features in the next releases.
+          then add more "exotic" features in the feature releases.
         </p>
         <p>
           For now, you can find the list of the SmartVan's <MapFeatures />.
           This lists are defined at the beginning of the development of each
           release, so that they can be integrated and updated according to the
-          needs of the community. More about release cycles on <MapRoadmap />
-          page.
+          needs of the community. More about release cycles on <MapRoadmap /> page.
         </p>
       </div>
     </section>
