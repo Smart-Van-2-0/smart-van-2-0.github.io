@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksmart_van_2_0_github_io=self.webpackChunksmart_van_2_0_github_io||[]).push([[2202],{3530:a=>{a.exports=JSON.parse('{"label":"firmware","permalink":"/blog/tags/firmware","allTagsPath":"/blog/tags","count":2}')}}]);
