@@ -5,6 +5,13 @@
 
 ## WebSite
 
+### Version 1.0.2
+
+* Added Software subsections and template
+* Updated Hardware template to a more light structure but including the SV Specs
+* Updated Features template to include the SV Specs
+* Other mionr fixes
+
 ### Version 1.0.1
 
 * Fixed CNAME wrong position for GHActions
