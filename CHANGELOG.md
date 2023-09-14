@@ -49,6 +49,13 @@
 
 ## Content
 
+### Version 20230914
+
+* Removed Feature's placeholders
+* Added Energy Monitoring Feature (incomplete)
+* Added Panel Prototype device in Hardware (incomplete)
+* Added Software subsections and an initial list of software
+
 ### Version 20230904
 
 * Fixed social banner
