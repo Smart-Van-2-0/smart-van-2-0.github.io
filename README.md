@@ -6,7 +6,7 @@ and at the [smartvan.johnosproject.org](https://smartvan.johnosproject.org) url.
 Repository that exports the [smartvan.johnosproject.org](https://smartvan.johnosproject.org)
 Web Site as GitHub Pages.
 
-* **WebSite Version:** 1.0.1
+* **WebSite Version:** 1.0.2
 * **Content Version:** 20230904
 
 [CHANGELOG](CHANGELOG.md) | [TODOs](TODOs.md) | [LICENCE](LICENCE.md)
@@ -15,9 +15,9 @@ Current repo contains the source code of the Web Site published at [smartvan.joh
 This WebSite is based on [Docusaurus](https://docusaurus.io/)/[Node.js](https://nodejs.org/en)
 and is structured into the following 3 sections, plus a [Blog](https://smartvan.johnosproject.org/blog):
 
-* [Features](https://smartvan.johnosproject.org/docs/category/features)
-* [Hardware](https://smartvan.johnosproject.org/docs/category/hardware)
-* [Software](https://smartvan.johnosproject.org/docs/category/software)
+* [Features](https://smartvan.johnosproject.org/docs/category/features): what the Smart Van can do for you
+* [Hardware](https://smartvan.johnosproject.org/docs/category/hardware): specs and guides to create your own SmartVan boxes
+* [Software](https://smartvan.johnosproject.org/docs/category/software): downloads and sources of all the software used by the SmartVan project
 
 This repo, contrary other repos, use 4 principal brances:
 * `main`: release branche used to merge `develop` and `content` branches
