@@ -19,8 +19,9 @@
 .list_container {
   border: solid #00000038 1px;
   padding: 1em;
-  /*padding-left: 2em;*/
+  margin-left: 2em;
   min-width: 300px;
+  height: fit-content;
 }
 
 @media screen and (max-width: 996px) {
