@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 import TitleSubSectionPage from '@site/src/components/TitleSubSectionPage';
 
 /**
-  <PageHardware
+  <PageHardwareResources
     name="Panel Prototype"
     code="panel_prototype" >
 
@@ -12,13 +12,14 @@ import TitleSubSectionPage from '@site/src/components/TitleSubSectionPage';
 
   </PageHardware>
  */
-export default function PageHardwareBOM(props) {
+export default function PageHardwareResources(props) {
   return (
     <div className={styles.tmpl_container}>
        <TitleSubSectionPage
          section="Hardware"
          subsection={props.name}
-         page="Bill Of Material" />
+         page="Resources" />
+          {props.children}
     </div>
   );
 }
