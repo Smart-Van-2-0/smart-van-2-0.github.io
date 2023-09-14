@@ -15,7 +15,7 @@ statistics. All features are grouped in 3 main blocks.
 the <MapRoadmap /> to know when it will be updated.*
 
 ## SmartCamping
-* Energy Monitor
+* [Energy Monitor](/docs/features/smart_camping/energy)
 * Waters Tanks
 * Monitoring Air Quality
 * Monitoring indoor environment
