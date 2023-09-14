@@ -5,11 +5,7 @@ sidebar_position: {FEATURE_POSITION}
 
 # Feature: {FEATURE_NAME}
 
-### Short  description
-
 {ONE_SENTENCE_DESCRIPTION: what is it?}
-
-### Long description
 
 {LONG_DESCRIPTION: what is it and what it is doing for you?}
 
@@ -48,3 +44,11 @@ sidebar_position: {FEATURE_POSITION}
 ### {FEATURE_NAME}
 
 {REFERENCES: any documents that helps explain the feature}
+
+### Required Smart Van Specs
+
+Smart Van Specs are the capabilities that must be exported by a Smart Van Box
+in order to enable the current feature:
+
+{SV_SPECS: list all required Smart Van Specs by the feature}
+
