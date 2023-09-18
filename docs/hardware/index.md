@@ -22,4 +22,4 @@ a service battery, an engine battery, solar panels and various camper services.
 the <MapRoadmap /> to know when it will be updated*
 
 ## Models (Prototypes)
-* Other hardware models...
+* [Panel Prototype](/docs/hardware/panel_prototype)
