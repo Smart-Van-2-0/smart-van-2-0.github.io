@@ -2,11 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartvan.johnosproject.org/blog</id>
     <title>Smart Van Project Blog</title>
-    <updated>2023-09-11T00:00:00.000Z</updated>
+    <updated>2023-09-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartvan.johnosproject.org/blog"/>
     <subtitle>Smart Van Project Blog</subtitle>
     <icon>https://smartvan.johnosproject.org/img/logos/logo_32.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Released the Panel Prototype]]></title>
+        <id>https://smartvan.johnosproject.org/blog/2023/09/18/released-panel-prototype</id>
+        <link href="https://smartvan.johnosproject.org/blog/2023/09/18/released-panel-prototype"/>
+        <updated>2023-09-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Finally, all the resources of the prototype have been made public and available]]></summary>
+        <content type="html"><![CDATA[<p>Finally, all the resources of the prototype have been made public and available
+on the <a href="/docs/hardware/panel_prototype">prototype page</a>.</p><p><img loading="lazy" alt="dev_img.jpg" src="/assets/images/dev_img-68957c505729042f37f269ed0bd6452c.jpg" width="2236" height="3760" class="img_ev3q"></p><p><strong>NB: </strong> This first prototype is intend to be a development device. That means,
+maybe it will not perfect to mount it on your camper or van; and his design can
+be improved... But, if required, it can be easily customized to your own needs.
+If you'll do it, please remember to share your experience with the Smart Van's
+community.</p><p>Into the prototype's <a href="/docs/hardware/panel_prototype/resources">Resources</a> page
+you can find all schematics and BOMs required to assemble your own Panel
+Prototype. It's composed by more than 180 components (including all wires)...
+so it will be a perfect challenge for all Makers!</p><p><img loading="lazy" alt="CustomBoard_002_B.png" src="/assets/images/CustomBoard_002_B-dd2ce9eded3abb534ab6914319872bd6.png" width="1920" height="1080" class="img_ev3q"></p><p>Don't wait any longer, go to the <a href="/docs/hardware/panel_prototype/guides">Guides</a>
+page and start creating your first Smart Van device!</p>]]></content>
+        <author>
+            <name>Roberto Pompermaier</name>
+            <uri>https://www.robypomper.org</uri>
+        </author>
+        <category label="release" term="release"/>
+        <category label="panel_prototype" term="panel_prototype"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Released FW Victron v.1.0.1]]></title>
         <id>https://smartvan.johnosproject.org/blog/2023/09/11/released-fw-victron</id>
