@@ -28,7 +28,7 @@ export function GettingStartedStep1() {
       </p>
       <ul>
         <li> <LinkHardwareModel code="panel_prototype" label="Panel Prototype" /></li>
-        <li> <LinkHardwareModel code="box_prototype" label="Box Prototype" /></li>
+        <li> Box Prototype (Coming soon)</li>
       </ul>
       <p>
         For any prototype, you can find the BOM lists, wiring diagrams, case

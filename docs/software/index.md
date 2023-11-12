@@ -70,7 +70,7 @@ the <MapRoadmap /> to know when it will be updated*
 </td>
 <td>
   <ul>
-    <li><a href="software/images/smartvan_jod_image">SmartVan JOD Image</a></li>
+    <li><a href="software/images/jod_smart_van_image">SmartVan JOD Image</a></li>
     <li>Other devices images</li>
   </ul>
 </td>
@@ -79,7 +79,6 @@ the <MapRoadmap /> to know when it will be updated*
 
 
 ## Firmwares Sources and Repositories
-* [SmartVan JOD Distribution](software/firmware/smartvan_jod)
-* [SV Relays Controller](software/firmware/sv_relays_controller)
-* [SV Environment Sensors](software/firmware/sv_environment_sensors)
+* [SmartVan JOD Distribution](software/firmware/jod_smart_van)
+* [FW Victron](software/firmware/fw_victron)
 * Other firmware sources...
