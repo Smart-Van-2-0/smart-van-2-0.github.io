@@ -1,0 +1,41 @@
+
+/** PageFeature */
+
+.tmpl_container {}
+
+.head_container1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 996px) {
+  .head_container1 {
+    flex-direction: column-reverse;
+  }
+}
+
+.descr {}
+
+.lists_container {
+  float: right;
+  border: solid #00000038 1px;
+  padding: 1em;
+  margin-left: 2em;
+  margin-bottom: 2em;
+  width: 300px;
+  min-width: 300px;
+  height: fit-content;
+}
+
+@media screen and (max-width: 996px) {
+  .lists_container {
+    float: none;
+    margin: 0px auto 2em auto;
+  }
+}
+
+.list {}
+
+.list_item {}
