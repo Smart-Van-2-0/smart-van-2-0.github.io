@@ -1,31 +1,29 @@
 
+/** PageHardware */
+
 .tmpl_container {}
 
-.head_container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
 
-@media screen and (max-width: 996px) {
-  .head_container {
-    flex-direction: column-reverse;
-  }
-}
+/** Hardware header */
+
+.head_container {}
 
 .descr {}
 
 .list_container {
+  float: right;
   border: solid #00000038 1px;
   padding: 1em;
   margin-left: 2em;
+  margin-bottom: 2em;
+  width: 300px;
   height: fit-content;
 }
 
 @media screen and (max-width: 996px) {
   .list_container {
-    margin: 2em;
+    float: none;
+    margin: 0px auto 2em auto;
   }
 }
 
