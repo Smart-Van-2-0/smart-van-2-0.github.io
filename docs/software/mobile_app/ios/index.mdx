@@ -1,0 +1,51 @@
+---
+title: Smart Van - iOS
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "Smart Van for iOS"
+export const software_status = "Proposed"
+export const software_code = "smart_van_ios"
+export const software_version = "?.?.?"
+export const software_category = "Mobile App"
+export const software_language = "???"
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+<SoftwareHeader
+  name={software_name}
+  code={software_code}
+  category={software_category}
+  language={software_language}
+  current_status={software_status}
+  current_version={software_version} >
+
+import { MapFeatures } from '@site/src/components/WebSiteMap';
+
+Empower your Smart Van experience with the Mobile App – a comprehensive tool
+that seamlessly integrates with all project specifications. This dynamic app
+ensures access to all available <MapFeatures />, adapting intelligently to the
+capabilities of your Smart Box. If certain functions are unavailable from the
+Smart Box, the corresponding app features are gracefully disabled.
+
+With the Mobile App, users gain full control over their Smart Van, whether in
+close proximity or remotely via cloud connection. Enjoy the convenience of
+managing your Smart Van's functionalities with ease, ensuring a connected and
+efficient experience wherever you are. Take charge of your Smart Van journey
+like never before, harnessing the power of our intuitive Mobile App for an
+unparalleled level of control and convenience.
+
+</SoftwareHeader>
