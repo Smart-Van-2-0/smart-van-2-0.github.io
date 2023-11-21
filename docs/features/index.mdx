@@ -1,0 +1,141 @@
+---
+title: Features
+hide_title: true
+sidebar_position: 2
+hide_table_of_contents: true
+---
+
+# Smart Van's Features
+
+<img src="/img/features/header.png"
+  style={{
+    padding: "32px",
+    maxHeight: "500px",
+    margin: "auto",
+    display: "block"
+  }} />
+
+import Card from '@mui/material/Card';
+import ImageClickable from '@site/src/components/ImageClickable';
+import { MapSpecs } from '@site/src/components/WebSiteMap';
+
+export const div_style = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  marginBottom: 'var(--ifm-leading)',
+}
+export const card_style = {
+  width: `40%`,
+  '@media (max-width: 966px)': {
+    width: `60%`,
+  },
+  '@media (max-width: 600px)': {
+    width: `90%`,
+  },
+  display: 'table-cell',
+  verticalAlign: 'middle',
+  padding: "0px var(--ifm-leading)",
+  margin: "var(--ifm-leading)",
+}
+export const link_style = {
+  textDecoration: "none",
+}
+export const text_style = {
+  textAlign: "center",
+  padding: "var(--ifm-leading)",
+}
+export const descr_style = {
+  color: "var(--ifm-font-color-base)",
+}
+
+In this section you can find **everything a SmartVan can do for you**. From
+service control to energy and water monitoring, via security alarms and travel
+statistics. All features are grouped in 4 main blocks.
+
+<div style={div_style}>
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/remote_office">
+      <ImageClickable
+        src="/img/features/features_remote_office_logo_512.png"
+        alt="Remote Office"
+         width="300px"/>
+      <div style={text_style}>
+        <h3>Remote Office</h3>
+        <p style={descr_style}>
+          Discover what a SmartVan can do for you. Here there's the full list of
+          features of the Smart Van project.
+        </p>
+      </div>
+    </a>
+  </Card>
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/control">
+      <ImageClickable
+        src="/img/features/features_control_logo_512.png"
+        alt="Control and Automations"
+        width="300px" />
+      <div style={text_style}>
+        <h3>Controls & Automations</h3>
+        <p style={descr_style}>
+          Discover what a SmartVan can do for you
+        </p>
+      </div>
+    </a>
+  </Card>
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/monitor">
+      <ImageClickable
+        src="/img/features/features_monitoring_logo_512.png"
+        alt="Monitoring and Alarms"
+        width="300px" />
+      <div style={text_style}>
+        <h3>Monitoring & Alarms</h3>
+        <p style={descr_style}>
+          Discover what a SmartVan can do for you. Here there's the full list of
+          features of the Smart Van project.
+        </p>
+      </div>
+    </a>
+  </Card>
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/smart" >
+      <ImageClickable
+        src="/img/features/features_smart_logo_512.png"
+        alt="Smart Experience"
+        width="300px" />
+      <div style={text_style}>
+        <h3>Smart Experience</h3>
+        <p style={descr_style}>
+          Discover what a SmartVan can do for you. Here there's the full list of
+          features of the Smart Van project.
+        </p>
+      </div>
+    </a>
+  </Card>
+</div>
+
+
+## Smart Van Specifications
+
+Since this is an open source project, everyone is able to create their own
+Smart Van Box and adapt it to their needs. For example, increasing the number
+of controllable services, or integrating a different solar charger. Directly on
+this site **you can find different Smart Van Boxes models to build yourself**
+or to take example from.
+
+**For each feature, its hardware requirements and related configurations are
+specified**. In some cases there are several options to choose from, such as the
+solar chargers required for energy monitoring. Or, if it will be necessary to
+make configuration changes, for example by increasing the number of managed
+services.
+
+For more technical details on the features provided by Smart Van Boxes and
+required by mobile apps, see the **Smart Van project <MapSpecs />**.
