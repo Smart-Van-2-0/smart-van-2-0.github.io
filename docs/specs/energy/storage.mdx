@@ -1,0 +1,49 @@
+---
+title: Storage
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader } from '@site/src/components/templates/PageSpecification';
+import { SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "Energy Storage"
+export const specs_group_status = "Defined"
+export const specs_group_path = "Energy > Storage"
+export const specs_group_pillars = [
+    { name: "Voltage",      pillarType: "Range",  pillarDir: "State",  descr: "Battery actual voltage in Volts",
+      min: "0",     max: "55",   step: "1",      unit: "Volts"},
+    { name: "Percentage",      pillarType: "Range",  pillarDir: "State",  descr: "Battery actual charge in Percent",
+      min: "0",     max: "100",   step: "1",      unit: "Percent"},
+    { name: "Min",      pillarType: "Range",  pillarDir: "State",  descr: "Battery minimal voltage allowed in Volts",
+      min: "0",     max: "55",   step: "1",      unit: "Volts"},
+    { name: "Max",      pillarType: "Range",  pillarDir: "State",  descr: "Battery maximum voltage allowed in Volts",
+      min: "0",     max: "55",   step: "1",      unit: "Volts"},
+]
+
+
+
+<SpecificationTitle
+  name={specs_group_name}
+    status={specs_group_status} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+Information on energy storage in service batteries.
+
+</SpecificationHeader>
+
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />

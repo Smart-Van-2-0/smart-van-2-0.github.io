@@ -1,0 +1,68 @@
+---
+title: Internet
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "IoT Internet"
+export const specs_group_path = "IoT > Internet"
+export const specs_group_pillars = [
+    { name: "Status",         pillarType: "Boolean",  pillarDir: "State",   descr: "Internet's connection status (true is Connected, false is NOT Connected)",
+      aliasTrue: "Connected",     aliasFalse: "NOT Connected"},
+    { name: "SIM Status",     pillarType: "Boolean",  pillarDir: "State",   descr: "Sim's status (true is Working, false is NOT Working)",
+      aliasTrue: "Working",       aliasFalse: "NOT Working"},
+    { name: "Percentage",     pillarType: "Range",    pillarDir: "State",   descr: "Internet signal quality in Percent",
+      min: "0",     max: "100",   step: "1",      unit: "Percent"},
+    { name: "Max Download",       pillarType: "Range",    pillarDir: "State",   descr: "Internet MAX download speed in MB/s",
+      min: "0",     max: "2048",  step: "0.1",    unit: "MegaBytes/Second"},
+    { name: "Download",       pillarType: "Range",    pillarDir: "State",   descr: "Internet download speed in MB/s",
+      min: "0",     max: "2048",  step: "0.1",    unit: "MegaBytes/Second"},
+    { name: "Downloaded",     pillarType: "Range",    pillarDir: "State",   descr: "Data downloaded in GB",
+      min: "0",     max: "1000",  step: "0.1",    unit: "MegaBytes/Second"},
+    { name: "Upload",         pillarType: "Range",    pillarDir: "State",   descr: "Internet upload speed in MB/s",
+      min: "0",     max: "2048",  step: "0.1",    unit: "MegaBytes/Second"},
+    { name: "Uploaded",       pillarType: "Range",    pillarDir: "State",   descr: "Data uploaded in GB",
+      min: "0",     max: "1000",  step: "0.1",    unit: "MegaBytes/Second"},
+    { name: "Power Module",   pillarType: "Boolean",  pillarDir: "Action",  descr: "Power on/off the SIM module to save energy"},
+]
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+The IoT module has a <b>mobile modem for internet connectivity</b>. This section
+provides information about the connection status, SIM card status, and network
+communication measurements (download and upload rate, total data uploaded or
+downloaded, and maximum download speed with periodic tests).
+
+</SpecificationHeader>
+
+`Max Download` represents the maximum download speed measured during a periodic
+test, while `Download` reflects the current download rate based on user and
+system activity.
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />
+
+
+<!--
+
+Data downloaded and uploaded ???
+  da quando inizia il conteggio?
+  ogni quanto viene resettato?
+
+-->

@@ -1,0 +1,61 @@
+---
+title: Inertial
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "Position Inertial"
+export const specs_group_path = "Position > Inertial"
+export const specs_group_pillars = [
+    { name: "Roll",             pillarType: "Range",  pillarDir: "State",   descr: "Gyroscope Roll axis, rotation about its longitudinal axis (drawn through the body of the vehicle from tail to nose)",
+      min: "-180",    max: "180",   step: "1",    unit: "Degrees"},
+    { name: "Pitch",            pillarType: "Range",  pillarDir: "State",   descr: "Gyroscope Pitch axis, rotation about its lateral axis",
+      min: "-90",     max: "90",    step: "1",    unit: "Degrees"},
+    { name: "Yaw",              pillarType: "Range",  pillarDir: "State",   descr: "Gyroscope Yaw axis, rotation about its vertical axis",
+      min: "-180",    max: "180",   step: "1",    unit: "Degrees"},
+    { name: "Acceleration X",   pillarType: "Range",  pillarDir: "State",   descr: "Acceleration X axis",
+      min: "-16",     max: "16",    step: "1",     unit: "G"},
+    { name: "Acceleration y",   pillarType: "Range",  pillarDir: "State",   descr: "Acceleration Y axis",
+      min: "-16",     max: "16",    step: "1",     unit: "G"},
+    { name: "Acceleration Z",   pillarType: "Range",  pillarDir: "State",   descr: "Acceleration Z axis",
+      min: "-16",     max: "16",    step: "1",     unit: "G"},
+    { name: "Gyroscope X",   pillarType: "Range",  pillarDir: "State",      descr: "Gyroscope X axis",
+      min: "-2048",   max: "2048",  step: "1",    unit: "Degrees/sec"},
+    { name: "Gyroscope y",   pillarType: "Range",  pillarDir: "State",      descr: "Gyroscope Y axis",
+      min: "-2048",   max: "2048",  step: "1",    unit: "Degrees/sec"},
+    { name: "Gyroscope Z",   pillarType: "Range",  pillarDir: "State",      descr: "Gyroscope Z axis",
+      min: "-2048",   max: "2048",  step: "1",    unit: "Degrees/sec"},
+]
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+Get more information about your vehicle and its position using data related to
+the <b>vehicle's rotation axis</b>.
+
+</SpecificationHeader>
+
+Here are some possible ways to use data from the vehicle's rotation axis to get
+more information about the vehicle and its location:
+
+* Roll, Pitch and Yaw
+* Acceleration
+* Gyroscope
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />
