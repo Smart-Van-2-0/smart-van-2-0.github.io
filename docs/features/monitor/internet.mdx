@@ -1,0 +1,46 @@
+---
+title: Internet
+hide_title: true
+sidebar_position: 3
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Internet Monitoring"
+export const feature_status = "Development"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "IoT", sub_group: "Internet", desc: "Information needed to monitor the signal quality."},
+  { group: "IoT", sub_group: "AccessPoint", desc: "Information needed to monitor the connected devices."},
+]
+
+
+
+<FeatureTitle
+  name={feature_name}
+  status={feature_status} />
+
+Remote work is becoming increasingly popular, but it can be difficult to maintain
+a reliable internet connection when you're working in mobility. SmartVan can help
+you improve your remote office internet by providing you with a heatmap of the
+quality of internet in your area.
+
+SmartVan uses a variety of sensors to monitor the signal strength and speed of
+internet connections in your area. This information is then used to create a
+heatmap that shows you where the best internet is located.
+
+With SmartVan, you can always know where to go when you need a strong internet
+connection for a call or to upload your work.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />

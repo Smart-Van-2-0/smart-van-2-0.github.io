@@ -1,0 +1,38 @@
+---
+title: Internet sharing
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Internet Sharing"
+export const feature_status = "Development"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "IoT", sub_group: "Internet", desc: "Accessing both internet connectivity and signal quality information."},
+  { group: "IoT", sub_group: "AccessPoint", desc: "Controls and statistics for the WiFi network provided by the SV box."},
+]
+
+
+
+<FeatureTitle
+  name={feature_name}
+  status={feature_status} />
+
+The integrated modem provides a WiFi signal to which all your devices can
+connect and access the internet. Additionally, the same modem keeps your Smart
+Van connected to the Cloud, making it reachable by the Smart Van's Mobile App.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />

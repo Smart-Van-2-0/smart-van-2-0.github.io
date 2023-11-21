@@ -1,0 +1,48 @@
+---
+title: Horizon
+hide_title: true
+sidebar_position: 6
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Horizon finder for parking"
+export const feature_status = "Development"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Position", sub_group: "Inertial", desc: "Internal gyroscope for detecting vehicle leveling."},
+  { group: "Services", sub_group: "Actuators", desc: "Control of actuators such as pistons or other leveling systems."},
+]
+
+
+
+<FeatureTitle
+  name={feature_name}
+  status={feature_status} />
+
+Finding the perfect spot to park your campervan and then leveling it perfectly
+can be a source of heated debate. But it doesn't have to be. SmartVan can help
+you find the perfect tilt to park your campervan in perfect balance, so you
+can sleep soundly without rolling from side to side.
+
+SmartVan uses sensors like a gyroscope and accelerometer to measure the tilt of
+your campervan. It then displays this information in real time in a 3D GUI. This
+way, you can see at any time whether your campervan is perfectly level or if
+changes need to be made.
+
+SmartVan is perfect for campervan owners who want to sleep well at night. It can
+also be useful for campervan owners who want to cook or do other activities in
+their campervan without worrying about uneven surfaces.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />

@@ -1,0 +1,72 @@
+---
+title: Checklists
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Trip Checklists"
+export const feature_status = "Proposed"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Sensors", sub_group: "Living", desc: "Sensors to detect status and validate active checks."},
+  { group: "Sensors", sub_group: "Engine", desc: "Engine and Vehicle status to validate active checks."},
+  { group: "Energy", sub_group: "Storage", desc: "Service's Battery information to check its status."},
+  { group: "IoT", sub_group: "Battery", desc: "IoT's Battery information to check its status."},
+]
+
+
+
+<FeatureTitle
+name={feature_name}
+status={feature_status} />
+
+When traveling in a campervan, it is important to plan everything carefully.
+There are so many things to remember, such as checking that the tanks have been
+filled with water, that the batteries are charged, that the refrigerator has
+been filled and turned on, and many others.
+
+SmartVan Checklists is the perfect tool to help you plan your campervan trip.
+With its predefined templates and the possibility of customization, SmartVan
+Checklists allows you to not forget anything.
+
+Here are some of the available predefined templates:
+
+Lift-off: A checklist for preparing for the trip, with activities such as
+checking the oil level, tires, and fluids.
+Scheduled Maintenance: A checklist for scheduled maintenance of your campervan.
+Destination-reached: A checklist for when you reach your destination, with
+activities such as connecting to the electrical grid.
+
+You can also customize the checklists to suit your specific needs. For example,
+if you are traveling in a campervan with a solar system, you can add an item to
+the checklist to check the charge level of the solar batteries.
+
+SmartVan Checklists is an essential tool for any campervan traveler. It is easy
+to use and helps you plan your trip with ease, so you can focus on the adventure.
+
+Here are some tips for using SmartVan Checklists:
+
+* Create a checklist for each type of trip. For example, you can create a
+  checklist for short trips, long trips, and winter trips.
+* Customize the checklists according to your needs. Add or remove activities,
+  change the order of activities, and even add notes.
+* Share the checklists with others. If you are traveling with other people,
+  you can share the checklists with them so that everyone is on the same page.
+* SmartVan Checklists is the perfect tool to help you plan your campervan trip
+  and make sure everything is in order.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />
+
