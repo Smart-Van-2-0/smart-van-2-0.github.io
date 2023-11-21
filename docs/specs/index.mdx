@@ -1,0 +1,110 @@
+---
+title: Specs
+sidebar_position: 99
+hide_table_of_contents: true
+---
+
+# Smart Van project Specifications
+
+import Card from '@mui/material/Card';
+import ImageClickable from '@site/src/components/ImageClickable';
+import GettingStarted from '@site/src/components/GettingStarted';
+import { MapFeatures, MapHardware, MapSoftware, MapSpecs } from '@site/src/components/WebSiteMap';
+
+export const div_style = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  marginBottom: 'var(--ifm-leading)',
+}
+export const card_style = {
+  minWidth: `200px`,
+  maxWidth: `500px`,
+  margin: "var(--ifm-leading)",
+}
+export const card_div_style = {
+  textAlign: "center",
+  padding: "var(--ifm-leading)",
+  paddingBottom: "0px",
+}
+
+Each Smart Van Box has its own characteristics such as integrated services,
+connected sensors, buttons, etc. Each of these characteristics allows the Smart
+Van Box to provide a set of <MapFeatures />. On the other hand, the mobile app
+knows the information and actions provided by the Smart Box to which it is
+connected and can therefore use them to implement its features.
+
+The **meeting point between Smart Van Box and Features** are precisely these
+characteristics defined in the specifications of the Smart Van project. In other
+words, Smart Van Boxes provide these specifications and mobile applications use
+them.
+
+<ImageClickable
+  src="/img/specs/specs_diagram.png"
+  width="50%"
+  alt="SmartVan's Software diagram" />
+
+For better management, the characteristics of the Smart Van Box object have been
+grouped into the following hierarchy. Click on the group link to get more
+information on the features contained.
+
+<div style={div_style}>
+  <Card sx={card_style}>
+    <div style={card_div_style}>
+      <h3>Position</h3>
+      <p><a href="/docs/specs/position/gnss">GNSS</a></p>
+      <p><a href="/docs/specs/position/inertial">Inertial</a></p>
+    </div>
+  </Card>
+  <Card sx={card_style}>
+    <div style={card_div_style}>
+      <h3>Sensors</h3>
+      <p><a href="/docs/specs/sensors/living">Living</a></p>
+      <p><a href="/docs/specs/sensors/living">Engine</a></p>
+    </div>
+  </Card>
+  <Card sx={card_style}>
+    <div style={card_div_style}>
+      <h3>Services</h3>
+      <p><a href="/docs/specs/services/controllers">Controllers</a></p>
+      <p><a href="/docs/specs/services/actuators">Actuators</a></p>
+    </div>
+  </Card>
+  <Card sx={card_style}>
+    <div style={card_div_style}>
+      <h3>Energy</h3>
+      <p><a href="/docs/specs/energy/storage">Storage</a></p>
+      <p><a href="/docs/specs/energy/generation">Generation</a></p>
+      <p><a href="/docs/specs/energy/consumption">Consumption</a></p>
+    </div>
+  </Card>
+  <Card sx={card_style}>
+    <div style={card_div_style}>
+      <h3>IoT Box</h3>
+      <p><a href="/docs/specs/iot/battery">Battery</a></p>
+      <p><a href="/docs/specs/iot/internet">Internet</a></p>
+      <p><a href="/docs/specs/iot/accesspoint">AccessPoint</a></p>
+      <p><a href="/docs/specs/iot/media">Media</a></p>
+      <p><a href="/docs/specs/iot/monitor">Monitor</a></p>
+    </div>
+  </Card>
+</div>
+
+
+In the [John OS environment](https://docs.johnosproject.org), these
+specifications correspond to the object's structure.
+
+<!--
+
+Explain "Generic vs Specific" approach
+
+Energy > Generation > Generator
+    (SolarPanels|Vehicle|PowerWall|Multiple)
+    info about which system is charging the battery
+Energy > Consumer
+    info about single energy's consumer (each service + inverter)
+Waters > Tank Weight 0-N
+    info about weight sensor for tanks (but also min, max and percentage)
+Waters > Tank Level 0-N
+    info about level sensor for tanks (but also ?min, ?max and percentage)
+-->
