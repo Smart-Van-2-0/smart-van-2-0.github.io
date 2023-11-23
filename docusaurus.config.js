@@ -56,6 +56,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/logos/social_banner.jpg',
+      announcementBar: {
+        id: 'updating',
+        content:
+          'Hi, this project is under heavily development, so come back often to check for new updates!',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'Home',
         logo: {
