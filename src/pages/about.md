@@ -1,7 +1,7 @@
 # About
 
-import ImageClickable from '@site/src/components/ImageClickable';
-import {MapDocs} from '@site/src/components/WebSiteMap';
+import { MapCollaborate, MapDocs } from '@site/src/components/WebSiteMap';
+import LinkFacebookPage from '@site/src/components/LinkFacebookPage';
 
 ### Who?
 
