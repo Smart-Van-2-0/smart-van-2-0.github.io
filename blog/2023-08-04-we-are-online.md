@@ -11,6 +11,6 @@ the information and tricks to build your own Smart Van independently.
 
 It is structured into the following 3 sections, plus a Blog:
 
-* [Features](docs/features): what the Smart Van can do for you
-* [Hardware](docs/hardware): specs and guides to create your own SmartVan boxes
-* [Software](docs/software): downloads and sources of all the software used by the SmartVan project
+* [Features](/docs/features): what the Smart Van can do for you
+* [Hardware](/docs/hardware): specs and guides to create your own SmartVan boxes
+* [Software](/docs/software): downloads and sources of all the software used by the SmartVan project
