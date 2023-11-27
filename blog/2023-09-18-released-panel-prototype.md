@@ -20,7 +20,7 @@ you can find all schematics and BOMs required to assemble your own Panel
 Prototype. It's composed by more than 180 components (including all wires)...
 so it will be a perfect challenge for all Makers!
 
-![CustomBoard_002_B.png](..%2Fstatic%2Fimg%2Fhardware%2Fpanel_prototype%2Fresources%2FCustomBoard_002_B.png)
+![IoTBlock_002_B.png](..%2Fstatic%2Fimg%2Fhardware%2Fpanel_prototype%2Fresources%2FIoTBlock_002_B.png)
 
 Don't wait any longer, go to the [Guides](/docs/hardware/panel_prototype/guides)
 page and start creating your first Smart Van device!
