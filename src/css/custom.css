@@ -24,3 +24,18 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+main {
+  background-color: #FCFDFD;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -75px;           /** Adjust to top bar */
+  visibility: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
