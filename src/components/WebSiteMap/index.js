@@ -9,6 +9,10 @@ export function MapFeatures() {
   return (<a href="/docs/features">FEATURES</a>);
 }
 
+export function MapSpecs() {
+  return (<a href="/docs/specs">SPECIFICATIONS</a>);
+}
+
 export function MapHardware() {
   return (<a href="/docs/hardware">HARDWARE</a>);
 }
@@ -39,11 +43,11 @@ export default function WebSiteMap() {
       |
       <MapSoftware />
       |
+      <MapSpecs />
+      |
       <MapAbout />
       |
       <MapCollaborate />
-      |
-      <MapRoadmap />
     </div>
   )
 }
