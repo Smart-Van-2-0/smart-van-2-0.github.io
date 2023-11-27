@@ -1,0 +1,62 @@
+---
+title: Resources
+hide_title: true
+sidebar_position: 3
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "Panel Prototype"
+export const hardware_status = "Available"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+## Hardware Requirements
+
+* [External HW and Devices requirements](/img/hardware/panel_prototype/resources/BOMs-BlockExternal.pdf)
+* [BOMs Power Block](/img/hardware/panel_prototype/resources/BOMs-BlockPower.pdf)
+* [BOMs Integration Block](/img/hardware/panel_prototype/resources/BOMs-BlockIntegration.pdf)
+* [BOMs IoT Block](/img/hardware/panel_prototype/resources/BOMs-BlockIoT.pdf)
+* [BOMs Custom Board](/img/hardware/panel_prototype/resources/BOMs-CustomBoard.pdf)
+
+## Wiring
+
+* [Wiring Power Block](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Power%20Block%20Wiring%20Schema.png)
+* [Wiring Integration Block](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Integration%20Block%20Wiring%20Schema.png)
+* [Wiring IoT Block](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-IoT%20Block%20Wiring%20Schema.png)
+  * [Electrical scheme Custom Board](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Custom%20Board%20Electrical%20Scheme%20\(Hand-Made\).png)
+    * [Raspberry Pinout](/img/hardware/panel_prototype/resources/RaspberryPi%202%20Boards%20Pinout.pdf)
+    * [Raspberry and Boards Pin-outs](/img/hardware/panel_prototype/resources/RaspberryPi%202%20Boards%20Pinout.ods)
+
+## Custom Boards (Not Yet Designed)
+
+* KiCad Custom Board
+  * Electrical scheme Custom Board
+  * PCB Custom Board
+
+## Cases & 3D Models
+
+* [Main Panel shape and sizes](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Main%20Panel%20Schema.png)
+* Main Panel cover shape and sizes      @ <--- TODO
+* [Integration Block Case](/img/hardware/panel_prototype/resources/IntegrationBlock_001.stl)
+  * [Integration Block Case (Blender)](/img/hardware/panel_prototype/resources/IntegrationBlock_001.blend)
+* [IoT Block Case](/img/hardware/panel_prototype/resources/IoTBlock_002.stl)
+  * [IoT Block Case (Blender)](/img/hardware/panel_prototype/resources/IoTBlock_002.blend)
+  * [IoT Block Case Render A](/img/hardware/panel_prototype/resources/IoTBlock_002_A.png)
+  * [IoT Block Case Render B](/img/hardware/panel_prototype/resources/IoTBlock_002_B.png)
+
+## Other docs
+
+* [BOMs All](/img/hardware/panel_prototype/resources/BOMs-ALL.pdf)
+* [BOMs Details](/img/hardware/panel_prototype/resources/BOMs.ods)
+* [Blocks schema](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Blocks%20schema.png)
+  * [All schemas](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype.drawio)
