@@ -1,33 +1,43 @@
 
+/** PageSoftware */
+
 .tmpl_container {}
 
-.head_container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+
+/** SoftwareSpecsProvidedTable */
+
+.specs_table {
+    margin: 32px auto;
+    display: table;
 }
 
-@media screen and (max-width: 996px) {
-  .head_container {
-    flex-direction: column-reverse;
-  }
-}
+
+/** SoftwareHeader */
+
+.head_container {}
 
 .descr {}
 
-.list_container {
+.lists_container {
+  float: right;
   border: solid #00000038 1px;
   padding: 1em;
   margin-left: 2em;
+  margin-bottom: 2em;
+  width: 300px;
   min-width: 300px;
   height: fit-content;
 }
 
 @media screen and (max-width: 996px) {
-  .list_container {
-    margin: 2em;
+  .lists_container {
+    float: none;
+    margin: 0px auto 2em auto;
   }
+}
+
+.logo {
+  /*max-width: 250px;*/
 }
 
 .list {}

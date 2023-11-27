@@ -1,0 +1,48 @@
+
+/** SpecificationTable */
+.specs_table {
+    margin: 32px auto;
+    display: table;
+}
+
+
+/** SpecificationDetails */
+.spec_details {}
+
+.spec_details_single {
+  margin-bottom: 3em;
+}
+
+.spec_details_title_path {
+  color: gray;
+  margin-bottom: 0px;
+}
+
+.spec_details_title_type {
+  color: gray;
+  font-weight: normal;
+}
+
+
+/** Pillar */
+
+.pillar_table {}
+
+.pillar_table > tr {
+  background-color: transparent !important;
+}
+
+.pillar_table > tr,
+.pillar_table > tr > td,
+.pillar_table > tr > th {
+  border: none !important;
+}
+
+.pillar_table > tr > th {
+  text-align: left;
+  vertical-align: top;
+}
+
+.pillar_table p {
+  margin-bottom: 0px;
+}
