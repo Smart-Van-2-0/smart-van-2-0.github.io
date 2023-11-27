@@ -1,0 +1,44 @@
+---
+title: Specs
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "Panel Prototype"
+export const hardware_status = "Available"
+export const specs_implemented = [
+  { group: "Position",  sub_group: "GNSS",        fw: ["FW SIM 7600"], desc: "The SIM7600 module can provides GNSS info from various systems (GPS/Beidou/GLONASS/GALILEO/QZSS)."},
+  { group: "Position",  sub_group: "Inertial",    fw: ["FW Sense Hat"], desc: "Using the QMI8658C and the AK09918 sensors, the Sense Hat can detect movement, orientation, and the magnetic field."},
+  { group: "Sensors",   sub_group: "Living",      fw: ["FW Sense Hat"], desc: "Sensors like temperature, humidity and barometric pressure plus an AD converter from the Sense Hat, provide environment related data."},
+  { group: "Sensors",   sub_group: "Engine",      fw: ["FW ODB II Scanner"], desc: "A simple bluetooth ODB II scanner can be connected to any vehicle and get engine/diagnostic info."},
+  { group: "Services",  sub_group: "Controllers", fw: ["FW IOExp"], desc: "With the AW9523B, the IO Expansion board can listen up to 16 buttons (8 by default)."},
+  { group: "Services",  sub_group: "Actuators",   fw: ["FW IOExp"], desc: "With the AW9523B, the IO Expansion board can control up to 16 relays (8 by default)."},
+  { group: "Energy",    sub_group: "Storage",     fw: ["FW Victron"], desc: "Victron's SmartSolar/BlueSolar series devices can provide info about the service's battery status."},
+  { group: "Energy",    sub_group: "Generation",  fw: ["FW Victron"], desc: "Victron's SmartSolar/BlueSolar series devices can provide info about the solar panel charge."},
+  { group: "Energy",    sub_group: "Consumption", fw: ["FW Victron"], desc: "Victron's SmartSolar or BlueSolar series devices can provide info about the load consumption."},
+  { group: "IoT",       sub_group: "Battery",     fw: ["FW UPSPack_V3"], desc: "The UPS Pack with his own battery for the IoT block, provides info about the battery status."},
+  { group: "IoT",       sub_group: "Internet",    fw: ["FW SIM7600"], desc: "The SIM7600 module can provide the mobile connectivity and his status."},
+  { group: "IoT",       sub_group: "AccessPoint", fw: ["FW RPi_Access Point"], desc: "Use the onboard RPi WiFi to provide a local WiFi network."},
+  { group: "IoT",       sub_group: "Monitor",     fw: ["FW RPi_Monitor"], desc: "Keep track of the RPi load status."},
+]
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+# Specs provided
+
+<HardwareSpecsProvidedText />
+
+<HardwareSpecsProvidedTable
+  specs_implemented={specs_implemented} />

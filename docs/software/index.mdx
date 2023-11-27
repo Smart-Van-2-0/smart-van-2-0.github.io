@@ -1,0 +1,127 @@
+---
+title: Software
+sidebar_position: 4
+hide_table_of_contents: true
+---
+
+# Smart Van's Software
+
+import Card from '@mui/material/Card';
+import ImageClickable from '@site/src/components/ImageClickable';
+import {MapCollaborate} from '@site/src/components/WebSiteMap';
+
+export const div_style_ = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  marginBottom: 'var(--ifm-leading)',
+}
+export const card_style = {
+  width: `20%`,
+  minWidth: `100px`,
+  maxWidth: `150px`,
+  display: 'table-cell',
+  verticalAlign: 'middle',
+  padding: "var(--ifm-leading)",
+  marginRight: "var(--ifm-leading)",
+  float: "left",
+}
+export const card_div_style_ = {
+  textAlign: "center",
+  maxWidth: "300px",
+  padding: "var(--ifm-leading)",
+  paddingBottom: "0px",
+}
+export const card_img_style = {
+  display: "block",
+}
+export const card_item_style_ = {
+  display: "block"
+}
+
+After the hardware, the second component that constitutes the Smart Van solution
+is the software. Like every IoT solution, Smart Van also has software for the
+object, the JOD Smart Van known as the object's agent; and then, the user's
+software, namely the mobile app.
+
+<ImageClickable
+  src="/img/software/smartvan_diagram_for_software_LIGHT.png"
+  width="60%"
+  alt="SmartVan's Software diagram" />
+
+The **user only needs to install the [SV Mobile App](#sv-mobile-app)** on their phone, after which
+they can connect to the Smart Van Box and enjoy all the provided functionalities.<br/>
+On the other hand, **when creating your own Smart Van Box**, at a certain point, you
+need to **install the object's agent [JOD Smart Van](#jod-smart-van)** directly on your hardware. Fortunately,
+JOD Smart Van is distributed not only including the JOD agent (the component
+that manages IoT functionalities) but also the individual firmwares that
+interact directly with the hardware. This makes the installation of
+hardware-specific software not only straightforward but also highly flexible
+and easy to customize to your needs.
+
+If you want to customize or modify the mobile app or firmware, the SmartVan
+project makes **all the source
+code [repositories available](https://github.com/orgs/Smart-Van-2-0/repositories)
+**. Please post your changes to help the community. Read more on the <MapCollaborate />
+page.
+
+
+## SV Mobile App
+
+<Card sx={card_style}>
+  <img
+    style={card_img_style}
+    src="/img/logos/software_mobile_app_logo_200.png" />
+</Card>
+
+The Mobile App to control your Smart Van Box for **[Android](software/sv_mobile_app/android)**
+and **[iOS](/docs/software/sv_mobile_app/ios)**.
+
+Most people know how to **install a smartphone app** from the official stores.
+Just search for <code>SmartVan</code> in the most popular app stores and install
+the one you find (**NB!** at the moment, no app has been published yet, so you
+won't find the right one in the results).
+
+If you want to install a specific version or the latest available, you can
+download the installation file from [the download page](/docs/software/sv_mobile_app/downloads) for
+your smartphone and proceed with the 'install from file' procedure for your
+smartphone.
+
+
+## JOD Smart Van
+
+<Card sx={card_style}>
+  <img
+    style={card_img_style}
+    src="/img/logos/software_firmware_logo_200.png" />
+</Card>
+
+The object's agent as a installable distribution **[JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van)** or
+the **[SmartVan JOD Image](/docs/software/jod_smart_van/jod_smart_van_image)** an
+entire OS's image ready to be flashed.
+
+The software to be loaded on the devices is called firmware. For each device
+assembled according to the tutorials in the Hardware section, you must **load
+the corresponding firmware**.
+
+All the software to be installed on the object is provided and documented within
+these pages. Starting with the main software, the object agent JOD Smart Van,
+which manages the communication and other IoT aspects. Included in the object's
+agent distribution are the actual firmwares, the programs that communicate
+directly with the hardware. Typically, to have a fully operational Smart Van
+Box, it is sufficient to install and configure only the object agent that you
+can find into the [Object Distribution Downloads](/docs/software/jod_smart_van/downloads) page.
+
+
+## Other Sources and Repositories
+
+* [FW Victron](/docs/software/firmware/fw_victron)
+* [FW UPS Pack_V3](/docs/software/firmware/fw_upspack_v3)
+* [FW SIM7600](/docs/software/firmware/fw_sim7600)
+* [FW Sense Hat](/docs/software/firmware/fw_sensehat)
+* [FW IO Exp](/docs/software/firmware/fw_ioexp)
+* [FW RPi_Monitor](/docs/software/firmware/fw_rpi_monitor)
+* [FW RPi_Access Point](/docs/software/firmware/fw_rpi_accesspoint)
+* [FW RPi_Bluetooth Audio](/docs/software/firmware/fw_rpi_bt_audio)
+* [FW ODB II Scanner](/docs/software/firmware/fw_odbiiscanner)
+* Other firmware sources...

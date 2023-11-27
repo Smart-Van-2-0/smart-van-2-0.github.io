@@ -1,0 +1,42 @@
+---
+title: Buttons
+hide_title: true
+sidebar_position: 4
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Physical Buttons"
+export const feature_status = "Proposed"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Services", sub_group: "Controllers", desc: "Physical push-buttons and rheostat as input."},
+]
+
+
+
+<FeatureTitle
+  name={feature_name}
+  status={feature_status} />
+
+Smart Van includes a convenient keypad that allows you to control your camper's
+services without having to use your smartphone or tablet. The keypad is freely
+configurable, so you can customize it to fit your needs.
+
+For example, you can use a button to turn on the lights, another button to open
+the awning, and another button to start the heating system. You can also use the
+keypad to create custom scenes, such as a "bedtime" scene that turns off all the
+lights and locks the doors.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />

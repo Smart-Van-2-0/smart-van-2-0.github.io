@@ -1,0 +1,67 @@
+---
+title: FW SIM7600
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "FW SIM7600"
+export const software_status = "Development"
+export const software_code = "fw_sim7600"
+export const software_version = "1.0.0"
+export const software_category = "Firmware"
+export const software_language = "Python"
+export const specs_provided = [
+  { fw_value: "battery_voltage", group: "Energy", sub_group: "Storage",  spec: "Voltage"},
+  { fw_value: "battery_voltage_percentage", group: "Energy", sub_group: "Storage",  spec: "Percentage"},
+  { fw_value: "battery_voltage_min", group: "Energy", sub_group: "Storage",  spec: "Min"},
+  { fw_value: "battery_voltage_max", group: "Energy", sub_group: "Storage",  spec: "Max"},
+]
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+<SoftwareHeader
+  name={software_name}
+  code={software_code}
+  category={software_category}
+  language={software_language}
+  current_status={software_status}
+  current_version={software_version}
+  url_logo="/img/software/firmware/fw_sim7600/fw_sim7600_image.png"
+  url_repo="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sim7600/"
+  url_downloads="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sim7600/tags/"
+  url_support="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sim7600/issues/" >
+
+Simple Python module that read data from SIM7600 devices and share them on the
+local DBus.
+
+Once ran, this script **reads data from the serial specified port then notify
+the DBus with updated values**. The DBus service and his properties depends on
+the version get from the device (`AT+CGMM` AT command response). More info on
+[Supported devices and value mapping](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sim7600/#supported-devices-and-value-mapping).
+
+</SoftwareHeader>
+
+
+## Specs provided
+
+<SoftwareSpecsProvidedText />
+
+<SoftwareSpecsProvidedTable
+  specs_provided={specs_provided} />
+
+
+## Usage
+
+TODO: write the usage section for Firmware/SIM7600

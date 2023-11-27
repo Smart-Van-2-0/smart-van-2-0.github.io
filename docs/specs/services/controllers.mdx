@@ -1,0 +1,53 @@
+---
+title: Controller
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "Services Controller"
+export const specs_group_path = "Services > Controller"
+export const specs_group_pillars = [
+    { name: "Binary 0-N",         pillarType: "Boolean",  pillarDir: "State",  descr: "Multiple binary controllers like buttons (true is pressed, false is NOT pressed).",
+      aliasTrue: "Pressed",           aliasFalse: "Unpressed",},
+    { name: "Percentage 0-N",         pillarType: "Range",  pillarDir: "State",  descr: "Multiple percentage (0-100%) controllers like rheostat",
+      min: "0",     max: "100",   step: "1",      unit: "Percent"},
+]
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+<b>Controller status information</b> is an essential part of the control system
+of a camper or van. This information can be used to activate/deactivate
+services, scenarios, adjust parameters, detect events, and many more.
+
+</SpecificationHeader>
+
+The number of controllers (buttons, rheostat...) available may vary depending on
+the Smart Van Box model. Users can choose which port to connect a specific
+service to during the mobile app configuration. This allows users to customize
+their camper to meet their specific needs.
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />
+
+<!--
+Notes:
+
+Checkout the "Binary 0-N" pillars: generic vs specific pillars
+Checkout the "Percentage 0-N" pillars: generic vs specific pillars
+-->

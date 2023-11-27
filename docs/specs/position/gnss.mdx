@@ -1,0 +1,75 @@
+---
+title: GNSS
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "Position GNSS"
+export const specs_group_path = "Position > GNSS"
+export const specs_group_pillars = [
+    { name: "Latitude",             pillarType: "Boolean",  pillarDir: "State",   descr: "GPS latitude (true is North, false is South)",
+      aliasTrue: "North",     aliasFalse: "South",},
+    { name: "Latitude Degrees",     pillarType: "Range",    pillarDir: "State",   descr: "GPS latitude degrees",
+      min: "???",   max: "???",     step: "???",  unit: "Degrees"},
+    { name: "Longitude",            pillarType: "Boolean",  pillarDir: "State",   descr: "GPS longitude (true is West, false is East)",
+      aliasTrue: "West",      aliasFalse: "East",},
+    { name: "Longitude Degrees",    pillarType: "Range",    pillarDir: "State",   descr: "GPS longitude degrees",
+      min: "???",   max: "???",     step: "???",  unit: "Degrees"},
+    { name: "Altitude",             pillarType: "Range",    pillarDir: "State",   descr: "GPS position MSL Altitude. Unit is meters.",
+      min: "???",   max: "???",     step: "???",  unit: "meters"},
+    { name: "Speed",                pillarType: "Range",    pillarDir: "State",   descr: "GPS position Speed Over Ground. Unit is knots.",
+      min: "???",   max: "???",     step: "???",  unit: "Knots"},
+    { name: "Course",               pillarType: "Range",    pillarDir: "State",   descr: "GPS position course in degrees",
+      min: "???",   max: "???",     step: "???",  unit: "Degrees"},
+    { name: "Available Satellites", pillarType: "Range",    pillarDir: "State",   descr: "GPS satellite number (0-12)",
+      min: "0",     max: "12",      step: "1",    unit: "Satellites Count"},
+    { name: "Power Module",         pillarType: "Boolean",  pillarDir: "Action",  descr: "Power on/off the GNSS module to save energy"},
+]
+
+
+<!-- { name: "Longitude Degrees",    pillarType: "Range",    pillarDir: 	"State",  descr: "GPS longitude degrees", -->
+<!--   min: "???",   max: "???",     step: "???",  unit: [{key: "1", val: "aaa"}, {key: "2", val: "bbb"}, {key: "3", val: "ccc"}]}, -->
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+The Smart Box allows you to get <b>the real-time location of your camper or
+van</b>. It supports multiple GNSS networks, including GPS, Beidou, GLONASS,
+Galileo, and others. This gives you the most accurate and reliable location
+information possible.
+
+</SpecificationHeader>
+
+The Smart Box provides the following information about your vehicle's location:
+
+* Latitude and longitude: This is the most basic information about a location. It
+tells you where you are on the Earth's surface.
+* Altitude: This tells you how high you are above sea level.
+* Speed: This tells you how fast you are moving.
+* Course: This tells you in what direction you are facing.
+
+You can use this information to track your vehicle's movement, to find your way
+to a destination, or to monitor your vehicle for security purposes.
+
+The Smart Box supports multiple GNSS networks to ensure that you always have the
+most accurate location information possible. If one network is unavailable or
+unreliable, the Smart Box will use another network to provide you with the best
+possible location information.
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />

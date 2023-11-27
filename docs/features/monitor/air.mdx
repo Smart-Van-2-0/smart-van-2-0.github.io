@@ -1,0 +1,55 @@
+---
+title: Air
+hide_title: true
+sidebar_position: 4
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Air Monitoring"
+export const feature_status = "Development"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Sensors", sub_group: "Living", desc: "Sensors designed to detect the environment like air quality and gas sensors."},
+]
+
+
+
+<FeatureTitle
+name={feature_name}
+status={feature_status} />
+
+Air monitoring is an important safety feature provided by the Smart Van. It can
+help protect passengers from harmful gases and air pollution.
+
+Gas and PM sensors continuously monitor the air quality inside and outside the
+vehicle. If a dangerous concentration of gas or PM is detected, the air
+monitoring system will sound an alarm and may take measures to protect
+passengers, such as turning off devices that use gas or fuel, disabling solenoid
+valves, or opening windows and doors to ventilate the interior of the vehicle.
+
+In addition, the air monitoring system can provide information on air pollution
+levels in the surrounding area. This information can be useful for campers who
+want to find less polluted areas to park.
+
+Here are some of the benefits of air monitoring in campervans:
+
+* Improved safety: Air monitoring can help protect passengers from harmful gases
+  and air pollution.
+* Improved comfort: Air monitoring can help keep the air inside the vehicle fresh
+  and clean.
+* Improved health: Air monitoring can help reduce exposure to pollutants that
+  can harm health.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+specs_required={specs_required} />

@@ -1,0 +1,42 @@
+---
+title: Battery
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "IoT Battery"
+export const specs_group_path = "IoT > Battery"
+export const specs_group_pillars = [
+    { name: "Status",         pillarType: "Boolean",  pillarDir: "State",   descr: "IoT's battery charging status (true is Charging, false is NOT Charging)",
+      aliasTrue: "Charging",      aliasFalse: "NOT Charging"},
+    { name: "Percentage",     pillarType: "Range",    pillarDir: "State",   descr: "IoT's battery actual charge in Percent",
+      min: "0",     max: "100",   step: "1",      unit: "Percent"},
+    { name: "Voltage",        pillarType: "Range",    pillarDir: "State",   descr: "IoT's battery output voltage in Volts",
+      min: "0",     max: "10",    step: "1",      unit: "Volts"},
+]
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+IoT hardware has <b>a battery that acts as an UPS</b>, allowing it to operate
+autonomously. This section provides information about the battery and its charging.
+
+</SpecificationHeader>
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />

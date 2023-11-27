@@ -1,0 +1,53 @@
+---
+title: Energy
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Energy Monitoring"
+export const feature_status = "Development"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Energy", sub_group: "Storage", desc: "Information needed to monitor the battery, create charts and analyze its performance."},
+  { group: "Energy", sub_group: "Generation", desc: "Information on battery charging to create charts and analyze user behaviour."},
+  { group: "Energy", sub_group: "Consumption", desc: "Information on battery consumption to create charts and analyze user behaviour."}
+]
+
+
+
+<FeatureTitle
+  name={feature_name}
+  status={feature_status} />
+
+SmartVan Box allows you to monitor the entire energy flow of your camper, from
+generation through solar panels to consumption by the services. In this way,
+you can optimize your camper's range without changing your habits.
+
+In addition to real-time data and its history, you can view points on the map
+where the solar panels have charged the service battery the best, or where it
+is possible to connect to an electric column.
+
+This feature allows you to plan your trips and ensure that you always have
+enough energy to meet your needs:
+
+* If you are about to stop in an area with little sunlight, you can reduce your
+  energy consumption to conserve the service battery.
+* If you are about to arrive in an area with many electric columns, you can
+  schedule service battery charging to save time.
+* If you are planning a long trip, you can calculate the energy consumption
+  required to ensure that you have enough energy to reach your destination.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />
