@@ -7,7 +7,7 @@ Repository that exports the [smartvan.johnosproject.org](https://smartvan.johnos
 Web Site as GitHub Pages.
 
 * **WebSite Version:** 1.1.0
-* **Content Version:** 20230918
+* **Content Version:** 20231128
 
 [CHANGELOG](CHANGELOG.md) | [TODOs](TODOs.md) | [LICENCE](LICENCE.md)
 
