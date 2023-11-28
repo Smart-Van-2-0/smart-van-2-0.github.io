@@ -96,6 +96,10 @@ const config = {
             title: 'SmartVan @ JohnOSProject.org',
             items: [
               {
+                label: 'Specifications',
+                to: '/docs/specs',
+              },
+              {
                 label: 'Features',
                 to: '/docs/features',
               },
@@ -127,8 +131,12 @@ const config = {
             ],
           },
           {
-            title: 'Social',
+            title: 'eMail & Social',
             items: [
+              {
+                label: 'smartvan@johnosproject.org',
+                href: 'mailto:smartvan@johnosproject.org',
+              },
               {
                 label: 'Facebook',
                 href: 'https://www.facebook.com/profile.php?id=100095337571720',
