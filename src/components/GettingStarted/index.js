@@ -19,21 +19,21 @@ export function GettingStartedStep1() {
     <div>
       <h2>1. Get the Hardware</h2>
       <p>
-        The easiest way to get started is to re-create one of the official
-        prototype. With each development cycle, a new reference prototype is
-        released.
+        The easiest way to get started is to build one of the official
+        prototypes. With each development cycle, a new reference
+        prototype is released.
       </p>
       <p>
-        Actually there are 2 prototypes under development:
+        There are currently two prototypes under development:
       </p>
       <ul>
         <li> <LinkHardwareModel code="panel_prototype" label="Panel Prototype" /></li>
         <li> Box Prototype (Coming soon)</li>
       </ul>
       <p>
-        For any prototype, you can find the BOM lists, wiring diagrams, case
-        specs & 3D models; but also the assembly guides and the installation
-        tutorials.
+        For each prototype, you can find the BOM lists, wiring diagrams,
+        case specs, and 3D models, as well as the assembly guides and
+        installation tutorials.
       </p>
     </div>
   );
@@ -44,23 +44,23 @@ export function GettingStartedStep2() {
     <div>
       <h2>2. Setup everything</h2>
       <p>
-        Once the hardware is ready, we can proceed with the installation of the
-        firmware and the configuration of the services.
+        Once the hardware is ready, you can install the firmware and
+        configure the services.
       </p>
       <p>
-        Directly <a href="/docs/software#mobile-apps--firmwares">downloads images</a>
-        to flash on IoT devices, or get and compile their source code directly
-        from <a href="/docs/software#firmwares-sources-and-repositories">git repositories</a>.
+        You can directly <a href="/docs/software#mobile-apps--firmwares">downloads images</a> to
+        flash on the IoT devices, or get and compile the source code directly from
+        the <a href="/docs/software#firmwares-sources-and-repositories">Git repositories</a>.
       </p>
       <p>
-        Once all firmware have been loaded on the devices, then you can proceed
-        mounting the hardware into your camper. You can follow the "Mounting
-        instructions" from the chosen hardware. Finally, power up the box.<br />
+        Once all firmware has been loaded on the devices, you can mount the hardware in
+        your camper. Follow the "Mounting instructions" for the chosen hardware. Finally,
+        power up the box.<br/>
         <b>REMEMBER!</b> first, connect the service battery, then the services
         and finally the solar panels.
       </p>
       <p>
-        Now, your Smart Van box is active and broadcasting its own WiFi network.
+        Now, your Smart Van box is now active and broadcasting its own WiFi network.
       </p>
       {/*
       <p>
@@ -77,12 +77,11 @@ export function GettingStartedStep3() {
     <div>
       <h2>3. Connect the Smart Phone</h2>
       <p>
-        Get the mobile app from the app stores (not yet available),<br/>
-        <a href="/docs/software#mobile-apps--firmwares">download it</a> or
+        Get the mobile app from the app stores (not yet available), <a href="/docs/software#mobile-apps--firmwares">download it</a> or
         compile from <a href="/docs/software#firmwares-sources-and-repositories">his sources</a>.
       </p>
       <p>
-        Then, lunch the installed app and follow next steps:
+        Then, lunch the installed app and follow these steps:
       </p>
       <ol>
         <li>Tap on "Setup new Van"</li>

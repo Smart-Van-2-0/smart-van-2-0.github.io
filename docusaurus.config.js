@@ -56,6 +56,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/logos/social_banner.jpg',
+      announcementBar: {
+        id: 'updating',
+        content:
+          'Hi, this project is under heavily development, so come back often to check for new updates!',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'Home',
         logo: {
@@ -88,6 +96,10 @@ const config = {
             title: 'SmartVan @ JohnOSProject.org',
             items: [
               {
+                label: 'Specifications',
+                to: '/docs/specs',
+              },
+              {
                 label: 'Features',
                 to: '/docs/features',
               },
@@ -119,8 +131,12 @@ const config = {
             ],
           },
           {
-            title: 'Social',
+            title: 'eMail & Social',
             items: [
+              {
+                label: 'smartvan@johnosproject.org',
+                href: 'mailto:smartvan@johnosproject.org',
+              },
               {
                 label: 'Facebook',
                 href: 'https://www.facebook.com/profile.php?id=100095337571720',

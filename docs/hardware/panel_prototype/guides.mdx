@@ -1,0 +1,242 @@
+---
+title: Guides
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "Panel Prototype"
+export const hardware_status = "Available"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+# Guides
+
+The prototype panel is divided into **three blocks mounted on the main panel**:
+
+ * the Power Box
+ * The Integration Box
+ * and the IoT Box
+
+That allows independent work on each block to simplify the construction of the
+Smart Van Box. Specifically, the Integration and IoT blocks come with a
+dedicated case that can be easily mounted and dismounted from the main panel.
+In contrast, the devices in the Power block are individually fixed to the main
+panel.
+
+Before starting, it is advisable to **review the device list** from
+the [Hardware Requirements](/docs/hardware/panel_prototype/resources#hardware-requirements).
+After that, understand how and where to position the Smart Van Box inside your
+van. Finally, **proceed with the [assembly guides](#assembly-hardware), adapting
+them to your needs**.
+
+To complete the construction of your Smart Van Box, you need
+to **[install the object's software](#install-software) on the Raspberry Pi** in
+the IoT block. There are two methods: the first method provides the complete OS
+image: [JOD Smart Van image](/docs/software/jod_smart_van/jod_smart_van_image),
+to be flashed onto the Raspberry Pi's SD card; while the second method allows
+you to download and run [JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van)
+on an existing system.
+
+Now, all that's left is to mount the main panel onto your vehicle and
+connect [external devices](/img/hardware/panel_prototype/resources/BOMs-BlockExternal.pdf)
+such as the service battery, solar panel, and other services. Once
+everything is connected, switch on the switches in the following order:
+1st service battery, 2nd vehicle battery, and 3rd solar panels
+
+**Once your Smart Van Box is powered on, you can launch
+the [SV Mobile App](/docs/software#sv_mobile_app)** from your smart phone and
+initiate the first configuration procedure.
+
+
+## Assembly hardware
+
+The prototype's main panel contains the Power blocks devices plus the IoT and
+Integration blocks cases. The main panel is the base of the Smart Van Box and
+it's the first thing to build.
+
+As previously suggested, the main panel shape and sizes can be changed
+according to your needs. The only requirement is to have enough space to
+accommodate all devices and to allow the passage of the cables.
+
+The panel prototype, as other Smart Van Boxes, must be connected to some
+external device, such as a batteries, solar panels and other camper's
+services at your discretion (
+see [External HW and Devices requirements](/img/hardware/panel_prototype/resources/BOMs-BlockExternal.pdf)).
+
+1. **Shape Your Panel:**<br/>
+  Check the list of devices from the Power block to add to the main panel and
+  decide on their placement. Also, find a location for the cases of the
+  Integration and IoT blocks. You can find an example in
+  the [Main Panel shape and sizes](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Main%20Panel%20Schema.png)
+  diagram.<br/>
+  Always remember some simple rules: there should be sufficient air circulation;
+  if present, the inverter should be positioned as close as possible to the
+  fuses, and the service battery (external) should be placed as close as
+  possible to the main panel.
+2. **Place Power devices on the panel:**<br/>
+  Arrange all [Power block devices](/img/hardware/panel_prototype/resources/BOMs-BlockPower.pdf)
+  on the panel in their final positions. Feel free to take inspiration from
+  the [Power block's wiring diagram](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Power%20Block%20Wiring%20Schema.png)
+  or arrange them to best fit your van. This will help you to determine the
+  length of the cables and the shape of the conduits.
+3. **Prepare Power cables:**<br/>
+  Cut the cables of the appropriate size using conduits (order matters). Then,
+  solder the terminals or lugs according to where the cable needs to be
+  connected.
+  :::warning
+  Always use cables of the right size according to your system's power.<br/>
+  Additionally, ensure robust connections as damaged cables or poorly made
+  terminals could lead to short circuits or fires.
+  :::
+4. **Fix and Connect Power devices:**<br/>
+  Secure the Power block's devices on the panel using screws. Then, bend the
+  cables to give them the desired shape and connect them to the devices.
+5. **Assemble Integration block:**<br/>
+  Ensure that the dimensions of your devices match
+  the [3D model of the Integration block](/img/hardware/panel_prototype/resources/IntegrationBlock_001.stl)
+  case and proceed with printing. In case your devices differ from those
+  specified in the [BOMs Integration Box](/img/hardware/panel_prototype/resources/BOMs-BlockIntegration.pdf),
+  you can customize the [Blender file of the 3D model](/img/hardware/panel_prototype/resources/IntegrationBlock_001.blend).<br/>
+  After 3D printing the case, place the devices in their slots and proceed with
+  the wiring following the [Integration Box wiring diagram](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Integration%20Block%20Wiring%20Schema.png).<br/>
+  When installing fuses, remember to use fuses with the correct power rating
+  according to the service you will connect to the corresponding service's port.
+6. **Assemble the IoT block:**<br/>
+  Like for the Integration block, ensure that the dimensions of
+  your [IoT devices](/img/hardware/panel_prototype/resources/BOMs-BlockIoT.pdf)
+  match the 3D model of
+  the [IoT block case](/img/hardware/panel_prototype/resources/IoTBlock_002.stl)
+  and proceed with printing. To edit the model, you can use
+  the [IoT block Case (Blender)](/img/hardware/panel_prototype/resources/IoTBlock_002.blend)
+  file.<br/>
+  For [cabling the IoT block](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-IoT%20Block%20Wiring%20Schema.png),
+  it use a ribbon cable to connect the Raspberry Pi to all devices with a 40-PIN
+  header and also a small custom PCB board. All other devices within the IoT
+  block are interconnected and connected to the Raspberry Pi using the ports on
+  the custom PCB board.<br/>
+  - The IoT block requires a small PCB made from
+    a [perfboard and wires and connectors](/img/hardware/panel_prototype/resources/BOMs-CustomBoard.pdf).
+    This board houses the ports to connect the other devices in the block to
+    the ribbon cable and thus to the Raspberry Pi. Although this board involves
+    soldering a PCB, don't worry, it's perfect for practice. With a few
+    components, its cost is very low, but remember to order a few extra pieces.
+    You can find the [electrical scheme of the board](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Custom%20Board%20Electrical%20Scheme%20\(Hand-Made\).png)
+    and the [Raspberry and Boards Pin-outs](/img/hardware/panel_prototype/resources/RaspberryPi%202%20Boards%20Pinout.ods)
+    in the resources section.<br/>
+7. **Finish assembling the main panel:**<br/>
+  Position and connect the two Integration and IoT blocks to the main panel,
+  then link them together.<br/>
+  The Integration block receives its power directly from the solar charger in
+  the Power block; its outputs are connected to the camper's services (such as
+  lights, fans, fridge, etc.). Finally, its communication port is connected to
+  the IoT block.<br/>
+  The IoT block uses an uncontrolled output from the Integration block as a
+  12V power source. For communication with the Power block, a Serial to USB
+  cable is used, connected to the Solar Charger and the USB port of the
+  Raspberry Pi. Lastly, the external sensors of the IoT block are connected
+  through their respective communication ports.
+
+## Install Software
+
+### A. Flash the SD Card
+
+1. **Download JOD Smart Van Image:**<br/>
+  Ensure you have downloaded the
+  latest [JOD Smart Van image](/docs/software/jod_smart_van/jod_smart_van_image) from the
+  official page and store it on your computer.
+2. **Prepare SD Card:**<br/>
+  Insert the SD card into your computer and use a tool
+  like [RPi Imager](https://www.raspberrypi.com/software/),
+  [Etcher](https://www.balena.io/etcher/) or [Rufus](https://rufus.ie/) to
+  flash the JOD Smart Van image onto the SD card. Make sure to select the
+  correct drive and confirm the process.
+3. **Customize the JOD Smart Van:** (optional)<br/>
+  Once the flashing process is complete, you can mount the SD card partitions
+  from your computer and customize the JOD Smart Van configuration files.
+  Configs files are located in the `root` partition of the SD card into the
+  `/opt/jod_smart_van` folder.
+4. **Insert SD Card into Raspberry Pi:**<br/>
+  Once the flashing process is complete, safely eject the SD card from your
+  computer and insert it into the Raspberry Pi.
+5. **Power Up Raspberry Pi:**<br/>
+  After ensuring that you have connected the power supply of the IoT box to
+  the corresponding output of the Integration box, you can power up the
+  Raspberry Pi using the switch located on the UPS Pack_V3.<br/>
+  Alternatively, you have the option to charge the UPS Pack_V3 battery and
+  directly power your Raspberry Pi with it.
+6. **Connect the SV Mobile App:**<br/>
+  A few moments after powering up, launch
+  the [SV Mobile App](/docs/software#sv_mobile_app) on your smartphone and open
+  the 'first setup' function for your Smart Van Box. Wait for the new Smart Van
+  Box to be detected (via the emitted WiFi network), then follow the guided
+  setup procedure.
+
+*Note: Always refer to the official JOD Smart Van and SV Mobile App
+documentation for detailed instructions and troubleshooting tips during the
+flashing and connection process.*
+
+
+### B. Download and install
+
+Here are the manual installation steps for the JOD Smart Van software on the
+Raspberry Pi. These steps are useful if you want to install the software on an
+existing system. Make sure that the Raspberry Pi is configured to allows an SSH
+connection.
+
+1. **Connect to your Raspberry Pi using SSH:**<br/>
+  Use a tool like [PuTTY](https://www.putty.org/) or the terminal to connect to
+  your Raspberry Pi using SSH. Then, navigate to the desired installation
+  directory on your Raspberry Pi.
+  ```bash
+  $ ssh pi@<Raspberry_Pi_IP_Address>
+  rpi$ mkdir -p /opt/jod_smart_van
+  rpi$ cd /opt/jod_smart_van
+  ```
+  Ensure that you replace `<Raspberry_Pi_IP_Address>` with the actual IP
+  address of your Raspberry Pi, and to have the necessary credentials to log in.
+2. **Configure RaspberryPi communication ports:**<br/>
+  Enable the communication ports by adding the following line to the
+  `/boot/config.txt` file, then reboot.
+  ```bash
+  rpi$ sudo nano /boot/config.txt
+  rpi$ sudo reboot
+  ```
+  ```bash
+  enable_uart=1
+  ... missing lines, check the JOD Smart Van Image repository as reference
+  ```
+3. **Download JOD Smart Van:**<br/>
+  Using `wget`, download the latest JOD Smart Van release from the official and
+  extract it.
+  [GitHub repository](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/releases/).
+   ```bash
+   rpi$ wget https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/releases/download/0.1.0/JOD_Smart_Van-0.1.0.tar.xz
+   rpi$ tar -xf JOD_Smart_Van-0.1.0.tar.xz
+   ```
+4. **Run the JOD Smart Van daemon:**<br/>
+  After changing directory to the JOD Smart Van folder, you can run the JOS
+  Smart Van as a background daemon or a command line application (useful for
+  debugging purpose).
+   ```bash
+   rpi$ cd JOD_Smart_Van-0.1.0
+   rpi$ bash start.sh TRUE     # run it as a command line application
+   rpi$ bash start.sh          # run it as a background daemon
+   rpi$ bash stop.sh           # halt the background daemon
+   ```
+   The JOD Smart Van can be installed as a system service and executed at
+   startup. To do so, you can use the provided installation script.
+   ```bash
+   rpi$ sudo bash install.sh
+   ```

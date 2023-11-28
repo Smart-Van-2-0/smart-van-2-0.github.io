@@ -1,0 +1,140 @@
+---
+title: Panel Prototype
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle, HardwareHeader } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "Panel Prototype"
+export const hardware_status = "Available"
+export const hardware_code = "panel_prototype"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+<HardwareHeader
+  code={hardware_code}>
+
+This is **the first prototype of the Smart Van project**, used for the
+development of the [JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van).
+This panel is designed to provide convenient access to integrated devices,
+facilitating development and testing. However, **this prototype can be easily
+adapted to another form and used as a control unit for your camper**.
+
+Currently, this panel includes all devices for electrical management with
+charging from solar panels and a 200V power column. It provides mobile internet
+connectivity through the 4G module, environmental monitoring with sensors, and
+the ability to connect 8 camper services with as many physical buttons.<br/>
+Furthermore, this prototype is equipped with a GNSS module and a buffer battery
+for IoT components. This way, your van will stay connected even when the vehicle
+batteries are completely discharged or not plugged.
+
+</HardwareHeader>
+
+
+## Build your Smart Van Box
+
+Explore the documentation of this prototype to get an idea of how to adapt it to
+your needs. We recommend looking at the list of [required materials](/docs/hardware/panel_prototype/resources#hardware-requirements)
+and [case 3D models](/docs/hardware/panel_prototype/resources#cases) to
+understand which devices need to be included in this prototype and where you can
+position them.
+
+1. <h3>Prepare all the necessary materials</h3>
+
+  Check the [Hardware Requirements](/docs/hardware/panel_prototype/resources#hardware-requirements)
+  and ensure you have everything needed to start. Note that many devices can be
+  replaced with equivalent ones. More information can be found in
+  the [Software/Firmwares](/docs/software#other-sources-and-repositories) pages
+  related to the devices to be replaced.
+
+2. <h3>Assemble the Smart Van Box's blocks and connect them</h3>
+
+  Build each block following the [assembly guides](/docs/hardware/panel_prototype/guides#assembly).
+  After that, position them on the panel and connect them together. If you
+  prefer, you are free to change the arrangement and adapt it to the shape of
+  your van.
+
+3. <h3>Load the JOD Smart Van image and power everything on</h3>
+
+  Flash the [JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van) image
+  onto the SD card to be inserted into the IoT block's Raspberry Pi. After that,
+  insert it into the Raspberry Pi and power it on.
+
+
+## Panel's blocks
+
+The devices in this prototype are streamlined into **three distinct blocks** for
+ease of understanding: Power, Integration, and IoT.
+
+The **IoT block** serves as the brain and, leveraging its Raspberry Pi, can
+seamlessly expose the capabilities of the Smart Van Box to the SV Mobile App.
+Additionally, this block houses a variety of environmental sensors and GPS and
+GNSS modules.
+
+In the remaining two blocks, you'll find the **Power** electronics, featuring a
+solar charger, inverter, fuses, etc., alongside the **Integration** section for
+camper services, encompassing relays, dimmers, and buttons.
+
+### Power Block
+
+The Power Block houses all devices for managing electrical energy, including the
+Solar Charger, inverter, as well as fuses and switches for system and user
+protection. Check out the BOM for a full list of the devices.
+
+* [BOMs Power Block](/img/hardware/panel_prototype/resources/BOMs-BlockPower.pdf)
+* [Wiring Power Block](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Power%20Block%20Wiring%20Schema.png)
+* [Main Panel shape and sizes](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Main%20Panel%20Schema.png)
+
+### Integration Block
+
+Within the Integration block, you'll find the actuators and their respective fuses
+to control various camper services, moreover, the block houses some physical
+buttons.
+
+Remember to connect the services according to their power requirements. Each
+12V output of the Integration Box has a maximum capacity, so ensure that the
+connected service requires lower power.
+
+* [BOMs Integration Box](/img/hardware/panel_prototype/resources/BOMs-BlockIntegration.pdf)
+* [Wiring Integration Box](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Integration%20Block%20Wiring%20Schema.png)
+* [Integration Box Case](/img/hardware/panel_prototype/resources/IntegrationBlock_001.stl)
+  * [Integration Box Case (Blender)](/img/hardware/panel_prototype/resources/IntegrationBlock_001.blend)
+
+### IoT Box
+
+The IoT block serves as the brain of the Smart Van Box. It's an IoT device based
+on Raspberry Pi that, with [JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van),
+enables monitoring and controlling all devices connected to the Raspberry Pi
+and, consequently, the Smart Van Box.
+
+Within this block, various sensors are integrated, such as environmental
+sensors, gas detection sensors, but also GPS and GSM modules. Additionally, the
+block houses a buffer battery (UPS) that provides power to the IoT component
+even when the service battery is disconnected or depleted.
+
+The IoT block use a ribbon cable to connect the Raspberry Pi to all devices
+with a 40-PIN header like the [Sense Hat](/docs/software/firmware/fw_sensehat),
+the [SIM7600](/docs/software/firmware/fw_sim7600) and also a small custom
+PCB board. This custom board houses the ports to connect the other devices in
+the IoT block to the ribbon cable and thus to the Raspberry Pi.
+
+* [BOMs IoT Box](/img/hardware/panel_prototype/resources/BOMs-BlockIoT.pdf)
+* [BOMs Custom Board](/img/hardware/panel_prototype/resources/BOMs-CustomBoard.pdf)
+* [Wiring IoT Box](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-IoT%20Block%20Wiring%20Schema.png)
+  * [Electrical scheme Custom Board](/img/hardware/panel_prototype/resources/Design%20Panel%20Prototype-Custom%20Board%20Electrical%20Scheme%20\(Hand-Made\).png)
+    * [Raspberry Pinout](/img/hardware/panel_prototype/resources/RaspberryPi%202%20Boards%20Pinout.pdf)
+    * [Raspberry and Boards Pin-outs](/img/hardware/panel_prototype/resources/RaspberryPi%202%20Boards%20Pinout.ods)
+* [IoT Box Case](/img/hardware/panel_prototype/resources/IoTBlock_002.stl)
+  * [IoT Box Case (Blender)](/img/hardware/panel_prototype/resources/IoTBlock_002.blend)
+  * [IoT Box Case Render A](/img/hardware/panel_prototype/resources/IoTBlock_002_A.png)
+  * [IoT Box Case Render B](/img/hardware/panel_prototype/resources/IoTBlock_002_A.png)

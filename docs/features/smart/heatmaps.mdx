@@ -1,0 +1,53 @@
+---
+title: Heatmaps
+hide_title: true
+sidebar_position: 7
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Smart Heatmaps"
+export const feature_status = "Development"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Position", sub_group: "GNSS", desc: "Vehicle location data for enhanced situation detection and behavioral analysis."},
+  { group: "Energy", sub_group: "Generation", desc: "Information on battery charging as a resource usage."},
+  { group: "IoT", sub_group: "Internet", desc: "Accessing signal quality information as a resource to analyze."},
+]
+
+
+
+<FeatureTitle
+  name={feature_name}
+  status={feature_status} />
+
+Smart-heatmaps are a new way to see maps. Using location data and other data,
+smart-heatmaps can create maps that show the distribution of things like
+internet signal quality, solar charging capacity, points of interest, and
+travel statistics.
+
+Smart-heatmaps can be used for a variety of purposes, including:
+
+* Discovering new places: Smart-heatmaps can be used to identify areas with a
+  high concentration of points of interest or with good network coverage. This
+  can help travelers to discover new places to visit or to find a place to
+  connect to the internet.
+* Moving like a local: Smart-heatmaps can be used to identify popular areas or
+  busy streets. This can help travelers to move like a local and avoid crowded
+  areas.
+* Planning trips: Smart-heatmaps can be used to identify areas with good
+  network coverage or with a high concentration of points of interest. This
+  can help travelers to plan their trips more efficiently.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />

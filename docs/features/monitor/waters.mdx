@@ -1,0 +1,51 @@
+---
+title: Waters
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Water tanks Monitoring"
+export const feature_status = "Development"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Sensors", sub_group: "Living", desc: "Sensors designed to detect the environment like water tanks."},
+]
+
+
+
+<FeatureTitle
+name={feature_name}
+status={feature_status} />
+
+With SmartVan Box, you can keep track of the status of your water tanks in real
+time, configure them as fresh, gray, or black water, and automate refilling and
+emptying tasks.
+
+SmartVan Box will alert you when the water level is low or when it's time to
+refill or empty your tanks. This way, you can forget about your water tanks and
+focus on your trip.
+
+Here are some examples of how SmartVan Box can help you:
+
+* If you're in a remote area with no water, SmartVan Box will remind you when
+  your tanks are low and help you find a place to refill them.
+* If you're planning a long campervan road trip, SmartVan Box can help you
+  calculate your water usage and ensure you have enough water for the trip.
+* If you're camping with a large group, SmartVan Box can help you track water
+  usage and ensure everyone has enough water.
+* With SmartVan Box, managing the water in your campervan is easy and quick.
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+specs_required={specs_required} />
