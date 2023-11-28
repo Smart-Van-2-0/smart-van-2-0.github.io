@@ -1,0 +1,39 @@
+---
+title: AccessPoint
+hide_title: true
+sidebar_position: 3
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "IoT AccessPoint"
+export const specs_group_path = "IoT > AccessPoint"
+export const specs_group_pillars = []
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+The IoT module's <b>Access Point function</b> allows it to share its internet connection
+with other devices. This section provides information about this function,
+including the number of connected devices and the ability to activate/deactivate
+the function.
+
+</SpecificationHeader>
+
+TODO: ToBeDefined
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />

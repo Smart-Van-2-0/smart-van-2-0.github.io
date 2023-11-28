@@ -1,0 +1,46 @@
+---
+title: Engine
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "Sensors Engine"
+export const specs_group_path = "Sensors > Engine"
+export const specs_group_pillars = []
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+<b>Data coming directly from the engine</b> can provide a wealth of information
+about the health of the vehicle. This information can be used to identify
+potential problems early on, before they become serious.
+
+</SpecificationHeader>
+
+TODO: ToBeDefined
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />
+
+
+<!--
+Notes:
+
+Checkout the ODB II Scanner device to list interesting data
+
+-->

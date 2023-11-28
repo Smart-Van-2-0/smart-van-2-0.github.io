@@ -1,0 +1,134 @@
+---
+title: Documentation
+hide_title: true
+sidebar_position: 1
+sidebar_class_name: hidden
+hide_table_of_contents: true
+---
+
+<img src="/img/docs/header.png"
+  style={{
+    padding: "32px",
+    maxHeight: "500px",
+    margin: "auto",
+    display: "block"
+  }} />
+
+# SmartVan's Documentation
+
+import ImageClickable from '@site/src/components/ImageClickable';
+import Card from '@mui/material/Card';
+import GettingStarted from '@site/src/components/GettingStarted';
+import { MapFeatures, MapHardware, MapSoftware, MapSpecs } from '@site/src/components/WebSiteMap';
+
+export const div_style = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  marginBottom: 'var(--ifm-leading)',
+}
+export const card_style = {
+  minWidth: `200px`,
+  maxWidth: `500px`,
+  height: '450px',
+  display: 'table-cell',
+  verticalAlign: 'middle',
+  padding: "0px var(--ifm-leading)",
+}
+export const card_div_style = {
+  textAlign: "center",
+  maxWidth: "300px",
+  padding: "var(--ifm-leading)",
+  paddingBottom: "0px",
+}
+
+Welcome to the Smart Van official documentation.
+
+Explore the Smart Van project on these pages. Start with the list of features
+to see **how Smart Van can help you on your road adventures**. Or, for more
+technical users, browse the project specifications to understand **how
+information is exchanged** between the Smart Van Box and the Mobile App.
+
+<div style={div_style}>
+  <a href="/docs/features"
+    style={{textDecoration: "none"}}>
+    <Card sx={card_style}>
+      <ImageClickable
+        src="/img/docs/features_logo.png"
+        alt="SmartVan's Features"
+        width="300px" />
+      <div style={card_div_style}>
+        <MapFeatures/><br/>
+        <p>
+          Discover what a SmartVan can do for you. Here there's the full list of
+          features of the Smart Van project.
+        </p>
+      </div>
+    </Card>
+  </a>
+  <a href="/docs/specs"
+    style={{textDecoration: "none"}}>
+    <Card sx={card_style}>
+      <ImageClickable
+        src="/img/docs/specs_logo.png"
+        alt="SmartVan's Specifications"
+        width="300px" />
+      <div style={card_div_style}>
+        <MapSpecs/><br/>
+        <p>
+          Understand how it works. To know how the Smart Van Box share data with
+          the Mobile App, starts from the project's specifications.
+        </p>
+      </div>
+    </Card>
+  </a>
+</div>
+
+The Software and Hardware sections provide **all the details you need to update,
+modify, or create your own Smart Van Box**. The Hardware section includes
+documentation for different models of Smart Van Box, so you can choose the
+option that best suits your needs. On the other hands, the Software section
+includes not only the firmware references, but also the documentation for the
+Smart Van Mobile App, including download links, user manuals, and source code.
+
+<div style={div_style}>
+  <a href="/docs/hardware"
+    style={{textDecoration: "none"}}>
+    <Card sx={card_style}>
+      <ImageClickable
+        src="/img/docs/hardware_logo.png"
+        alt="SmartVan's Hardware"
+        width="300px" />
+      <div style={card_div_style}>
+        <MapHardware/><br/>
+        <p>
+          All Smart Van Box models, tutorials and schematics to create your own.
+        </p>
+      </div>
+    </Card>
+  </a>
+  <a href="/docs/software"
+    style={{textDecoration: "none"}}>
+    <Card sx={card_style}>
+      <ImageClickable
+        src="/img/docs/software_logo.png"
+        alt="SmartVan's Software"
+        width="300px" />
+      <div style={card_div_style}>
+        <MapSoftware/><br/>
+        <p>
+          Downloads and sources of all the software used by the SmartVan project
+        </p>
+      </div>
+    </Card>
+  </a>
+
+</div>
+
+Everything is published under open source licenses.
+
+---
+
+## Getting started
+
+<GettingStarted notitle/>

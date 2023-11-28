@@ -1,0 +1,39 @@
+---
+title: Media
+hide_title: true
+sidebar_position: 4
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSpecification
+ VER    1.0.3
+-->
+
+import { SpecificationTitle, SpecificationHeader, SpecificationDetails } from '@site/src/components/templates/PageSpecification';
+
+export const specs_group_name = "IoT Media"
+export const specs_group_path = "IoT > Media"
+export const specs_group_pillars = []
+
+<SpecificationTitle
+  name={specs_group_name} />
+
+<SpecificationHeader
+  name={specs_group_name}
+  pillars={specs_group_pillars} >
+
+The IoT module can integrate a variety of multimedia devices, including
+Bluetooth speakers, infotainment systems, and user smartphones and tablets. This
+section provides information on how to <b>access and control these media
+devices</b>.
+
+</SpecificationHeader>
+
+TODO: ToBeDefined
+
+## Specs details
+
+<SpecificationDetails
+  name={specs_group_name}
+  group_path={specs_group_path}
+  pillars={specs_group_pillars} />

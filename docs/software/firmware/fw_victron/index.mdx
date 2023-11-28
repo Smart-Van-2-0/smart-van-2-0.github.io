@@ -1,0 +1,111 @@
+---
+title: FW Victron
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "FW Victron"
+export const software_status = "Development"
+export const software_code = "fw_victron"
+export const software_version = "1.0.2"
+export const software_category = "Firmware"
+export const software_language = "Python"
+export const specs_provided = [
+  { fw_value: "battery_voltage", group: "Energy", sub_group: "Storage",  spec: "Voltage"},
+  { fw_value: "battery_voltage_percentage", group: "Energy", sub_group: "Storage",  spec: "Percentage"},
+  { fw_value: "battery_voltage_min", group: "Energy", sub_group: "Storage",  spec: "Min"},
+  { fw_value: "battery_voltage_max", group: "Energy", sub_group: "Storage",  spec: "Max"},
+  { fw_value: "battery_current", group: "Energy", sub_group: "Generation",  spec: "Current"},
+  { fw_value: "panel_voltage", group: "Energy", sub_group: "Generation",  spec: "Voltage"},
+  { fw_value: "panel_power", group: "Energy", sub_group: "Generation",  spec: "Power"},
+  { fw_value: "panel_power_percent", group: "Energy", sub_group: "Generation",  spec: "Percentage"},
+  { fw_value: "panel_power_max", group: "Energy", sub_group: "Generation",  spec: "Max Power"},
+  { fw_value: "load_current", group: "Energy", sub_group: "Consumption",  spec: "Current"},
+  { fw_value: "load_voltage", group: "Energy", sub_group: "Consumption",  spec: "Voltage"},
+  { fw_value: "load_power", group: "Energy", sub_group: "Consumption",  spec: "Power"},
+  { fw_value: "load_power_percent", group: "Energy", sub_group: "Consumption",  spec: "Percentage"},
+  { fw_value: "load_power_max", group: "Energy", sub_group: "Consumption",  spec: "Max Power"},
+]
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+<SoftwareHeader
+  name={software_name}
+  code={software_code}
+  category={software_category}
+  language={software_language}
+  current_status={software_status}
+  current_version={software_version}
+  url_logo="/img/software/firmware/fw_victron/fw_victron_image.png"
+  url_repo="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/"
+  url_downloads="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/tags/"
+  url_support="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/issues/" >
+
+Introducing our Python module designed for seamless **data retrieval
+from [Victron](https://www.victronenergy.com/) devices** with VE.Direct
+support, delivering real-time updates on the local DBus. Aligned with the JOD
+Smart Vans specifications, this script caters specifically **to the
+Energy's [Storage](/docs/specs/energy/storage), [Generation](/docs/specs/energy/generation)
+and [Consumption](/docs/specs/energy/consumption) specification** sub-groups,
+providing essential values.
+
+Once activated, the script effortlessly reads data from the specified serial
+port and promptly updates the DBus with the latest values. The DBus service and
+its properties dynamically adapt to the PID retrieved from the device. To
+determine if your Victron device is compatible with this firmware, explore the
+[Devices by ID](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/blob/main/docs/supported_devices.md#devices-by-pid)
+section and discover the available data mappings on
+the [Value mapping](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/blob/main/docs/values_mapping.md)
+page.
+
+
+</SoftwareHeader>
+
+
+## Specs provided
+
+<SoftwareSpecsProvidedText />
+
+<SoftwareSpecsProvidedTable
+  specs_provided={specs_provided} />
+
+
+## Usage
+
+Effortlessly gather data from your Victron device by following these
+straightforward steps. Physically connect the Victron device to your PC using a
+Serial To USB cable. Download the firmware (a Python script) and execute it on
+the connected PC, compatible with USB-equipped PCs or embedded devices like the
+Raspberry Pi.
+
+Before running the firmware, (1) verify the serial port name and (2) install the
+necessary software prerequisites. Upon connection, a virtual device is generated,
+and you can confirm the port name in your PC's resource center or via
+the `ls /dev/tty*` command, defaulting to `/dev/ttyUSB0`.
+
+For software prerequisites, install a [Python](https://www.python.org)
+interpreter and project dependencies using the `python -r requirements.txt`
+command.
+
+Now, you're ready to execute the firmware with the following command:
+
+```shell
+$ python run.py -p {PORT_NAME}
+```
+
+For detailed insights into running the firmware, consult
+the [README.md](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron#readme)
+in the source code or visit the [Remote Usage](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/blob/main/docs/remote_usage.md)
+page.

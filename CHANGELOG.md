@@ -33,7 +33,7 @@
   * Configured `docs` with source dir into `section` and `editUrl`
   * Configured `blog` with `editUrl`
   * Configured Layout::NavBar: title, logo, and items
-  * Configured Layout::Footer with the 3 columns: 'SmartVan @ JohnOSProject.org', 'Other Web Sites' and 'Social'
+  * Configured Layout::Footer with the 3 columns: 'SmartVan @ JohnOSProject.org', 'Other WebSites' and 'Social'
   * Configured colorMode and tableOfContents
   * Configured social card as `img/logos/social_banner.png`
   * Set onBrokenLinks as `warn`
@@ -55,6 +55,16 @@
 
 
 ## Content
+
+### Version 20231128
+
+* Updated Software and Hardware pages to WebSite version 1.1.0
+* Enabled the announcement bar on the homepage
+* Added Specifications, Features pages
+* Updated Software adn Hardware pages
+* Added firmwares to Software pages
+* Various fixes and text refectories
+* Added a Blog posts for FW Victron v 1.0.2, Maker Faire Rome and Website update
 
 ### Version 20230918
 

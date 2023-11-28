@@ -1,0 +1,55 @@
+---
+title: Smart Van - Android
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "Smart Van for Android"
+export const software_status = "Development"
+export const software_code = "sv_mobile_app_android"
+export const software_version = "0.1.0"
+export const software_category = "Mobile App"
+export const software_language = "Java"
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+<SoftwareHeader
+  name={software_name}
+  code={software_code}
+  category={software_category}
+  language={software_language}
+  current_status={software_status}
+  current_version={software_version}
+  url_logo="/img/software/sv_mobile_app_android/sv_mobile_app_android_logo_200.png"
+  url_repo="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android/"
+  url_downloads="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android/releases/"
+  url_support="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android/issues" >
+
+import { MapFeatures } from '@site/src/components/WebSiteMap';
+
+Empower your Smart Van experience with the Mobile App – a comprehensive tool
+that seamlessly integrates with all project specifications. This dynamic app
+ensures access to all available <MapFeatures />, adapting intelligently to the
+capabilities of your Smart Box. If certain functions are unavailable from the
+Smart Box, the corresponding app features are gracefully disabled.
+
+With the Mobile App, users gain full control over their Smart Van, whether in
+close proximity or remotely via cloud connection. Enjoy the convenience of
+managing your Smart Van's functionalities with ease, ensuring a connected and
+efficient experience wherever you are. Take charge of your Smart Van journey
+like never before, harnessing the power of our intuitive Mobile App for an
+unparalleled level of control and convenience.
+
+</SoftwareHeader>

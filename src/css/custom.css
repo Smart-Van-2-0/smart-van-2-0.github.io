@@ -39,3 +39,7 @@ a.anchor {
 .hidden {
   display: none !important;
 }
+
+img {
+  max-width: none;
+}

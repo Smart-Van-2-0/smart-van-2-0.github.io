@@ -1,0 +1,44 @@
+---
+title: Low-Services
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageFeature
+ VER    1.0.3
+-->
+
+import { FeatureTitle } from '@site/src/components/templates/PageFeature';
+import { FeatureSpecsRequiredText, FeatureSpecsRequiredTable } from '@site/src/components/templates/PageFeature';
+
+export const feature_name = "Low-Power Services control"
+export const feature_status = "Proposed"         // Proposed, Development, Beta, Stable
+export const specs_required = [
+  { group: "Services", sub_group: "Actuators", desc: "On/off and dimming control of low-power devices."},
+]
+
+
+
+<FeatureTitle
+  name={feature_name}
+  status={feature_status} />
+
+
+# Feature - Low-Power Services control
+
+Connect and control your camper's low-consumption services. Lights, fans, and
+water pumps are all small devices (12V and < 10A) that can be connected to the
+Smart Van box. Once connected, you can control them remotely from your smartphone
+or tablet using the Smart Van app. You can also add them to automations that
+will turn them on or off automatically based on certain conditions, such as
+time of day, temperature, or battery level. More details on the automations on
+the [relevant pages](/docs/features/control).
+
+
+## Specs required
+
+<FeatureSpecsRequiredText />
+
+<FeatureSpecsRequiredTable
+  specs_required={specs_required} />
