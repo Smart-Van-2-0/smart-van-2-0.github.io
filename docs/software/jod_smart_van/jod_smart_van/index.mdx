@@ -58,3 +58,82 @@ Actually, the first version contains only the support to the solar charger
 repository for more info on supported devices and which data are provided.
 
 </SoftwareHeader>
+
+
+## Usage
+
+### System requirements
+
+To run the JOD Smart Van distribution successfully, it's essential to have the
+following software installed: Java and Python.
+
+* Java 8 or higher: for JOD execution
+* python3: for firmware execution
+* python3-venv: for venv option on firmware execution
+
+Additionally, depending on the enabled firmwares, it may be necessary to fulfill
+their requirements. Here is the list of firmwares included in the JOD Smart Van
+distribution:
+
+* [FW Victron](/docs/software/firmware/fw_victron): v 1.0.2 [Sources](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/)
+* [FW SIM 7600](/docs/software/firmware/fw_sim7600): v 1.0.0 [Sources](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sim7600/)
+* [FW UPS Pack_V3](/docs/software/firmware/fw_upspack_v3): v 1.0.0 [Sources](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.upspack_v3/)
+* [FW Sense Hat](/docs/software/firmware/fw_sensehat): v 1.0.0 [Sources](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sensehat/)
+* [FW IO Exp](/docs/software/firmware/fw_ioexp): v 1.0.0 [Sources](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.ioexp/)
+
+:::warning
+Both the JOD Smart Van distribution and the firmwares are developed and tested
+using linux. Therefore, it is recommended to use a linux system to run the JOD
+Smart Van distribution.
+:::
+
+### Download and run
+
+The most common method to run JOD Smart Van distribution is on an embedded
+device, such as a Raspberry Pi. The procedure is similar to many other software
+installations: download, extract, and run.
+
+1. **Download:**
+  Download the latest available version of JOD Smart Van in compressed format.
+  For a list of versions and respective links, visit
+  the [Downloads](/docs/software/jod_smart_van/downloads)
+  page or directly the [Release@GitHub](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/releases)
+  for download links.
+    ```shell
+    $ wget https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/archive/refs/tags/1.0.0.tar.gz
+    ```
+2. **Extract:**
+  Extract the downloaded file and navigate into the created folder.
+    ```shell
+    $ tar -xzf 1.0.0.tar.gz -c JOD_Smart_Van
+    $ cd JOD_Smart_Van/1.0.0
+    ```
+3. **Run:**
+  Start JOD Smart Van; along with the JOD daemon, the enabled firmwares will
+  also be launched. You can interact with the JOD Smart Van instance using the
+  [JOD Shell](https://docs.johnosproject.org/references/josp/jod/specs/shell)
+  commands.
+     ```shell
+      $ bash start.sh true
+         >> type 'exit` to stop the JOD Smart Van instance
+      ```
+  You can also run JOD Smart Van in background mode and the stop it, using the
+  following commands:
+     ```shell
+      $ bash start.sh
+      $ bash stop.sh
+      ```
+
+Once satisfied, you can install JOD Smart Van as a service and ensure it runs
+on every system boot. Otherwise, check
+the [Run on development machine](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/blob/main/docs/development.md#run-on-development-machine)
+section to start an instance of JOD Smart Van that simulate the underlying
+hardware.
+
+More details on the JOD Smart Van distribution configs, execution, deployment
+and installation can be found in
+the [Usage](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/blob/main/docs/usage.md)
+page from the source repository.<br/>
+Otherwise, if you are interested in the development of JOD Smart Van, check
+the [Development](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/blob/main/docs/development.md)
+page.
