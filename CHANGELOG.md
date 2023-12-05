@@ -56,6 +56,13 @@
 
 ## Content
 
+### Version 20231205
+
+* Updated various Specifications details
+* Updated JOD Smart Van docs
+* Added a Blog posts for JOD Smart Van 1.0.0 release
+* Various fixes and text refectories
+
 ### Version 20231128
 
 * Updated Software and Hardware pages to WebSite version 1.1.0
