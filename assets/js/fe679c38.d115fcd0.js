@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksmart_van_2_0_github_io=self.webpackChunksmart_van_2_0_github_io||[]).push([[1732],{2125:a=>{a.exports=JSON.parse('{"label":"svbox","permalink":"/blog/tags/svbox","allTagsPath":"/blog/tags","count":1}')}}]);

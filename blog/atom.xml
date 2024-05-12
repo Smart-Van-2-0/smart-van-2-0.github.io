@@ -2,11 +2,42 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://smartvan.johnosproject.org/blog</id>
     <title>Smart Van Project Blog</title>
-    <updated>2023-12-05T00:00:00.000Z</updated>
+    <updated>2024-05-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://smartvan.johnosproject.org/blog"/>
     <subtitle>Smart Van Project Blog</subtitle>
     <icon>https://smartvan.johnosproject.org/img/logos/logo_32.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[🚀 Introducing the New SVBox IoT 1.0]]></title>
+        <id>https://smartvan.johnosproject.org/blog/2024/05/06/published-new-svbox-iot-10</id>
+        <link href="https://smartvan.johnosproject.org/blog/2024/05/06/published-new-svbox-iot-10"/>
+        <updated>2024-05-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are thrilled to announce the release of our latest model, the SVBox IoT 1.0.]]></summary>
+        <content type="html"><![CDATA[<p>We are thrilled to announce the release of our latest model, the SVBox IoT 1.0.
+This new model is a significant upgrade from our previous versions, focusing on
+the Internet of Things (IoT) and the 'brain' of the Smart Van Box.</p><img loading="lazy" src="/img/hardware/svbox_10/dev_img.jpg" alt="JOD Smart Van logo" width="500" class="img_ev3q"><p>The <strong>SVBox IoT 1.0 is designed for daily use within your vehicles</strong>. It is a
+compact, efficient, and powerful device that can seamlessly integrate with your
+existing vehicle systems.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="assembly-and-configuration">Assembly and Configuration<a href="#assembly-and-configuration" class="hash-link" aria-label="Direct link to Assembly and Configuration" title="Direct link to Assembly and Configuration">​</a></h2><p>We have made the assembly process as simple and intuitive as possible. The SVBox
+IoT 1.0 uses HAT modules, which are designed to be stacked one on top of the other,
+much like LEGO bricks. This design allows for easy assembly and disassembly,
+providing flexibility and convenience.</p><p>In addition to the main HAT modules, there are three other boards (2x gas sensors</p><ul><li>relays) that need to be connected via cables to the main block of the device,
+which also houses the Raspberry Pi. Once you have received all the components,
+you can proceed with the assembly.</li></ul><h2 class="anchor anchorWithStickyNavbar_LWe7" id="specifications-and-features">Specifications and Features<a href="#specifications-and-features" class="hash-link" aria-label="Direct link to Specifications and Features" title="Direct link to Specifications and Features">​</a></h2><p>The SVBox IoT 1.0 comes with a host of features and specifications. It can provide
+GNSS info from various systems (GPS/Beidou/GLONASS/GALILEO/QZSS), detect movement,
+orientation, and the magnetic field, provide environment-related data, and much more.</p><p>With the AW9523B, the IO Expansion board can listen up to 16 buttons (8 by default)
+and control up to 16 relays (8 by default). Victron's SmartSolar/BlueSolar series
+devices can provide info about the service's battery status, solar panel charge,
+and load consumption.</p><p>The UPS Pack with its own battery for the IoT block provides info about the
+battery status. The SIM7600 module can provide mobile connectivity and its
+status. You can use the onboard RPi WiFi to provide a local WiFi network and
+keep track of the RPi load status.</p>]]></content>
+        <author>
+            <name>Roberto Pompermaier</name>
+            <uri>https://www.robypomper.org</uri>
+        </author>
+        <category label="release" term="release"/>
+        <category label="svbox" term="svbox"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[🚀 Released JOD Smart Van v.1.0.0]]></title>
         <id>https://smartvan.johnosproject.org/blog/2023/12/05/released-jod-smart-van</id>
