@@ -19,21 +19,14 @@ export function GettingStartedStep1() {
     <div>
       <h2>1. Get the Hardware</h2>
       <p>
-        The easiest way to get started is to build one of the official
-        prototypes. With each development cycle, a new reference
-        prototype is released.
+        The quickest way to get started is to build your own device. Nothing scary, if you've
+        ever played with LEGO, then you'll have no trouble assembling the Smart Van Box. Check
+        the shopping list, order the necessary components, and put everything together.
       </p>
       <p>
-        There are currently two prototypes under development:
-      </p>
-      <ul>
-        <li> <LinkHardwareModel code="panel_prototype" label="Panel Prototype" /></li>
-        <li> Box Prototype (Coming soon)</li>
-      </ul>
-      <p>
-        For each prototype, you can find the BOM lists, wiring diagrams,
-        case specs, and 3D models, as well as the assembly guides and
-        installation tutorials.
+        Go to the page of the <LinkHardwareModel code="svbox_10" label="latest" /> available
+        Smart Van Box, or visit the <a href="docs/hardware">Hardware</a> section
+        where you can find other models or upload your own.
       </p>
     </div>
   );

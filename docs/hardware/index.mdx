@@ -46,6 +46,10 @@ export const text_style = {
 export const descr_style = {
   color: "var(--ifm-font-color-base)",
 }
+export const img_style = {
+  float: 'left',
+  marginRight: '8px',
+}
 
 The first part of composing a SmartVan is the hardware. This is defined as the
 **set of devices to be installed in the van** and connected to pre-existing
@@ -61,7 +65,7 @@ distinct entities. The object provides a set of states and actions to the
 service. This organizational structure is also reflected in the Smart Van
 project <MapSpecs />:
 
-:::noteSV Box vs. SV Mobile App
+:::note SV Box vs. SV Mobile App
 
 Each Smart Van Box offers a series of states and actions (the SV specifications),
 while the SV Mobile App utilizes them to implement its own functionalities.
@@ -83,11 +87,27 @@ Once you've identified the Smart Van Box model that best suits your needs, you
 can start building and customizing it to fit your camper.
 
 <div style={div_style}>
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/hardware/svbox_10">
+      <div style={text_style}>
+        <h3>SVBox IoT 1.0</h3>
+        <img style={img_style} src="/img/hardware/svbox_10/dev_img.jpg" alt="The panel prototype image" width="100"/>
+        <p style={descr_style}>
+          The new model of the SmartVan Box includes only the IoT/Brain part of
+          the previous boxes. It is designed to be more easy to assemble and install.
+        </p>
+      </div>
+    </a>
+  </Card>
+
   <Card sx={card_style}>
     <a style={link_style}
       href="/docs/hardware/panel_prototype">
       <div style={text_style}>
         <h3>Panel Prototype</h3>
+        <img style={img_style} src="/img/hardware/panel_prototype/dev_img.jpg" alt="The panel prototype image" width="100"/>
         <p style={descr_style}>
           The initial prototype of the Smart Van Box. The main purpose of this
           prototype is for project development and use as a demo.
@@ -106,4 +126,5 @@ can start building and customizing it to fit your camper.
         </p>
       </div>
   </Card>
+
 </div>
