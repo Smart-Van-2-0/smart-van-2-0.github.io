@@ -1,0 +1,81 @@
+---
+title: SVBox IoT 1.0
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle, HardwareHeader } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "SVBox IoT"
+export const hardware_status = "Available"
+export const hardware_code = "svbox_10"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+<HardwareHeader
+  code={hardware_code}>
+
+This model of the Smart Van Box is designed **to be used daily within your own
+vehicles**.
+
+This model can provide mobile internet connectivity through the 4G module
+environmental monitoring with sensors, and the ability to connect up to 8 camper's
+services with as many physical buttons.<br/>
+Furthermore, this prototype is equipped with a GNSS module and a buffer battery
+for IoT components. This way, your van will stay connected even when the vehicle
+batteries are completely discharged or not plugged.
+
+</HardwareHeader>
+
+
+## Build your Smart Van Box
+
+Explore the documentation of this prototype to get an idea of how to adapt it to
+your needs. We recommend looking at the list of [required materials](/docs/hardware/svbox_10/resources#hardware-requirements)
+and [case 3D models](/docs/hardware/svbox_10/resources#cases) to
+understand which devices need to be included in this prototype and where you can
+position them.
+
+1. <h3>Prepare all the necessary materials</h3>
+  Check the [Hardware Requirements](/docs/hardware/svbox_10/resources#hardware-requirements)
+  and ensure you have everything needed to start.
+
+2. <h3>Assemble your own Smart Van Box</h3>
+  Build your device following the [assembly guides](/docs/hardware/svbox_10/guides#assembly).
+
+3. <h3>Load the JOD Smart Van image and power everything on</h3>
+  Flash the [JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van) image
+  onto the SD card to be inserted into the 4Raspberry Pi. After that,
+  insert it into the Raspberry Pi and power it on.
+
+
+## Model's resources
+
+The SVBox IoT's an IoT device based on Raspberry Pi that, with [JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van),
+enables monitoring and controlling all services/systems connected to the Raspberry Pi
+and, consequently, the Smart Van Box.
+
+Within this device, various sensors are integrated, such as environmental
+sensors, gas detection sensors, but also GPS and GSM modules. Additionally, the
+block houses a buffer battery (UPS) that provides power to the IoT component
+even when the service battery is disconnected or depleted.
+
+The IoT block use a ribbon cable to connect the Raspberry Pi to all devices
+with a 40-PIN header like the [Sense Hat](/docs/software/firmware/fw_sensehat),
+the [SIM7600](/docs/software/firmware/fw_sim7600) and also a small custom
+PCB board. This custom board houses the ports to connect the other devices in
+the IoT block to the ribbon cable and thus to the Raspberry Pi.
+
+* [BOMs IoT Box](/img/hardware/svbox_10/resources/BOMs-BlockIoT.pdf)
+* [Wiring IoT Box](/img/hardware/svbox_10/resources/Design%20Panel%20Prototype-IoT%20Block%20Wiring%20Schema.png)
+  * [Raspberry Pinout](/img/hardware/svbox_10/resources/RaspberryPi%202%20Boards%20Pinout.pdf)
+  * [Raspberry and Boards Pin-outs](/img/hardware/svbox_10/resources/RaspberryPi%202%20Boards%20Pinout.ods)

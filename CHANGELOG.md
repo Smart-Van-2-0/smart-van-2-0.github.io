@@ -56,6 +56,11 @@
 
 ## Content
 
+### Version 20240512
+
+* Added SVBox IoT 1.0 model
+* Added a Blog post for SVBox IoT 1.0 publication
+
 ### Version 20231205
 
 * Updated various Specifications details

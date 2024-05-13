@@ -1,0 +1,27 @@
+---
+title: Resources
+hide_title: true
+sidebar_position: 3
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "SVBox IoT"
+export const hardware_status = "Available"
+export const hardware_code = "svbox_10"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+* [BOMs IoT Block](/img/hardware/svbox_10/resources/BOMs-BlockIoT.pdf)
+* [Wiring IoT Block](/img/hardware/svbox_10/resources/Design%20Panel%20Prototype-IoT%20Block%20Wiring%20Schema.png)
+  * [Raspberry Pinout](/img/hardware/svbox_10/resources/RaspberryPi%202%20Boards%20Pinout.pdf)
+  * [Raspberry and Boards Pin-outs](/img/hardware/svbox_10/resources/RaspberryPi%202%20Boards%20Pinout.ods)
