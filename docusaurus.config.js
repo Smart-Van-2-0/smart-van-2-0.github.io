@@ -9,7 +9,7 @@ const config = {
   title: 'Smart Van Project',
   tagline: 'Web site for the Smart Van project',
   favicon: 'img/logos/logo_32.ico',
-  url: 'https://smartvan.johnosproject.org',
+  url: 'https://smartvanbox.org',
   baseUrl: '/',
   organizationName: 'johnosproject',
   projectName: 'smart-van-2-0.github.io',
