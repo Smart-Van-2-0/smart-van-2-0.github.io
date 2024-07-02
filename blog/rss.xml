@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Smart Van Project Blog</title>
-        <link>https://smartvanbox.org/blog</link>
+        <link>https://www.smartvanbox.org/blog</link>
         <description>Smart Van Project Blog</description>
         <lastBuildDate>Mon, 06 May 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[🚀 Introducing the New SVBox IoT 1.0]]></title>
-            <link>https://smartvanbox.org/blog/2024/05/06/published-new-svbox-iot-10</link>
-            <guid>https://smartvanbox.org/blog/2024/05/06/published-new-svbox-iot-10</guid>
+            <link>https://www.smartvanbox.org/blog/2024/05/06/published-new-svbox-iot-10</link>
+            <guid>https://www.smartvanbox.org/blog/2024/05/06/published-new-svbox-iot-10</guid>
             <pubDate>Mon, 06 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[We are thrilled to announce the release of our latest model, the SVBox IoT 1.0.]]></description>
             <content:encoded><![CDATA[<p>We are thrilled to announce the release of our latest model, the SVBox IoT 1.0.
@@ -37,8 +37,8 @@ keep track of the RPi load status.</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[🚀 Released JOD Smart Van v.1.0.0]]></title>
-            <link>https://smartvanbox.org/blog/2023/12/05/released-jod-smart-van</link>
-            <guid>https://smartvanbox.org/blog/2023/12/05/released-jod-smart-van</guid>
+            <link>https://www.smartvanbox.org/blog/2023/12/05/released-jod-smart-van</link>
+            <guid>https://www.smartvanbox.org/blog/2023/12/05/released-jod-smart-van</guid>
             <pubDate>Tue, 05 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[We are delighted to announce the release of JOD Smart Van version 1.0.0,]]></description>
             <content:encoded><![CDATA[<p>We are delighted to announce the release of JOD Smart Van version 1.0.0,
@@ -46,7 +46,7 @@ bringing a host of new features, improvements, and firmware updates. Here are
 the key highlights of this release:</p><img loading="lazy" src="/img/software/jod_smart_van/jod_smart_van_logo_500.png" alt="JOD Smart Van logo" width="300" class="img_ev3q"><h3 class="anchor anchorWithStickyNavbar_LWe7" id="major-updates">Major Updates<a href="#major-updates" class="hash-link" aria-label="Direct link to Major Updates" title="Direct link to Major Updates">​</a></h3><ul><li><strong>Build Configurations:</strong> Implemented robust production and development build
 configurations to enhance project setup.</li><li><strong>Firmware Management Scripts:</strong> Integrated firmware management into
 <code>pre-startup.sh</code> and <code>post-startup.sh</code> scripts for improved control and
-efficiency.</li><li><strong>Firmware Version Updates:</strong><ul><li><a href="https://smartvanbox.org/docs/software/firmware/fw_victron" target="_blank" rel="noopener noreferrer">FW Victron</a> updated to v1.0.2. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://smartvanbox.org/docs/software/firmware/fw_sim7600" target="_blank" rel="noopener noreferrer">FW SIM 7600</a> introduced with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sim7600/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://smartvanbox.org/docs/software/firmware/fw_upspack_v3" target="_blank" rel="noopener noreferrer">FW UPS Pack_V3</a> added with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.upspack_v3/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://smartvanbox.org/docs/software/firmware/fw_sensehat" target="_blank" rel="noopener noreferrer">FW Sense Hat</a> included with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sensehat/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://smartvanbox.org/docs/software/firmware/fw_ioexp" target="_blank" rel="noopener noreferrer">FW IO Exp</a> introduced with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.ioexp/" target="_blank" rel="noopener noreferrer">View Sources</a></li></ul></li><li><strong>File Structure Updates:</strong><ul><li>Updated the struct.jod file to match Smart Van Specs.</li><li>Added structure files for all SV specs sub-groups.</li><li>Added structure files for any included firmware.</li></ul></li></ul><p>Here you can download
+efficiency.</li><li><strong>Firmware Version Updates:</strong><ul><li><a href="https://www.smartvanbox.org/docs/software/firmware/fw_victron" target="_blank" rel="noopener noreferrer">FW Victron</a> updated to v1.0.2. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://www.smartvanbox.org/docs/software/firmware/fw_sim7600" target="_blank" rel="noopener noreferrer">FW SIM 7600</a> introduced with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sim7600/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://www.smartvanbox.org/docs/software/firmware/fw_upspack_v3" target="_blank" rel="noopener noreferrer">FW UPS Pack_V3</a> added with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.upspack_v3/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://www.smartvanbox.org/docs/software/firmware/fw_sensehat" target="_blank" rel="noopener noreferrer">FW Sense Hat</a> included with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.sensehat/" target="_blank" rel="noopener noreferrer">View Sources</a></li><li><a href="https://www.smartvanbox.org/docs/software/firmware/fw_ioexp" target="_blank" rel="noopener noreferrer">FW IO Exp</a> introduced with version 1.0.0. <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.ioexp/" target="_blank" rel="noopener noreferrer">View Sources</a></li></ul></li><li><strong>File Structure Updates:</strong><ul><li>Updated the struct.jod file to match Smart Van Specs.</li><li>Added structure files for all SV specs sub-groups.</li><li>Added structure files for any included firmware.</li></ul></li></ul><p>Here you can download
 the <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/releases/tag/1.0.0" target="_blank" rel="noopener noreferrer">JOD Smart Van distribution - v1.0.0</a>
 release.</p><p>For a detailed overview, please refer to
 the <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/blob/1.0.0/CHANGELOG.md" target="_blank" rel="noopener noreferrer">changelog</a>
@@ -56,8 +56,8 @@ or <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_v
         </item>
         <item>
             <title><![CDATA[🌐 Website Update Announcement - Version 1.1.0]]></title>
-            <link>https://smartvanbox.org/blog/2023/11/28/website-update</link>
-            <guid>https://smartvanbox.org/blog/2023/11/28/website-update</guid>
+            <link>https://www.smartvanbox.org/blog/2023/11/28/website-update</link>
+            <guid>https://www.smartvanbox.org/blog/2023/11/28/website-update</guid>
             <pubDate>Tue, 28 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[We are thrilled to announce the latest update to our Smart Van project website,]]></description>
             <content:encoded><![CDATA[<p>We are thrilled to announce the latest update to our Smart Van project website,
@@ -78,8 +78,8 @@ innovation! 🚐💡</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[Maker Faire 2023 Interviews]]></title>
-            <link>https://smartvanbox.org/blog/2023/11/23/makerfaire-interviews</link>
-            <guid>https://smartvanbox.org/blog/2023/11/23/makerfaire-interviews</guid>
+            <link>https://www.smartvanbox.org/blog/2023/11/23/makerfaire-interviews</link>
+            <guid>https://www.smartvanbox.org/blog/2023/11/23/makerfaire-interviews</guid>
             <pubDate>Thu, 23 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[The Maker Faire 2023 was not only an exceptional showcase for the Smart Van]]></description>
             <content:encoded><![CDATA[<div style="display:flex;justify-content:space-around;flex-wrap:wrap"><div class="img_container_ABGT"><a href="/img/blog/2023-11-23/award.jpg" class="img_link_Hl3U"><img src="/img/blog/2023-11-23/award.jpg" alt="MFR2023 Smart Van Award" width="150px" class="img_tag_oucX"></a></div><div class="img_container_ABGT"><a href="/img/blog/2023-11-23/interview.jpg" class="img_link_Hl3U"><img src="/img/blog/2023-11-23/interview.jpg" alt="MFR2023 Smart Van Interview" width="150px" class="img_tag_oucX"></a></div></div><p>The Maker Faire 2023 was not only an exceptional showcase for the Smart Van
@@ -105,8 +105,8 @@ Stay tuned as we continue to evolve and inspire in the realm of DIY innovation.<
         </item>
         <item>
             <title><![CDATA[🌟 Smart Van Project at Maker Faire Rome 2023!]]></title>
-            <link>https://smartvanbox.org/blog/2023/11/20/makerfaire-rome</link>
-            <guid>https://smartvanbox.org/blog/2023/11/20/makerfaire-rome</guid>
+            <link>https://www.smartvanbox.org/blog/2023/11/20/makerfaire-rome</link>
+            <guid>https://www.smartvanbox.org/blog/2023/11/20/makerfaire-rome</guid>
             <pubDate>Mon, 20 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Exciting news from the Maker Faire Rome, where the Smart Van project made a]]></description>
             <content:encoded><![CDATA[<div class="img_container_ABGT"><a href="/img/blog/2023-11-20/stand.jpg" class="img_link_Hl3U"><img src="/img/blog/2023-11-20/stand.jpg" alt="The Smart Van stand at Maker Faire" width="400px" class="img_tag_oucX"></a></div><p>Exciting news from the Maker Faire Rome, where the Smart Van project made a
@@ -131,8 +131,8 @@ more exciting updates as the Smart Van journey continues! 🌍✨</p>]]></conten
         </item>
         <item>
             <title><![CDATA[🚀 FW Victron Release v1.0.2]]></title>
-            <link>https://smartvanbox.org/blog/2023/11/06/released-fw-victron</link>
-            <guid>https://smartvanbox.org/blog/2023/11/06/released-fw-victron</guid>
+            <link>https://www.smartvanbox.org/blog/2023/11/06/released-fw-victron</link>
+            <guid>https://www.smartvanbox.org/blog/2023/11/06/released-fw-victron</guid>
             <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[We're thrilled to announce the release of FW Victron version 1.0.2, packed with]]></description>
             <content:encoded><![CDATA[<p>We're thrilled to announce the release of FW Victron version 1.0.2, packed with
@@ -144,8 +144,8 @@ our <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.fw.victron
         </item>
         <item>
             <title><![CDATA[🚀 Released the Panel Prototype]]></title>
-            <link>https://smartvanbox.org/blog/2023/09/18/released-panel-prototype</link>
-            <guid>https://smartvanbox.org/blog/2023/09/18/released-panel-prototype</guid>
+            <link>https://www.smartvanbox.org/blog/2023/09/18/released-panel-prototype</link>
+            <guid>https://www.smartvanbox.org/blog/2023/09/18/released-panel-prototype</guid>
             <pubDate>Mon, 18 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Finally, all the resources of the prototype have been made public and available]]></description>
             <content:encoded><![CDATA[<p>Finally, all the resources of the prototype have been made public and available
@@ -163,8 +163,8 @@ page and start creating your first Smart Van device!</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[🚀 Released FW Victron v.1.0.1]]></title>
-            <link>https://smartvanbox.org/blog/2023/09/11/released-fw-victron</link>
-            <guid>https://smartvanbox.org/blog/2023/09/11/released-fw-victron</guid>
+            <link>https://www.smartvanbox.org/blog/2023/09/11/released-fw-victron</link>
+            <guid>https://www.smartvanbox.org/blog/2023/09/11/released-fw-victron</guid>
             <pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Updated the FW Victron.]]></description>
             <content:encoded><![CDATA[<p>Updated the FW Victron.</p><p>Added the <code>--simulate</code> cmdLine arg that initialize a <code>VEDeviceSimulator</code> instead
@@ -177,8 +177,8 @@ release.</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[🚀 Released JOD Smart Van v.0.1.0]]></title>
-            <link>https://smartvanbox.org/blog/2023/09/11/released-jod-smart-van</link>
-            <guid>https://smartvanbox.org/blog/2023/09/11/released-jod-smart-van</guid>
+            <link>https://www.smartvanbox.org/blog/2023/09/11/released-jod-smart-van</link>
+            <guid>https://www.smartvanbox.org/blog/2023/09/11/released-jod-smart-van</guid>
             <pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[The first version of the JOD Smart Van distribution is available online via the]]></description>
             <content:encoded><![CDATA[<p>The first version of the JOD Smart Van distribution is available online via the
@@ -197,8 +197,8 @@ release.</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[🚀 Released FW Victron v.1.0.0]]></title>
-            <link>https://smartvanbox.org/blog/2023/09/04/released-fw-victron</link>
-            <guid>https://smartvanbox.org/blog/2023/09/04/released-fw-victron</guid>
+            <link>https://www.smartvanbox.org/blog/2023/09/04/released-fw-victron</link>
+            <guid>https://www.smartvanbox.org/blog/2023/09/04/released-fw-victron</guid>
             <pubDate>Mon, 04 Sep 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Published the first version of the FW Victron.]]></description>
             <content:encoded><![CDATA[<p>Published the first version of the FW Victron.</p><p>The v1.0.0 can connect to a <a href="https://www.victronenergy.com/" target="_blank" rel="noopener noreferrer">Victron</a> device
@@ -212,8 +212,8 @@ release.</p>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[We are online! 🌐]]></title>
-            <link>https://smartvanbox.org/blog/2023/08/04/we-are-online</link>
-            <guid>https://smartvanbox.org/blog/2023/08/04/we-are-online</guid>
+            <link>https://www.smartvanbox.org/blog/2023/08/04/we-are-online</link>
+            <guid>https://www.smartvanbox.org/blog/2023/08/04/we-are-online</guid>
             <pubDate>Fri, 04 Aug 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[Finally online the Smart Van project website!]]></description>
             <content:encoded><![CDATA[<p>Finally online the Smart Van project website!</p><p>the main purpose of this website is to collect and organize, in one place, all
