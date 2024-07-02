@@ -1,9 +1,9 @@
 # smart-van-2-0.github.io
 
 This repository contains the Smart Van's Web Site source code used as [GitHub Pages](https://smart-van-2-0.github.io/)
-and at the [smartvanbox.org](https://smartvanbox.org) url.
+and at the [smartvanbox.org](https://www.smartvanbox.org) url.
 
-Repository that exports the [smartvanbox.org](https://smartvanbox.org)
+Repository that exports the [smartvanbox.org](https://www.smartvanbox.org)
 Web Site as GitHub Pages.
 
 * **WebSite Version:** 1.1.0
@@ -11,13 +11,13 @@ Web Site as GitHub Pages.
 
 [CHANGELOG](CHANGELOG.md) | [TODOs](TODOs.md) | [LICENCE](LICENCE.md)
 
-Current repo contains the source code of the Web Site published at [smartvanbox.org](https://smartvanbox.org).
+Current repo contains the source code of the Web Site published at [smartvanbox.org](https://www.smartvanbox.org).
 This WebSite is based on [Docusaurus](https://docusaurus.io/)/[Node.js](https://nodejs.org/en)
-and is structured into the following 3 sections, plus a [Blog](https://smartvanbox.org/blog):
+and is structured into the following 3 sections, plus a [Blog](https://www.smartvanbox.org/blog):
 
-* [Features](https://smartvanbox.org/docs/category/features): what the Smart Van can do for you
-* [Hardware](https://smartvanbox.org/docs/category/hardware): specs and guides to create your own SmartVan boxes
-* [Software](https://smartvanbox.org/docs/category/software): downloads and sources of all the software used by the SmartVan project
+* [Features](https://www.smartvanbox.org/docs/category/features): what the Smart Van can do for you
+* [Hardware](https://www.smartvanbox.org/docs/category/hardware): specs and guides to create your own SmartVan boxes
+* [Software](https://www.smartvanbox.org/docs/category/software): downloads and sources of all the software used by the SmartVan project
 
 This repo, contrary other repos, use 4 principal brances:
 * `main`: release branche used to merge `develop` and `content` branches
@@ -28,7 +28,7 @@ This repo, contrary other repos, use 4 principal brances:
 
 ## Run
 
-To see the live version, please open a browser and navigate to [https://smartvanbox.org](https://smartvanbox.org).
+To see the live version, please open a browser and navigate to [https://www.smartvanbox.org](https://www.smartvanbox.org).
 
 Otherwise, to run it locally execute following commands. Remember that [Node.js](https://nodejs.org/en)
 and [Yarn](https://yarnpkg.com/) must be installed on your machine in order to
@@ -60,7 +60,7 @@ sub-branch to commit your work. Once you have terminated with the task, then you
 can merge you sub-branch to the `content` branch.<br/>
 Only when all content changes has been approved, the `content` branch can be
 merged into the `main` one. That triggers the [GitHub Actions](https://github.com/Smart-Van-2-0/smart-van-2-0.github.io/actions)
-that builds and deploys the live [smartvanbox.org](https://smartvanbox.org)
+that builds and deploys the live [smartvanbox.org](https://www.smartvanbox.org)
 WebSite.
 
 * **Features**:<br />
