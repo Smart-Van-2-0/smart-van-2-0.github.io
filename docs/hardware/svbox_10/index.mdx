@@ -11,7 +11,7 @@ sidebar_position: 1
 
 import { HardwareTitle, HardwareHeader } from '@site/src/components/templates/PageHardware';
 
-export const hardware_name = "SVBox IoT"
+export const hardware_name = "SVBox IoT 1.0"
 export const hardware_status = "Available"
 export const hardware_code = "svbox_10"
 
@@ -29,7 +29,8 @@ vehicles**.
 
 This model can provide mobile internet connectivity through the 4G module
 environmental monitoring with sensors, and the ability to connect up to 4 camper's
-services with as many physical buttons.<br/>
+services with as many physical buttons.
+
 Furthermore, this prototype is equipped with a GNSS module and a buffer battery
 for IoT components. This way, your van will stay connected even when the vehicle
 batteries are completely discharged or not plugged.
@@ -40,22 +41,23 @@ batteries are completely discharged or not plugged.
 ## Build your Smart Van Box
 
 Explore the documentation of this prototype to get an idea of how to adapt it to
-your needs. We recommend looking at the list of [required materials](/docs/hardware/svbox_10/resources#hardware-requirements)
-and [case 3D models](/docs/hardware/svbox_10/resources#cases) to
-understand which devices need to be included in this prototype and where you can
-position them.
+your needs.
 
 1. <h3>Prepare all the necessary materials</h3>
-  Check the [Hardware Requirements](/docs/hardware/svbox_10/resources#hardware-requirements)
-  and ensure you have everything needed to start.
+  Check the BOM lists from the [Hardware Requirements](/docs/hardware/svbox_10/resources#hardware-requirements)
+  section and ensure you have everything needed to start.
 
 2. <h3>Assemble your own Smart Van Box</h3>
-  Build your device following the [assembly guides](/docs/hardware/svbox_10/guides#assembly).
+  Let's start [printing the 3D model](/docs/hardware/svbox_10/guides/print_smartvanbox_case)
+  for the SmartVanBox's case and [configure the SD Card](/docs/hardware/svbox_10/guides/prepare_sdcard)
+  for the Raspberry Pi. Then, when you received the ordered components and the
+  case has been printed, build your SmartVanBox following the [assembly guides](/docs/hardware/svbox_10/guides/assembly_smartvanbox).
+  Finally [install the JOD SmartVan Distribution](/docs/hardware/svbox_10/guides/install_jod_smartvan_distribution).
 
-3. <h3>Load the JOD Smart Van image and power everything on</h3>
-  Flash the [JOD Smart Van](/docs/software/jod_smart_van/jod_smart_van) image
-  onto the SD card to be inserted into the 4Raspberry Pi. After that,
-  insert it into the Raspberry Pi and power it on.
+3. <h3>Mount the SmartVanBox on board and let's start with the SmartVan Mobile App</h3>
+  Follow the [mounting guides](/docs/hardware/svbox_10/guides/mount_smartvanbox)
+  for your SmartVanBox, then let's [download and install the SmartVan Mobile App](/docs/software/sv_mobile_app/android/guides/get-and-install-the-smartvan-mobile-app)
+  on your phone. And **enjoy your SmartVan experience!**
 
 
 ## Model's resources
@@ -69,13 +71,11 @@ sensors, gas detection sensors, but also GPS and GSM modules. Additionally, the
 block houses a buffer battery (UPS) that provides power to the IoT component
 even when the service battery is disconnected or depleted.
 
-The IoT block use a ribbon cable to connect the Raspberry Pi to all devices
-with a 40-PIN header like the [Sense Hat](/docs/software/firmware/fw_sensehat),
-the [SIM7600](/docs/software/firmware/fw_sim7600) and also a small custom
-PCB board. This custom board houses the ports to connect the other devices in
-the IoT block to the ribbon cable and thus to the Raspberry Pi.
+Internally, the SmartVanBox contains a Raspberry Pi 4 within a stack of HAT (in
+order: [UPS Pack](/docs/software/firmware/fw_upspack_v3), Raspberry Pi,
+[SIM7600](/docs/software/firmware/fw_sim7600) and [Sense Hat](/docs/software/firmware/fw_sensehat)).
+Other modules are hosted on the internal panels (the [IO Exp](/docs/software/firmware/fw_ioexp)
+and the Relays modules). Then, also the two gas sensors are placed on their own supports.
 
-* [BOMs IoT Box](/img/hardware/svbox_10/resources/BOMs-BlockIoT.pdf)
-* [Wiring IoT Box](/img/hardware/svbox_10/resources/Design%20Panel%20Prototype-IoT%20Block%20Wiring%20Schema.png)
-  * [Raspberry Pinout](/img/hardware/svbox_10/resources/RaspberryPi%202%20Boards%20Pinout.pdf)
-  * [Raspberry and Boards Pin-outs](/img/hardware/svbox_10/resources/RaspberryPi%202%20Boards%20Pinout.ods)
+Other devices can be integrated using available USB ports or wireless using the
+WiFi / Bluetooth connections (see [Victron BlueSolar and SmartSolar](/docs/software/firmware/fw_victron)).
