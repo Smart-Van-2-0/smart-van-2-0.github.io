@@ -1,0 +1,220 @@
+---
+title: Prepare the SD Card
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "SVBox IoT 1.0"
+export const hardware_status = "Available"
+export const hardware_code = "svbox_10"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+## Prepare the SD Card
+
+Install and configure the main OS and the JOD Smart Van distribution on the SD
+card that will be inserted into the Raspberry Pi.
+
+Currently, the JOD SmartVan Distribution OS image is not yet available. Therefore,
+after flashing the [Raspberry Pi OS (Lite/64bit)](https://www.raspberrypi.com/software/operating-systems/)
+onto the SD card, you'll need to configure a few files on the SD card before the
+first boot of the Raspberry Pi. Once the SmartVanBox is assembled and powered on,
+you can proceed with the manual installation of the JOD Smart Van Distribution.
+
+**Short Steps**
+
+1. Install Raspberry Pi Imager
+1. Select SD card and Operating System: “Raspberry Pi OS Lite (64-bit)”
+1. Write the SD Card
+1. Configure user via "userconf.txt"
+1. Configure WiFi via "wpa_supplicant.conf"
+1. Enable SSH by creating the "ssh" file
+1. Enable I2C ports
+1. Enable extra serial/UART ports via "configs.txt"
+1. Enable console on UART2 ("/dev/ttyAMA1") via "cmdline.txt"
+
+### Install the Operating System
+
+First, you need to install the operating system, commonly referred to as
+"flashing the SD card". In short, after inserting the SD card into a PC, you use
+software like [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to
+"copy" the operating system onto the SD card.
+
+With Raspberry Pi Imager, after selecting the USB device corresponding to your
+SD card, choose the operating system from a list. Select “Raspberry Pi
+OS (Others) > Raspberry Pi OS Lite (64-bit)” to have a system without a desktop,
+which is not necessary for an IoT device.
+
+<img src="/img/hardware/svbox_10/guides/prepare_sdcard/raspberry-pi-imager.png"
+  style={{
+  padding: "32px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }} />
+
+Once you've selected the SD card and the operating system, proceed by clicking
+the “Write” or “Apply” button.
+
+### Configure the Operating System
+
+After writing the SD card, we need to proceed with some detailed configurations.
+In this case, reinsert the SD card into the computer and open its "boot"
+partition. Inside this folder, you'll find the files to configure the operating
+system of our Raspberry Pi, such as "configs.txt" or "cmdline.txt".
+
+Once these configurations are complete, you can remove the SD card and insert it
+into the Raspberry Pi of the SmartVanBox.
+
+### Creating a User
+
+To connect and manage the Raspberry Pi, you need to configure at least one user,
+whose credentials will be used for login via serial cable or SSH access. Both
+methods will be explained later.
+
+To configure a user, create a file named "userconf.txt" in the boot partition of
+the SD card. This file contains the username and the encrypted password of the
+user to be configured in the following format: `<USERNAME>:<PASSWORD_ENCRYPTED>`.
+
+The following example corresponds to the username `svbox` and password `smartvan`:
+
+```
+svbox:$6$YkZTSxi8ZG78cKYQ$ZAczHmXlNubuxFg8M7qXfpdAOtDsSZAKddkVwxelRjEokyUkQZAGmFBSB3NkbGdvlkIlekWxOKUvtZX7kUoLh.
+```
+
+To generate the string corresponding to the desired password, you can use the
+command `openssl passwd -6` and type the password when prompted.
+
+Without the "userconf.txt" file, the default username and password are `pi` and
+`raspberry`, respectively.
+
+For more information on configuring a user, refer to the [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configure-a-user).
+
+### Configuring WiFi
+
+Initially, we need to configure our SmartVanBox to connect to an existing WiFi
+network with internet access, such as home WiFi or smartphone hotspot. Later, we
+will configure the Raspberry Pi as an Access Point with its own dedicated WiFi
+network.
+
+In the boot partition of the SD card, create a file named "wpa_supplicant.conf"
+with the configurations to access the chosen WiFi network. Copy and customize
+the following example:
+
+```
+country={YOUR_COUNTRY_CODE}
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+
+network={
+  scan_ssid=1
+  ssid="{YOUR_WIFI_SSID}"
+  psk="{YOUR_WIFI_PASSWORD}"
+}
+```
+
+Replace `{YOUR_COUNTRY_CODE}`, `{YOUR_WIFI_SSID}`, and `{YOUR_WIFI_PASSWORD}` with the
+correct values for your WiFi network.
+
+For more information, visit Raspberry Pi's guide on [setting up WiFi](https://www.raspberrypi.com/documentation/computers/configuration.html#connect-to-a-wireless-network78)
+or [manual WiFi setup](https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/)
+tutorial.
+
+### Enabling SSH
+
+SSH allows you to access your Raspberry Pi from another computer. This is a
+privileged access to the Raspberry Pi's shell, where you can perform maintenance
+on your SmartVanBox, such as initial configuration, accessing files, installing
+software, and more.
+
+To enable SSH, simply create a file named "ssh" in the boot partition of the SD card.
+
+During SSH connection, you will be prompted for a username and password. Enter
+the credentials configured in the [Creating a User](#creating-a-user) section.
+
+For more details on remote access, see [Raspberry Pi's SSH documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#remote-access).
+
+### Enabling I2C
+
+I2C is a protocol used to communicate with hardware modules that support it. In
+our case, it allows communication with the Sense Hat and IO Expander modules.
+
+To enable this protocol, add the following line to the "configs.txt" file in the
+boot partition of the SD card:
+
+```
+dtparam=i2c_arm=on
+```
+
+For more information on I2C configuration, refer to [Raspberry Pi's I2C documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configure-i2c).
+
+### Enabling UART Ports
+
+Several hardware modules communicate with the Raspberry Pi using UART ports. In
+the SmartVanBox, the following 4 ports are used:
+
+* UART0: Bluetooth (miniUART)
+* UART1 (/dev/ttyAMA0): SIM7600
+* UART2 (/dev/ttyAMA1): Console
+* UART3 (/dev/ttyAMA2): UPS Pack
+
+To enable these ports, add the following lines to the "configs.txt" file:
+
+```
+enable_uart=1
+dtoverlay=uart0   # BT on miniUART
+dtoverlay=uart1   # SIM7600 > /dev/ttyAMA0 - GPIOs 14/15 - Pins 8/10
+dtoverlay=uart2   # Console > /dev/ttyAMA1 - GPIOs 0/1 - Pins 27/28
+dtoverlay=uart3   # UPS Pack > /dev/ttyAMA2 - GPIOs 4/5 - Pins 7/29
+```
+
+Here is a summary table of UART ports and their associated pins:
+
+| Usage | UART	| TX	GPIO | TX Pin | RX GPIO	| RX Pin |
+|-------|-------|----------|--------|---------|--------|
+| Bluetooth | uart0	| 14	| 8	| 15	| 10	|
+| SIM7600 | uart1	| 14	| 8	| 15	| 10	|
+| Debug/Console | uart2	| 0	| 27	| 1	| 28	|
+| UPS Pack V3 | uart3	| 4	| 7	| 5	| 29	|
+| N/A | uart4	| 8	| 24	| 9	| 21	|
+| N/A | uart5	| 12	| 32	| 13	| 33	|
+
+For more information on UART configuration, refer to [Raspberry Pi's UART documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#configure-uarts)
+or check the following links:
+
+* [Pi-4 Activating additional UART ports](https://forums.raspberrypi.com/viewtopic.php?t=244827)
+* [DID YOU KNOW THAT THE RASPBERRY PI 4 HAS MORE SPI, I2C, UART PORTS?](https://hackaday.com/2022/02/01/did-you-know-that-the-raspberry-pi-4-has-more-spi-i2c-uart-ports/)
+* [Raspberry Pi 4 with Multiple UART Interfaces](https://jason19970210.medium.com/raspberry-pi-4-with-multiple-uart-interface-4eac75f74d7c)
+* [Raspberry OS - Configuring UARTs](https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-uarts)
+
+
+### Enabling Console on UART
+
+The UART2 (`/dev/ttyAMA1`) port is used as a debug port. By connecting a [USB-to-TTL](https://www.amazon.it/10Gtek-PL2303TA-Programming-Support-Raspberry/dp/B09KGQCZ58)
+cable from a computer to the pins of this port, you can access the Raspberry Pi's
+shell. This allows you to perform the initial configuration of the SmartVanBox,
+access files, install software, and more. Unlike traditional SSH connection, no
+WiFi network is needed.
+
+To configure the UART2 port as a console, add the parameter `console=ttyAMA1,115200`
+to the first line of the "cmdline.txt" file. The "cmdline.txt" file should look
+like this:
+
+```
+console=tty1 console=ttyAMA1,115200 root=PARTUUID=556a8c7f-02 rootfstype=ext4 fsck.repair=yes rootwait
+```
+
+For more information on [kernel command line](https://www.raspberrypi.com/documentation/computers/configuration.html#kernel-command-line-cmdline-txt),
+refer to [Adafruit's Raspberry Pi Lesson 5](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-5-using-a-console-cable/enabling-serial-console).
