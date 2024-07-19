@@ -78,3 +78,10 @@
   width: 100%;
   font-size: 1.3em;
 }
+
+.cards_div_style {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: var(--ifm-leading);
+}

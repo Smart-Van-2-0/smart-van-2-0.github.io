@@ -8,10 +8,11 @@ import styles from './index.module.css';
 
 import ImageClickable from '@site/src/components/ImageClickable';
 import WebSiteMap from '@site/src/components/WebSiteMap';
-import { MapDocs, MapFeatures, MapCollaborate } from '@site/src/components/WebSiteMap';
+import { MapDocs, MapFeatures, MapCollaborate, MapSpecs } from '@site/src/components/WebSiteMap';
 import GettingStarted from '@site/src/components/GettingStarted';
 import LinkFacebookPage from '@site/src/components/LinkFacebookPage';
 import LatestSquare from '@site/src/components/LatestSquare';
+import Card from '@mui/material/Card';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -45,9 +46,8 @@ function HomePageWelcome() {
   return (
     <section className={styles.home_section}>
       <div className="container">
-        <h1>Welcome</h1>
         <p>
-            <b>With Smart Van, you can create a van that is tailored to your
+            <b>With Smart Van, you can connect a van that is tailored to your
             specific needs and requirements.</b> Whether you want a van for
             camping, road trips, or work, Smart Van can help you make it happen.
         </p>
@@ -107,6 +107,53 @@ function HomePageWhatIsIt() {
   );
 }
 
+function HomePageBoxAndApp() {
+  const card_style = {
+    minWidth: '200px',
+    maxWidth: '500px',
+    height: '650px',
+    display: 'table-cell',
+    padding: "1em var(--ifm-leading)",
+    textAlign: "center",
+  }
+  return (
+    <section className={styles.home_section}>
+      <div className="container">
+
+        <div className={styles.cards_div_style}>
+          <Card sx={card_style}>
+            <h1>The SmartVanBox</h1>
+            <p>
+              The <a href="/docs/hardware/svbox_10">Smart Van Box</a> is a
+              small and powerful computer that is designed to be installed in
+              a van. It is the brain of the Smart Van system, and it connects
+              to the van's resources and services to make them smart.
+            </p>
+            <img src="/img/hardware/svbox_10/dev_img.jpg"
+              alt="Smart Van Box"
+              width="325px" />
+          </Card>
+          <Card sx={card_style}>
+            <h1>SmartVan Mobile App</h1>
+            <p>
+              The <a href="/docs/software/sv_mobile_app/android">Smart Van App</a> is
+              a mobile application that allows you to monitor and control
+              your van from anywhere in the world. It connects to the SmartVanBox
+              over the internet, so you can check on your van even when you
+              are not nearby.
+            </p>
+            <video className={styles.splitter_right_}
+              height="400px" controls>
+              <source src="/img/home/smartvan_mobile_app_intro.webm" type="video/mp4" />
+            </video>
+          </Card>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
 function HomePageGettingStarted() {
   return (
     <section className={styles.home_section}>
@@ -153,6 +200,7 @@ export default function Home() {
         <LatestSquare />
         <HomePageWelcome />
         <HomePageWhatIsIt />
+        <HomePageBoxAndApp />
         <HomePageGettingStarted />
         <HomePageWhatsNext />
       </main>
