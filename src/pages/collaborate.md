@@ -5,7 +5,7 @@ import LinkFacebookPage from '@site/src/components/LinkFacebookPage';
 
 Hi! Thank you for clicking on this section.
 
-For inquiries, you can reach out to us via email at smartvan@johnosproject.org.
+For inquiries, you can reach out to us via email at collaborate@smartvanbox.org.
 Or join the conversation and catch the latest updates on <LinkFacebookPage />.
 
 If you're passionate about contributing, explore our projects
