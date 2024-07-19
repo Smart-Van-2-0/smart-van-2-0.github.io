@@ -11,6 +11,7 @@ import WebSiteMap from '@site/src/components/WebSiteMap';
 import { MapDocs, MapFeatures, MapCollaborate } from '@site/src/components/WebSiteMap';
 import GettingStarted from '@site/src/components/GettingStarted';
 import LinkFacebookPage from '@site/src/components/LinkFacebookPage';
+import LatestSquare from '@site/src/components/LatestSquare';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -149,6 +150,7 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomePageIntro />
+        <LatestSquare />
         <HomePageWelcome />
         <HomePageWhatIsIt />
         <HomePageGettingStarted />

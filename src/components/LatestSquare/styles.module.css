@@ -1,0 +1,19 @@
+.container {
+  display: block;
+  float: right;
+  padding: 2rem 0;
+  width: 30%;
+}
+
+@media screen and (max-width: 996px) {
+  .container {
+    display: none;
+  }
+}
+
+
+.list_item {
+  whiteSpace: nowrap;
+  overflow: hidde;
+  marginBottom: 0.5em;
+}
