@@ -1,0 +1,550 @@
+---
+title: Assemble the SmartVanBox
+hide_title: true
+sidebar_position: 3
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
+import ImageClickable from '@site/src/components/ImageClickable';
+
+export const hardware_name = "SVBox IoT 1.0"
+export const hardware_status = "Available"
+export const hardware_code = "svbox_10"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+## Assemble the SmartVanBox
+
+Place the hardware in the SmartVanBox case, connect all components, and get ready
+to power up your new SmartVanBox.
+
+Finally, we have all the components (hardware modules, case, and configured SD
+card) to assemble our SmartVanBox. Before inserting everything into the case, we
+need to connect some hardware modules.
+
+**Short Steps**
+
+1. Solder UPS with DC/DC and jumpers.
+1. Attach IO Expander to Panel.
+1. Attach Relay module to Panel.
+1. Attach PowerIn connector (12V) to Panel.
+1. Wire IO Expander to Relay module on Panel.
+1. Prepare IO Expander to Cover Buttons cable.
+1. Insert and secure buttons in Cover.
+1. Solder and join all positive button contacts.
+1. Solder negative button contacts with pull-down resistors.
+1. Solder jumpers to negative button contacts.
+1. Prepare connector for IO Expander in Cover.
+1. Position Battery and nuts for RPi Stack in Base.
+1. Insert Panel into Base.
+1. Position and secure UPS and DC/DC converter in Base.
+1. Connect Battery to UPS and DC/DC to PowerIn connector (12V).
+1. Position and secure Raspberry Pi above UPS.
+1. Position and secure SIM7600 module above Raspberry Pi and attach antennas.
+1. Position and secure Sense HAT above SIM7600.
+1. Position and secure gas sensors.
+1. Connect modules to Raspberry Pi (UPS, GPIO Expander, and gas sensors).
+1. Connect IO Expander to Cover Buttons cable.
+1. Power on the SmartVanBox.
+1. Place Cover on Base.
+
+
+### Power Supply
+
+First, prepare the UPS module by connecting it to the DC/DC converter and jumper
+wires to the Raspberry Pi.
+
+1. **Prepare DC/DC Converter Cables**: The DC/DC converter has two pairs of cables, one for the 12/24V input and one for the 5V output. All four cables need to be stripped, and only the input cables should have terminals attached.
+2. **Modify UPS Module**: Solder the output cables from the DC/DC converter to the UPS module. You might need to scrape off some material from the tracks behind the USB-C port.
+3. **Solder Jumpers to UPS Module**: Solder jumper wires to the UPS module, behind the second USB port.
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/dcdc_converter.jpg"
+        alt=""
+        width="100%"/>
+      1. Prepare DC/DC Converter
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/ups_soldering_details.jpg"
+        alt=""
+        width="100%"/>
+      2a. Prepare UPS Module
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/dcdc_to_ups.jpg"
+        alt=""
+        width="100%"/>
+      2b. Sold DC/DC to UPS
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/ups_jumpers.jpg"
+        alt=""
+        width="100%"/>
+      3. Solder Jumpers to UPS
+    </td>
+  </tr>
+</table>
+
+The Jumpers' order from bottom to top is:
+
+| Color | Description |
+| --- | --- |
+| Red | 5V |
+| Black | GND |
+| Green | TX |
+| Blue | RX |
+| White | STA |
+
+
+### Prepare the Internal Panel
+
+Now, prepare the previously printed panel and attach its components (GPIO Expander,
+Relay module, and PowerIn connector).
+
+1. **Mount GPIO Expander**:
+  Secure the GPIO Expander module, using hot glue if necessary.
+2. **Mount Relay Module**:
+  Secure the Relay module to the panel using screws.
+3. **Position PowerIn Connector**:
+  Place the PowerIn connector in position.
+4. **Wire GPIO Expander to Relay Module**:
+  Connect the GND pins of the Relay module in a cascade manner, with the last
+  GND pin also connected to the GPIO Expander GND pin. Connect the positive pins
+  of the Relay module to the respective pins on the GPIO Expander, from P0 to P3.
+5. **Prepare Cable for Buttons**:
+  Create a cable with 10 jumpers, with a 10x1 connector for the GPIO Expander
+  pins on one end and a Molex PicoBlade connector for the buttons on the cover.
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      1. Place the GPIO Expander
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      2a. Place the Relay Module
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      2b. Fix the Relay Module
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      3. Place the PowerIn
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      4a. Connect GPIO Expander to Relay (GND)
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      4b. Connect GPIO Expander to Relay (Positives)
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      5. GPIO Expander to Cover Buttons Cable
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/panel_ready.jpg"
+        alt=""
+        width="100%"/>
+      6. The panel is ready
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+Below is the wiring diagram for connecting the GPIO Expander to the Relay module:
+
+<ImageClickable src="/img/hardware/svbox_10/resources/schemas/schema_ioexp_relays.png"
+  width="40%"  />
+
+
+### Cover and Buttons
+
+1. **Install Buttons on Cover**:
+  Insert the buttons into the cover and secure them with nuts.
+2. **Connect Positive Contacts**:
+  Connect all the positive contacts of the buttons together.
+3. **Connect Negative Contacts with Resistors**:
+  Connect the negative contacts using 10kOhm pull-down resistors.
+4. **Solder Jumper Wires**:
+  Solder jumper wires to the negative contacts.
+5. **Prepare Molex PicoBlade Connector**:
+  Connect these jumpers, including negative and positive, to a female Molex PicoBlade connector. Here are two possible configurations:
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      1. Place Buttons
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      2. Wire Positive Contacts
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      3. Wire Negative Contacts and Resistors
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      5. Wire Jampers
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/"
+        alt=""
+        width="100%"/>
+      5. Prepare connector
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/cover_ready.jpg"
+        alt=""
+        width="100%"/>
+      6. The cover is ready
+    </td>
+  </tr>
+</table>
+
+**Connector 10 PIN**
+
+|||||||||||
+|---|---|---|---|---|---|--|---|---|---|
+| VCC | GND | P0 | P1 | P2 | P3 | P4 | P5 | P6 | P7 |
+
+**Connector 5 + 5 PIN**
+
+||||||
+|---|---|---|---|---|
+| VCC | P0 | P1 | P2 | P3 |
+| GND | P4 | P5 | P6 | P7 |
+
+Below is the wiring diagram for connecting the Cover Buttons to the
+GPIO Expander's port:
+
+<ImageClickable src="/img/hardware/svbox_10/resources/schemas/schema_cover_buttons.png"
+  width="50%"  />
+
+
+### Assembling the SmartVanBox
+
+1. **Place the Battery**: Insert the battery into the base.
+2. **Position the Nuts**: Place the four nuts into their slots.
+3. **Insert the Panel**: Slide the panel into the slots above the battery.
+4. **Install UPS Module**: Position the UPS module with the USB ports facing the case and secure it with 6mm spacers. Position the DC/DC converter in the remaining space.
+5. **Connect Power Cables**: Connect the DC/DC converter input cables to the PowerIn connector and connect the battery to the UPS module.
+6. **Install Raspberry Pi**: Place and secure the Raspberry Pi above the UPS module.
+7. **Add SIM7600 Module**: Position the SIM7600 module above the Raspberry Pi and attach the antennas.
+8. **Install Sense HAT**: Position the Sense HAT above the SIM7600 module.
+9. **Install Gas Sensors**: Place the gas sensors into their slots.
+10. **Insert SIM7600 Antennas**: Attach the SIM7600 antennas to the module and insert them into the holes on the case.
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_1_place_battery.jpg"
+        alt=""
+        width="100%"/>
+      1. Place the internal battery
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_2_place_nuts.jpg"
+        alt=""
+        width="100%"/>
+      2. Place the stack's nuts
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_3_place_panel.jpg"
+        alt=""
+        width="100%"/>
+      3a. Place the internal panel
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_4_slide_panel.jpg"
+        alt=""
+        width="100%"/>
+      3b. Slide the internal panel
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_5_place_ups.jpg"
+        alt=""
+        width="100%"/>
+      4. Place UPS Pack V3 module
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_6_place_power_connector.jpg"
+        alt=""
+        width="100%"/>
+      5. Connect the power connector
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_7_place_raspberry.jpg"
+        alt=""
+        width="100%"/>
+      6. Place the Raspberry Pi 4B
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_8_place_sim7600.jpg"
+        alt=""
+        width="100%"/>
+      7. Place the SIM7600 module
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_9_place_sense_hat.jpg"
+        alt=""
+        width="100%"/>
+      8. Place the Sense Hat (c) module
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_10_place_gas_sensors.jpg"
+        alt=""
+        width="100%"/>
+      9. Place the gas sensors
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_11_place_sim7600_antennas.jpg"
+        alt=""
+        width="100%"/>
+      10. Place the SIM7600 antennas
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+Most of the components are now in place. It's time to connect them. Many of the
+necessary cables are provided with the hardware modules.
+
+**The UPS Pack V3 module to the Raspberry Pi's headers**
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td width="50%">
+| Cable | Pin | BCM |
+| --- | --- | --- |
+| Red / 5V | 2 | 5V |
+| Black / GND | 6, 9, or 39 | GND |
+| Green / TX | 24 | GPIO 8 |
+| Blue / RX | 21 | GPIO 9 |
+| White / STA | 38 | GPIO 20 |
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_cable_ups.jpg"
+        alt=""
+        width="100%"/>
+    </td>
+  </tr>
+</table>
+
+**The GPIO Expander module to the Raspberry Pi's headers**
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td width="50%">
+| Cable | Pin | BCM |
+| --- | --- | --- |
+| Red / VCC | 1 | 3.3V |
+| Black / GND | 14, 6, or 20 | GND |
+| Blue / SDA | 3 | GPIO 2 - SDA |
+| Yellow / SCL | 5 | GPIO 3 - SCL |
+| Orange / INT | 11 | GPIO 17 |
+| Green / RESET | 13 | GPIO 27 |
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_cable_io.jpg"
+        alt=""
+        width="100%"/>
+    </td>
+  </tr>
+</table>
+
+**The Gas Sensors to the Sense Hat's analog headers**
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td width="50%">
+| Cable | MQ-2 | MQ-7 |
+| --- | --- | --- |
+| Red / 3V3 | 3V3_0 | 3V3_1 |
+| Black / GND | GND_0 | GND_1 |
+| Blue / ANALOG | AIN0 | AIN1 |
+| Yellow / DIGITAL | P0 | P1 |
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/base_cable_gas_sensors.jpg"
+        alt=""
+        width="100%"/>
+    </td>
+  </tr>
+</table>
+
+Below is the wiring diagram for connecting the Raspberry Pi headers to other modules:
+
+<ImageClickable src="/img/hardware/svbox_10/resources/schemas/schema_raspberry_headers.png"
+  width="70%"  />
+
+This diagram provides a clear guide on how to connect each module to the
+appropriate header pins on the Raspberry Pi, ensuring a seamless setup for your
+SmartVanBox.
+
+
+### Final Assembly
+
+1. **Connect Cover to Base**: Use the prepared IO Expander to Cover Buttons cable.
+2. **Power On the SmartVanBox**: Turn on the SmartVanBox using the UPS module switch.
+3. **Close the SmartVanBox**: Insert one side of the cover first, then apply some pressure to insert the other side.
+
+
+<table border="0"
+  style={{
+  padding: "8px",
+  maxWidth: "80%",
+  margin: "auto",
+  display: "block"
+  }}>
+  <tr align="center">
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/box_1.jpg"
+        alt=""
+        width="100%"/>
+      1. Connect cover and base
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/box_2.jpg"
+        alt=""
+        width="100%"/>
+      2. Turn on the SmartVanBox
+    </td>
+    <td>
+      <ImageClickable
+        src="/img/hardware/svbox_10/guides/assemble_smartvanbox/box_3.jpg"
+        alt=""
+        width="100%"/>
+      3. Close the SmartVanBox
+    </td>
+  </tr>
+</table>

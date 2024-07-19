@@ -1,0 +1,37 @@
+---
+title: Guides
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "SVBox IoT 1.0"
+export const hardware_status = "Available"
+export const hardware_code = "svbox_10"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+# Guides
+
+## Assembly SmartVanBox
+
+* [Print SmartVanBox Case](guides/print_smartvanbox_case)
+* [Prepare the SD Card](guides/prepare_sdcard)
+* [Assembly the SmartVanBox](guides/assembly_smartvanbox)
+* [Install JOD SmartVan Distribution](guides/install_jod_smartvan_distribution)
+
+
+## Mounting SmartVanBox
+
+* [Mounting the SmartVanBox](guides/mount_smartvanbox)

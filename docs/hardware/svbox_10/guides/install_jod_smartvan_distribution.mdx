@@ -1,0 +1,187 @@
+---
+title: Install the JOD SmartVan Distribution
+hide_title: true
+sidebar_position: 4
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
+import ImageClickable from '@site/src/components/ImageClickable';
+
+export const hardware_name = "SVBox IoT 1.0"
+export const hardware_status = "Available"
+export const hardware_code = "svbox_10"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+## Installing JOD SmartVan Distribution
+
+With the hardware assembly completed, we now have a fully functional SmartVanBox.
+However, on the software side, it currently only has the operating system installed.
+To enable communication with the SmartVan Mobile App, we need to install the JOD
+SmartVan Distribution.
+
+The JOD SmartVan Distribution comprises the software required to communicate with
+the Mobile App and interact with the SmartVanBox hardware. In this section, we'll
+cover how to install and configure this software.
+
+**Short Steps**
+
+1. Connect to the Raspberry Pi
+1. Install Java, Python, and other software requirements
+1. Download and extract JOD SmartVan Distribution
+1. Enable venv usage for Python-based firmware
+1. Create venv for each Python-based firmware
+1. Install JOD SmartVan as a daemon/service
+
+
+### Accessing the Raspberry Pi
+
+To install the necessary software, we first need to access the Raspberry Pi
+inside our SmartVanBox using an SSH connection.
+
+Depending on the settings configured on the SD card, your Raspberry Pi should be
+connected to your chosen WiFi network. Ensure that your workstation is also
+connected to the same network.
+
+You can use an SSH client to access the Raspberry Pi's shell (command line) from
+your workstation. This shell will allow you to install and configure the
+JOD SmartVan Distribution.
+
+- **From Windows**: Use PuTTY as the SSH client.
+- **From Linux and macOS**: Use the built-in `ssh` utility in the terminal.
+
+During the SSH connection, you'll be prompted for a username and password. Use
+the credentials set during the SD card configuration (suggested: `svbox`/`smartvan`).
+Once connected, you will be in the `/home/svbox` directory, ready to begin the
+JOD SmartVan Distribution installation.
+
+#### From Ubuntu
+
+To SSH into a Raspberry Pi from a Linux device:
+1. Press `Ctrl + Alt + T` to open a terminal window.
+2. Enter: `ssh [username]@[hostname].local` or `ssh [username]@[IP address]`,
+  replacing `[username]` and `[hostname]` or `[IP address]` with your Raspberry
+  Pi's details.
+
+#### From Mac
+
+To SSH into your Raspberry Pi from macOS:
+1. Navigate to `Applications > Utilities`.
+2. Open the terminal, and enter either `ssh [username]@[hostname].local` or
+  `ssh [username]@[IP address]`. Replace `[username]` and `[hostname]` or
+  `[IP address]` with your Raspberry Pi's details.
+
+#### From Windows: PuTTY
+
+To SSH into your Raspberry Pi from PuTTY:
+1. Open PuTTY.
+2. Under `Host Name (or IP address)`, enter your Raspberry Pi’s IP address or
+  hostname.
+3. Ensure that `Port` is set to 22.
+4. Under `Connection type`, select `SSH`.
+5. Select `Open`, then enter your username and password.
+
+#### From Windows: PowerShell
+
+To SSH into your Raspberry Pi using PowerShell:
+1. Open PowerShell (press `Ctrl + Shift + P`, or search for PowerShell).
+2. Enter the command: `ssh [username]@[hostname].local` or
+  `ssh [username]@[IP address]`, replacing `[username]` and `[hostname]` or
+  `[IP address]` with your Raspberry Pi's details.
+
+
+### Installing Software Requirements
+
+The JOD SmartVan Distribution requires several libraries and tools to function
+properly. Install all necessary dependencies with the following command:
+
+```sh
+sudo apt-get update && sudo apt-get install -y \
+    git curl wget nano \
+    openjdk-11-jdk avahi-utils \
+    python3 python3-pip python3-venv \
+    libcairo2-dev libgirepository1.0-dev dbus-x11
+```
+
+
+### Downloading JOD SmartVan
+
+Next, download and extract the JOD SmartVan distribution file. This file
+includes the JOD daemon, its configurations, and firmware for communicating with
+the SmartVanBox hardware.
+
+```sh
+wget https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/releases/download/1.0.0/JOD_Smart_Van-1.0.0.tgz
+tar -xzf JOD_Smart_Van-1.0.0.tgz
+cd JOD_Smart_Van
+```
+
+You are now in the main directory of the JOD SmartVan Distribution
+(`/home/svbox/JOD_Smart_Van`).
+
+
+### Initializing the Firmware
+
+We need to configure the distribution and set up Python virtual environments
+(venv) for the firmware. Uncomment the VENV variable in the configs.sh file and
+set it to true. Then, initialize the Python venv for each firmware:
+
+```sh
+cd deps/com.robypomper.smartvan.fw.victron/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.sim7600/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.upspack_v3/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.sensehat/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.ioexp/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+```
+
+For each firmware, the commands will:
+
+```
+Create a venv.
+Activate the venv.
+Install the requirements.
+Deactivate the venv.
+```
+
+
+### Installing JOD SmartVan
+
+Now we are ready to install the JOD SmartVan Distribution as a daemon (a
+background service that starts and stops with the operating system).
+
+```sh
+bash install.sh
+```
+
+To check if it's running correctly, you can use the `state.sh` script or view
+the JOD daemon logs.
+
+```sh
+bash state.sh
+tail -f logs/jospJSL.log
+```
+
+
+### Configuring Access Point Mode
+
+...
