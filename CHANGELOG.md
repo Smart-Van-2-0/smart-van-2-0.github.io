@@ -56,6 +56,18 @@
 
 ## Content
 
+### Version 20240720
+
+* Updated SVBox IoT 1.0 model's image
+* Added resources and guides for SVBox IoT 1.0
+* Added guides for JOD SV Dist
+* Added guides for SV Mobile App
+* Updated home page with LatestSquare and Box+Mobile App Cards
+* Added steps icons to GettingStarted component
+* Updated Hardware list with "collaborate email" link
+* Cleaned latest johnosproject.org domain references
+* Added "Build" landing page
+
 ### Version 20240512
 
 * Added SVBox IoT 1.0 model

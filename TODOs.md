@@ -12,6 +12,7 @@
 
 ## Content
 
+* Add missing images to the "Assembly SmartVanBox" of the SVBox_10
 * Define following Specs
   * Sensors > Engine
   * IoT > AccessPoint
