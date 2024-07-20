@@ -1,29 +1,31 @@
 ---
-title: Install the JOD SmartVan Distribution
+title: Install the JOD SV Dist. on Remote Device
 hide_title: true
-sidebar_position: 4
+sidebar_position: 1
 ---
 
 <!--
- FROM   @site/src/components/templates/PageHardware
+ FROM   @site/src/components/templates/PageSoftware
  VER    1.0.3
 -->
 
-import { HardwareTitle } from '@site/src/components/templates/PageHardware';
-import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
-import ImageClickable from '@site/src/components/ImageClickable';
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
 
-export const hardware_name = "SVBox IoT 1.0"
-export const hardware_status = "Available"
-export const hardware_code = "svbox_10"
+export const software_name = "JOD Smart Van"
+export const software_status = "Development"
+export const software_code = "jod_smart_van"
+export const software_version = "1.0.0"
+export const software_category = "Object Agent"
+export const software_language = "JOD Distribution"
 
 
 
-<HardwareTitle
-  name={hardware_name}
-  status={hardware_status} />
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
 
-## Installing JOD SmartVan Distribution
+## Installing JOD SmartVan Distribution on Remote Device
 
 With the hardware assembly completed, we now have a fully functional SmartVanBox.
 However, on the software side, it currently only has the operating system installed.
@@ -43,62 +45,8 @@ cover how to install and configure this software.
 1. Create venv for each Python-based firmware
 1. Install JOD SmartVan as a daemon/service
 
-
-### Accessing the Raspberry Pi
-
 To install the necessary software, we first need to access the Raspberry Pi
-inside our SmartVanBox using an SSH connection.
-
-Depending on the settings configured on the SD card, your Raspberry Pi should be
-connected to your chosen WiFi network. Ensure that your workstation is also
-connected to the same network.
-
-You can use an SSH client to access the Raspberry Pi's shell (command line) from
-your workstation. This shell will allow you to install and configure the
-JOD SmartVan Distribution.
-
-- **From Windows**: Use PuTTY as the SSH client.
-- **From Linux and macOS**: Use the built-in `ssh` utility in the terminal.
-
-During the SSH connection, you'll be prompted for a username and password. Use
-the credentials set during the SD card configuration (suggested: `svbox`/`smartvan`).
-Once connected, you will be in the `/home/svbox` directory, ready to begin the
-JOD SmartVan Distribution installation.
-
-#### From Ubuntu
-
-To SSH into a Raspberry Pi from a Linux device:
-1. Press `Ctrl + Alt + T` to open a terminal window.
-2. Enter: `ssh [username]@[hostname].local` or `ssh [username]@[IP address]`,
-  replacing `[username]` and `[hostname]` or `[IP address]` with your Raspberry
-  Pi's details.
-
-#### From Mac
-
-To SSH into your Raspberry Pi from macOS:
-1. Navigate to `Applications > Utilities`.
-2. Open the terminal, and enter either `ssh [username]@[hostname].local` or
-  `ssh [username]@[IP address]`. Replace `[username]` and `[hostname]` or
-  `[IP address]` with your Raspberry Pi's details.
-
-#### From Windows: PuTTY
-
-To SSH into your Raspberry Pi from PuTTY:
-1. Open PuTTY.
-2. Under `Host Name (or IP address)`, enter your Raspberry Pi’s IP address or
-  hostname.
-3. Ensure that `Port` is set to 22.
-4. Under `Connection type`, select `SSH`.
-5. Select `Open`, then enter your username and password.
-
-#### From Windows: PowerShell
-
-To SSH into your Raspberry Pi using PowerShell:
-1. Open PowerShell (press `Ctrl + Shift + P`, or search for PowerShell).
-2. Enter the command: `ssh [username]@[hostname].local` or
-  `ssh [username]@[IP address]`, replacing `[username]` and `[hostname]` or
-  `[IP address]` with your Raspberry Pi's details.
-
+inside our SmartVanBox using an [SSH or Serial connection](connect_remote_svbox)
 
 ### Installing Software Requirements
 
@@ -181,7 +129,24 @@ bash state.sh
 tail -f logs/jospJSL.log
 ```
 
+Installation and init system configurations are inherited from the JOD Dist TMPL,
+and currently it supports following init systems:
 
-### Configuring Access Point Mode
+* `launchd` (macOS)
+* `systemd` (Linux)
+* `wininitsys` (Windows)
 
-...
+
+### JOD SmartVan scripts
+
+Among the `start.sh` and `install.sh` script, there are other scripts that can
+be used to manage the JOD Smart Van instance:
+
+| Command                                  | Description                                                                                                   |
+|------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Start    <br/>```$ bash start.sh```      | Start local JOD instance in background mode, logs can be retrieved via ```tail -f logs/console.log``` command |
+| Start    <br/>```$ bash start.sh true``` | Start local JOD instance in foreground mode, user can interact with the instance using the JOD Shell          |
+| Stop     <br/>```$ bash stop.sh```       | Stop local JOD instance, if it's running                                                                      |
+| State    <br/>```$ bash state.sh```      | Print the local JOD instance state (obj's id and name, isRunning, PID...)                                     |
+| Install  <br/>```$ bash install.sh```    | Install local JOD instance as system daemon/service                                                           |
+| Uninstall<br/>```$ bash uninstall.sh```  | Uninstall local JOD instance as system daemon/service                                                         |

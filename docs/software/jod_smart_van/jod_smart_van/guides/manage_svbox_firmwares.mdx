@@ -1,0 +1,66 @@
+---
+title: Manage the SVBox Firmwares
+hide_title: true
+sidebar_position: 4
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "JOD Smart Van"
+export const software_status = "Development"
+export const software_code = "jod_smart_van"
+export const software_version = "1.0.0"
+export const software_category = "Object Agent"
+export const software_language = "JOD Distribution"
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Manage the SmartVanBox Firmwares
+
+The SmartVanBox is a modular system that can be customized to fit different hardware
+configurations. This flexibility is achieved through the use of firmwares, which are
+software components responsible for managing specific hardware devices or functionalities.
+
+The link between the SmartVanBox structure and the firmwares is defined in the
+`structure.jod` file, which specifies the hierarchy of pillars and the corresponding
+firmwares that provide the functionality for each pillar.
+In this guide, we'll cover how to manage the firmwares installed on the SmartVanBox.
+To know more about the SmartVanBox structure, check the [Customize SmartVanBox's structure](customize_svbox_structure)
+guide.
+
+
+All firmwares, for a JOD SmartVan Distribution, are located in the `$JOD_SV_DIST/deps`
+folder. Firmware, if needed can be executed on JOD startup and stopped on JOD shutdown.
+This can be done by updating the `$JOD_SV_DIST/scripts/pre-startup.sh` and
+`$JOD_SV_DIST/scripts/post-shutdown.sh` scripts.
+
+### Add/Update a new firmware
+
+To add a new firmware you can follow these steps:
+
+1. Stop the JOD SmartVan Distribution service.
+   ```
+   cd $JOD_SV_DIST
+   bash stop.sh         // if the JOD SV Dist has been executed as a background process
+   bash uninstall.sh    // if the JOD SV Dist has been installed as a daemon
+    ```
+1. Copy the new firmware's dir into the `$JOD_SV_DIST/deps` folder.
+1. [Update the `structure.jod`](customize_svbox_structure) file to include the new firmware.
+1. Update the `$JOD_SV_DIST/scripts/pre-startup.sh` script to run the firmware on JOD startup.
+1. Update the `$JOD_SV_DIST/scripts/post-shutdown.sh` script to stop the firmware on JOD shutdown.
+1. Start the JOD SmartVan Distribution service.
+   ```
+   cd $JOD_SV_DIST
+   bash start.sh        // if the JOD SV Dist has been executed as a background process
+   bash install.sh      // if the JOD SV Dist has been installed as a daemon
+    ```

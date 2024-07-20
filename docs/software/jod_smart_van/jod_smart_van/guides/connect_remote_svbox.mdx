@@ -1,0 +1,130 @@
+---
+title: Connect to remote SVBox
+hide_title: true
+sidebar_position: 5
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "JOD Smart Van"
+export const software_status = "Development"
+export const software_code = "jod_smart_van"
+export const software_version = "1.0.0"
+export const software_category = "Object Agent"
+export const software_language = "JOD Distribution"
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Connect to remote SmartVanBox
+
+Each SmartVanBox provides privileged access for maintenance. Through this access,
+you can read files (e.g., log files) and execute commands (updates,
+configuration changes, etc.). There are two ways to obtain this privileged
+access: via [SSH](#ssh-connection) or a [serial cable](#serial-connection).
+
+In the first case, the connection is made through an IP network (e.g., WiFi),
+which is the most common method. In the second case, a Serial-to-TTL cable is
+used, which is very useful when the SmartVanBox has connectivity or network issues.
+
+
+### SSH Connection
+
+Depending on the settings configured on the SD card, your Raspberry Pi should be
+connected to your chosen WiFi network. Ensure that your workstation is also
+connected to the same network.
+
+You can use an SSH client to access the Raspberry Pi's shell (command line) from
+your workstation. This shell will allow you to install and configure the
+JOD SmartVan Distribution.
+
+- **From Windows**: Use PuTTY as the SSH client.
+- **From Linux and macOS**: Use the built-in `ssh` utility in the terminal.
+
+During the SSH connection, you'll be prompted for a username and password. Use
+the credentials set during the SD card configuration (suggested: `svbox`/`smartvan`).
+Once connected, you will be in the `/home/svbox` directory, ready to begin the
+JOD SmartVan Distribution installation.
+
+#### From Ubuntu
+
+To SSH into a Raspberry Pi from a Linux device:
+1. Press `Ctrl + Alt + T` to open a terminal window.
+2. Enter: `ssh [username]@[hostname].local` or `ssh [username]@[IP address]`,
+  replacing `[username]` and `[hostname]` or `[IP address]` with your Raspberry
+  Pi's details.
+
+#### From Mac
+
+To SSH into your Raspberry Pi from macOS:
+1. Navigate to `Applications > Utilities`.
+2. Open the terminal, and enter either `ssh [username]@[hostname].local` or
+  `ssh [username]@[IP address]`. Replace `[username]` and `[hostname]` or
+  `[IP address]` with your Raspberry Pi's details.
+
+#### From Windows: PuTTY
+
+To SSH into your Raspberry Pi from PuTTY:
+1. Open PuTTY.
+2. Under `Host Name (or IP address)`, enter your Raspberry Pi’s IP address or
+  hostname.
+3. Ensure that `Port` is set to 22.
+4. Under `Connection type`, select `SSH`.
+5. Select `Open`, then enter your username and password.
+
+#### From Windows: PowerShell
+
+To SSH into your Raspberry Pi using PowerShell:
+1. Open PowerShell (press `Ctrl + Shift + P`, or search for PowerShell).
+2. Enter the command: `ssh [username]@[hostname].local` or
+  `ssh [username]@[IP address]`, replacing `[username]` and `[hostname]` or
+  `[IP address]` with your Raspberry Pi's details.
+
+
+### Serial Connection
+
+The Serial-to-TTL cable is a very useful tool for debugging and maintenance
+purposes. It allows you to access the Raspberry Pi's shell
+(command line) directly from your workstation, even when the Raspberry Pi is not
+connected to a network.
+
+To establish a serial connection, you need a Serial-to-TTL cable and a terminal
+emulator. The most common terminal emulators are PuTTY (Windows) and Minicom
+(Linux).
+
+#### PuTTY (Windows)
+
+1. Open PuTTY.
+2. Under `Connection type`, select `Serial`.
+3. Set the `Serial line` to the COM port where the cable is connected.
+4. Set the `Speed` to `115200`.
+5. Select `Open`.
+
+#### Minicom (Linux)
+
+1. Install Minicom:
+   ```shell
+   $ sudo apt-get install minicom
+   ```
+2. Configure Minicom:
+   ```shell
+    $ sudo minicom -s
+    ```
+3. Select `Serial port setup`.
+4. Set the `Serial Device` to the port where the cable is connected (e.g., `/dev/ttyUSB0`).
+5. Set the `Bps/Par/Bits` to `115200 8N1`.
+6. Save the configuration and exit.
+7. Start Minicom:
+   ```shell
+   $ sudo minicom
+   ```
+8. Press `Enter` to access the Raspberry Pi's shell.

@@ -1,0 +1,43 @@
+---
+title: Guides
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "Smart Van for Android"
+export const software_status = "Development"
+export const software_code = "sv_mobile_app_android"
+export const software_version = "0.1.0"
+export const software_category = "Mobile App"
+export const software_language = "Java"
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Guides
+
+### Install and customize
+
+* [Install the JOD SmartVan Distribution on Remote Device](guides/install_jod_sv_dist_remote_device)
+* [Configure JOD SmartVan Distribution](guides/configure_jod_sv_dist)
+* [Customize SmartVanBox's structure](guides/customize_svbox_structure)
+* [Manage SmartVanBox's firmwares](guides/manage_svbox_firmwares)
+
+
+### Management & Trubleshooting
+
+* [Connect to remote SmartVanBox](guides/connect_remote_svbox)
+
+
+### Development
+
+* [Contribute to JOD SmartVan Distribution](guides/contribute_jod_sv_dist)
