@@ -16,7 +16,6 @@ hide_table_of_contents: true
   }} />
 
 import Card from '@mui/material/Card';
-import ImageClickable from '@site/src/components/ImageClickable';
 import { MapSpecs } from '@site/src/components/WebSiteMap';
 
 export const div_style = {
@@ -34,6 +33,7 @@ export const card_style = {
     width: `90%`,
   },
   display: 'table-cell',
+  textAlign: "center",
   verticalAlign: 'middle',
   padding: "0px var(--ifm-leading)",
   margin: "var(--ifm-leading)",
@@ -57,7 +57,7 @@ statistics. All features are grouped in 4 main blocks.
   <Card sx={card_style}>
     <a style={link_style}
       href="/docs/features/remote_office">
-      <ImageClickable
+      <img
         src="/img/features/features_remote_office_logo_512.png"
         alt="Remote Office"
          width="300px"/>
@@ -74,7 +74,7 @@ statistics. All features are grouped in 4 main blocks.
   <Card sx={card_style}>
     <a style={link_style}
       href="/docs/features/control">
-      <ImageClickable
+      <img
         src="/img/features/features_control_logo_512.png"
         alt="Control and Automations"
         width="300px" />
@@ -90,7 +90,7 @@ statistics. All features are grouped in 4 main blocks.
   <Card sx={card_style}>
     <a style={link_style}
       href="/docs/features/monitor">
-      <ImageClickable
+      <img
         src="/img/features/features_monitoring_logo_512.png"
         alt="Monitoring and Alarms"
         width="300px" />
@@ -107,7 +107,7 @@ statistics. All features are grouped in 4 main blocks.
   <Card sx={card_style}>
     <a style={link_style}
       href="/docs/features/smart" >
-      <ImageClickable
+      <img
         src="/img/features/features_smart_logo_512.png"
         alt="Smart Experience"
         width="300px" />
