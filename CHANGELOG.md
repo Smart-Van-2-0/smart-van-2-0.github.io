@@ -5,6 +5,10 @@
 
 ## WebSite
 
+### Version 1.1.1
+
+* Updated project's dependencies (Docusaurus -> 3.4.0, React -> 18.3.1, Mui/Material -> 5.16.4)
+
 ### Version 1.1.0
 
 * Added Specs subsections and page components
