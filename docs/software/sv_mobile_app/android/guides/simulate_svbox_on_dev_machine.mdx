@@ -1,0 +1,161 @@
+---
+title: Simulate a SmartVanBox on Development Machine
+hide_title: true
+sidebar_position: 41
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "Smart Van for Android"
+export const software_status = "Development"
+export const software_code = "sv_mobile_app_android"
+export const software_version = "0.1.0"
+export const software_category = "Mobile App"
+export const software_language = "Java"
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Simulate a SmartVanBox on Development Machine
+
+During the development and testing of the SmartVan Mobile App, a SmartVanBox
+device is often required. To simulate a SmartVanBox on any PC, you can create a
+Docker container that clones the source code of the JOD SmartVan Distribution
+and generates the distribution itself.
+
+**Short Steps**
+
+1. Start Docker Container
+1. Install Software Requirements
+1. Download and Configure JOD SmartVan Distribution
+1. Start JOD SmartVan Distribution
+
+### Start Docker Container
+
+After installing Docker, you can clone the [SmartVan Mobile App repo](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android)
+and start a container based on ‘Ubuntu’. This container will share the
+`jod_svbox.sh` file (from the root directory of the mobile app project) and the
+host system's DBus socket.
+
+```shell
+$ git clone https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android.git
+$ sudo docker run --privileged --network host \
+   -v .:/home/ubuntu \
+   -v /run/dbus/system_bus_socket:/run/dbus/system_bus_socket \
+   -it ubuntu /bin/bash
+[sudo] password for user: xxxxxx
+root@05c16c828bd6:/#
+```
+
+Now you are inside the container, which also includes the source code of the
+mobile app and the jod_svbox.sh file.
+
+
+### Install Software Requirements
+
+The JOD daemon, as well as the various firmware, requires libraries and tools to
+function properly. In this step, all necessary dependencies are installed:
+
+* for Scripts: `git curl wget nano`
+* for JOD: `openjdk-11-jdk avahi-utils`
+* for Firmware: `python3 python3-pip python3-venv libcairo2-dev libgirepository1.0-dev dbus-x11`
+
+Additionally, since the Docker container does not have an associated init system,
+you need to manually start a DBus session.
+
+```shell
+# apt-get update && apt-get install -y \
+   git curl wget nano \
+   openjdk-11-jdk avahi-utils \
+   python3 python3-pip python3-venv \
+   libcairo2-dev libgirepository1.0-dev dbus-x11
+# exec dbus-run-session -- bash
+```
+
+
+### Download and Configure JOD SmartVan Distribution
+
+Navigate to the SmartVan Mobile App directory and obtain the JOD SmartVan project
+using the `jod_svbox.sh` script. The `init` sub-command will clone the main
+project, while the start sub-command will attempt to `start` the distribution but
+will fail initially. This is expected!
+
+The `start` sub-command will download the dependencies of the JOD SmartVan
+Distribution, i.e., its firmware.
+
+```shell
+# cd /home/ubuntu/com.robypomper.smartvan.app.android/
+# bash jod_svbox.sh init
+# bash jod_svbox.sh start
+```
+
+The JOD SmartVan Distribution does not start because its scripts require an
+Init System, which the Docker container cannot provide. To bypass this, remove
+the line of code that performs this check.
+
+```shell
+# sed -i '95d' ../com.robypomper.smartvan.jod_smart_van/build/JOD_Smart_Van/1.0.0/scripts/jod/jod-script-configs.sh
+```
+
+Now we are ready to configure the distribution and set the simulation mode, as
+well as the use of Python 'venv' by the firmware. In the `configs.sh` file,
+uncomment the `SIMULATE` and `VENV` variables, both should be `true`. More info
+on [JOD SmartVan Distitribution configs](/docs/software/jod_smart_van/jod_smart_van/guides/configure_jod_sv_dist).
+
+
+Next, initialize the Python 'venv' for each firmware:
+
+```shell
+# cd ../com.robypomper.smartvan.jod_smart_van/build/JOD_Smart_Van/1.0.0/deps/com.robypomper.smartvan.fw.victron/
+# python3 -m venv venv; source venv/bin/activate; pip install -r requirements.txt; deactivate; cd -
+# cd ../com.robypomper.smartvan.jod_smart_van/build/JOD_Smart_Van/1.0.0/deps/com.robypomper.smartvan.fw.sim7600/
+# python3 -m venv venv; source venv/bin/activate; pip install -r requirements.txt; deactivate; cd -
+# cd ../com.robypomper.smartvan.jod_smart_van/build/JOD_Smart_Van/1.0.0/deps/com.robypomper.smartvan.fw.upspack_v3/
+# python3 -m venv venv; source venv/bin/activate; pip install -r requirements.txt; deactivate; cd -
+# cd ../com.robypomper.smartvan.jod_smart_van/build/JOD_Smart_Van/1.0.0/deps/com.robypomper.smartvan.fw.sensehat/
+# python3 -m venv venv; source venv/bin/activate; pip install -r requirements.txt; deactivate; cd -
+# cd ../com.robypomper.smartvan.jod_smart_van/build/JOD_Smart_Van/1.0.0/deps/com.robypomper.smartvan.fw.ioexp/
+# python3 -m venv venv; source venv/bin/activate; pip install -r requirements.txt; deactivate; cd -
+```
+
+For each firmware, the following sequence of commands is executed:
+
+1. Create `venv`
+1. Activate `venv`
+1. Install requirements
+1. Deactivate `venv`
+
+
+### Start JOD SmartVan Distribution
+
+Now we are ready to start our JOD SmartVan Distribution. From the SmartVan Mobile
+App directory, execute again the `start` sub-command of the `jod_svbox.sh`
+script. If everything is configured correctly, this command will start the JOD
+daemon and various firmware for the JOD SmartVan distribution.
+
+```shell
+bash jod_svbox.sh start
+bash jod_svbox.sh logs
+```
+
+**Note:** The logs sub-command may not work correctly, so you can use an
+alternative command:
+
+```
+# tail -f /home/ubuntu/com.robypomper.smartvan.jod_smart_van/build/JOD_Smart_Van/1.0.0/logs/jospJSL.log
+```
+
+To verify that the distribution is running, you can use the `state` sub-command.
+If running, you can stop it with the `stop` sub-command.
+
+```shell
+bash jod_svbox.sh state
+bash jod_svbox.sh stop
+```

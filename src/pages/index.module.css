@@ -51,7 +51,7 @@
   display: flex;
   align-items: center;
   padding: 2rem 0;
-  width: 80%;
+  max-width: 80%;
   margin: 0 10%;
 }
 
@@ -77,4 +77,11 @@
   text-align: center;
   width: 100%;
   font-size: 1.3em;
+}
+
+.cards_div_style {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: var(--ifm-leading);
 }

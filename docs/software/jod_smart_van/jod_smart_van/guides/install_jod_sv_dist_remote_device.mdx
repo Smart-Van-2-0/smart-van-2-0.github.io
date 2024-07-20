@@ -1,0 +1,152 @@
+---
+title: Install the JOD SV Dist. on Remote Device
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "JOD Smart Van"
+export const software_status = "Development"
+export const software_code = "jod_smart_van"
+export const software_version = "1.0.0"
+export const software_category = "Object Agent"
+export const software_language = "JOD Distribution"
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Installing JOD SmartVan Distribution on Remote Device
+
+With the hardware assembly completed, we now have a fully functional SmartVanBox.
+However, on the software side, it currently only has the operating system installed.
+To enable communication with the SmartVan Mobile App, we need to install the JOD
+SmartVan Distribution.
+
+The JOD SmartVan Distribution comprises the software required to communicate with
+the Mobile App and interact with the SmartVanBox hardware. In this section, we'll
+cover how to install and configure this software.
+
+**Short Steps**
+
+1. Connect to the Raspberry Pi
+1. Install Java, Python, and other software requirements
+1. Download and extract JOD SmartVan Distribution
+1. Enable venv usage for Python-based firmware
+1. Create venv for each Python-based firmware
+1. Install JOD SmartVan as a daemon/service
+
+To install the necessary software, we first need to access the Raspberry Pi
+inside our SmartVanBox using an [SSH or Serial connection](connect_remote_svbox)
+
+### Installing Software Requirements
+
+The JOD SmartVan Distribution requires several libraries and tools to function
+properly. Install all necessary dependencies with the following command:
+
+```sh
+sudo apt-get update && sudo apt-get install -y \
+    git curl wget nano \
+    openjdk-11-jdk avahi-utils \
+    python3 python3-pip python3-venv \
+    libcairo2-dev libgirepository1.0-dev dbus-x11
+```
+
+
+### Downloading JOD SmartVan
+
+Next, download and extract the JOD SmartVan distribution file. This file
+includes the JOD daemon, its configurations, and firmware for communicating with
+the SmartVanBox hardware.
+
+```sh
+wget https://github.com/Smart-Van-2-0/com.robypomper.smartvan.jod_smart_van/releases/download/1.0.0/JOD_Smart_Van-1.0.0.tgz
+tar -xzf JOD_Smart_Van-1.0.0.tgz
+cd JOD_Smart_Van
+```
+
+You are now in the main directory of the JOD SmartVan Distribution
+(`/home/svbox/JOD_Smart_Van`).
+
+
+### Initializing the Firmware
+
+We need to configure the distribution and set up Python virtual environments
+(venv) for the firmware. Uncomment the VENV variable in the configs.sh file and
+set it to true. Then, initialize the Python venv for each firmware:
+
+```sh
+cd deps/com.robypomper.smartvan.fw.victron/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.sim7600/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.upspack_v3/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.sensehat/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+cd deps/com.robypomper.smartvan.fw.ioexp/
+python3 -m venv venv; source venv/bin/activate; \
+    pip install -r requirements.txt; deactivate; cd -
+```
+
+For each firmware, the commands will:
+
+```
+Create a venv.
+Activate the venv.
+Install the requirements.
+Deactivate the venv.
+```
+
+
+### Installing JOD SmartVan
+
+Now we are ready to install the JOD SmartVan Distribution as a daemon (a
+background service that starts and stops with the operating system).
+
+```sh
+bash install.sh
+```
+
+To check if it's running correctly, you can use the `state.sh` script or view
+the JOD daemon logs.
+
+```sh
+bash state.sh
+tail -f logs/jospJSL.log
+```
+
+Installation and init system configurations are inherited from the JOD Dist TMPL,
+and currently it supports following init systems:
+
+* `launchd` (macOS)
+* `systemd` (Linux)
+* `wininitsys` (Windows)
+
+
+### JOD SmartVan scripts
+
+Among the `start.sh` and `install.sh` script, there are other scripts that can
+be used to manage the JOD Smart Van instance:
+
+| Command                                  | Description                                                                                                   |
+|------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Start    <br/>```$ bash start.sh```      | Start local JOD instance in background mode, logs can be retrieved via ```tail -f logs/console.log``` command |
+| Start    <br/>```$ bash start.sh true``` | Start local JOD instance in foreground mode, user can interact with the instance using the JOD Shell          |
+| Stop     <br/>```$ bash stop.sh```       | Stop local JOD instance, if it's running                                                                      |
+| State    <br/>```$ bash state.sh```      | Print the local JOD instance state (obj's id and name, isRunning, PID...)                                     |
+| Install  <br/>```$ bash install.sh```    | Install local JOD instance as system daemon/service                                                           |
+| Uninstall<br/>```$ bash uninstall.sh```  | Uninstall local JOD instance as system daemon/service                                                         |

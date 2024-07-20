@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/logos/logo_32.ico',
   url: 'https://www.smartvanbox.org',
   baseUrl: '/',
-  organizationName: 'johnosproject',
+  organizationName: 'SmartVan',
   projectName: 'smart-van-2-0.github.io',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
@@ -93,7 +93,7 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'SmartVan @ JohnOSProject.org',
+            title: 'SmartVan',
             items: [
               {
                 label: 'Specifications',
@@ -122,7 +122,7 @@ const config = {
             items: [
               {
                 label: 'John OS Project',
-                href: 'https://www.johnosproject.org',
+                href: 'https://www.smartvanbox.org',
               },
               {
                 label: 'RobyPomper.org',
@@ -134,8 +134,8 @@ const config = {
             title: 'eMail & Social',
             items: [
               {
-                label: 'smartvan@johnosproject.org',
-                href: 'mailto:smartvan@johnosproject.org',
+                label: 'collaborate@smartvanbox.org',
+                href: 'mailto:collaborate@smartvanbox.org',
               },
               {
                 label: 'Facebook',

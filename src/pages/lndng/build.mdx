@@ -1,0 +1,89 @@
+# Create your own SmartVanBox
+
+import ImageClickable from '@site/src/components/ImageClickable';
+import { MapFeatures, MapCollaborate, MapDocs } from '@site/src/components/WebSiteMap';
+import LinkFacebookPage from '@site/src/components/LinkFacebookPage';
+
+<div
+  style={{
+    display: 'block',
+  }}>
+<div
+  style={{
+    display: 'block',
+    float: 'right',
+    margin: '0',
+    width: '50%',
+  }}>
+<ImageClickable
+  src="/img/hardware/svbox_10/dev_img.jpg"
+  alt="Remote Office"
+  width="100%"
+  style={{
+    margin: '0',
+  }} />
+</div>
+
+The [SmartVanBox IoT 1.0](/docs/hardware/svbox_10) is now available, along with
+comprehensive open-source documentation to help you build your own SVBox.
+</div>
+
+**What is the SVBox?**<br/>
+The SVBox is a powerful IoT device, an essential accessory for any camper, van,
+or caravan. It serves as a smart control unit that assists travelers in
+maintaining their vehicles and enjoying every journey to the fullest.
+
+**How Does it Work?**<br/>
+The SmartVanBox is one of the three components that make up the SmartVan solution.
+Along with the [SmartVan Mobile App](/docs/software/sv_mobile_app/android) and
+the accompanying cloud service, these three components work together to provide
+the user with a seamless digital travel experience.
+
+**What's inside?**<br/>
+The SVBox is installed inside your vehicle and powered by a 12V supply, similar
+to other camper services like lights and fans. It houses various sensors, as
+well as LTE and GNSS modules to ensure constant connectivity. Additionally, the
+SVBox is designed to integrate seamlessly with other devices in your camper,
+such as the SolarCharger. For a full list of components, refer to the
+[SVBox's Specification](/docs/hardware/svbox_10/specs) page.
+
+**What Can I Do With It?**<br/>
+The SVBox is used in conjunction with its mobile app, providing a user-friendly
+interface to view and export collected data (e.g., energy monitoring, tank levels).
+The app also acts as a command and control center, allowing users to easily
+customize the intelligence of their SmartVanBox to meet their specific needs.
+More examples can be found into the <MapFeatures/> page.
+
+## Build It?
+
+Creating an IoT device from scratch can be challenging, but don't be discouraged!
+Our guides will walk you through each step of the process. To help you stay
+organized, we've divided the guide into six sections: from ordering the necessary
+materials to configuring the software, including 3D printing the case and
+assembling the hardware components.
+
+If you lack certain tools, such as a 3D printer, find the [nearest FabLab](https://www.fablabs.io/labs).
+There, you'll have access to the right tools and people who can assist you with
+the more complex steps.
+
+Our documentation includes all the original files, so if you decide to customize
+your SmartVanBox, you can start with the models we've already created. Just
+remember to share your results with the community!
+
+Don't wait any longer—open the [BOM](/img/hardware/svbox_10/resources/SVBox%20BOM%20List%201.0.0.pdf)
+and start ordering the necessary components today.
+
+1. [Order Materials](/docs/hardware/svbox_10/resources)<br/>
+  Refer to the Bill of Materials (BOM) for the necessary components.
+2. [Print the Case](/docs/hardware/svbox_10/guides/print_smartvanbox_case)<br/>
+  Download and print the 3D models specifically designed to house the ordered hardware.
+3. [Configure the SD Card](/docs/hardware/svbox_10/guides/prepare_sdcard)<br/>
+   While printing the case, prepare the SD card that will be used with the Raspberry Pi.
+4. [Assemble the SVBox](/docs/hardware/svbox_10/guides/assembly_smartvanbox)<br/>
+   Once you have the printed case and received components, assemble the SmartVanBox.
+5. [Install Software](/docs/software/jod_smart_van/jod_smart_van/guides/install_jod_sv_dist_remote_device)<br/>
+   Finally, install the required software, including the JOD SmartVan Distribution daemon.
+
+For more information, visit the [SVBox IoT 1.0 page](/docs/hardware/svbox_10) or
+visit the <MapCollaborate/> page. For any comment or suggestion please email us
+at <a href="mailto:info@smartvanbox.org">info@smartvanbox.org</a>

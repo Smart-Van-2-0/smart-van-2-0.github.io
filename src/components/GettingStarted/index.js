@@ -18,6 +18,10 @@ export function GettingStartedStep1() {
   return (
     <div>
       <h2>1. Get the Hardware</h2>
+      <img
+        class={styles.img_left}
+        src="img/components/getting_started_1_order.png"
+        alt="Order the hardware" width="100px" />
       <p>
         The quickest way to get started is to build your own device. Nothing scary, if you've
         ever played with LEGO, then you'll have no trouble assembling the Smart Van Box. Check
@@ -36,6 +40,10 @@ export function GettingStartedStep2() {
   return (
     <div>
       <h2>2. Setup everything</h2>
+      <img
+        class={styles.img_left}
+        src="img/components/getting_started_2_install.png"
+        alt="Order the hardware" width="100px" />
       <p>
         Once the hardware is ready, you can install the firmware and
         configure the services.
@@ -44,15 +52,11 @@ export function GettingStartedStep2() {
         You can directly <a href="/docs/software#mobile-apps--firmwares">downloads images</a> to
         flash on the IoT devices, or get and compile the source code directly from
         the <a href="/docs/software#firmwares-sources-and-repositories">Git repositories</a>.
-      </p>
-      <p>
         Once all firmware has been loaded on the devices, you can mount the hardware in
-        your camper. Follow the "Mounting instructions" for the chosen hardware. Finally,
-        power up the box.<br/>
-        <b>REMEMBER!</b> first, connect the service battery, then the services
-        and finally the solar panels.
+        your camper. Follow the instructions for the chosen hardware.
       </p>
       <p>
+        Finally, power up the box.<br/>
         Now, your Smart Van box is now active and broadcasting its own WiFi network.
       </p>
       {/*
@@ -69,9 +73,13 @@ export function GettingStartedStep3() {
   return (
     <div>
       <h2>3. Connect the Smart Phone</h2>
+      <img
+        class={styles.img_left}
+        src="img/components/getting_started_3_connect.png"
+        alt="Order the hardware" width="100px" />
       <p>
-        Get the mobile app from the app stores (not yet available), <a href="/docs/software#mobile-apps--firmwares">download it</a> or
-        compile from <a href="/docs/software#firmwares-sources-and-repositories">his sources</a>.
+        Get the mobile app from the app stores (not yet available), <a href="/docs/software/sv_mobile_app/android/guides/get_and_install_the_smartvan_mobile_app">download it</a> or
+        compile from <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android">his sources</a>.
       </p>
       <p>
         Then, lunch the installed app and follow these steps:
@@ -84,7 +92,7 @@ export function GettingStartedStep3() {
         <li>Change the Smart Box 's WiFi default password</li>
       </ol>
       <p>
-        <b>Now you can access to the Smart Van box from your smartphone!</b>
+        <b>🎉 Compliments! Now you can access to the Smart Van box from your smartphone! 🎉</b>
       </p>
       {/*
       <p>

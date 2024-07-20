@@ -1,0 +1,43 @@
+---
+title: Get and Install the SmartVan Mobile App
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "Smart Van for Android"
+export const software_status = "Development"
+export const software_code = "sv_mobile_app_android"
+export const software_version = "0.1.0"
+export const software_category = "Mobile App"
+export const software_language = "Java"
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Get and Install the SmartVan Mobile App
+
+1. Download the App<br/>
+  From your smartphone, navigate to the [SmartVan Mobile App page](/docs/software/sv_mobile_app/android)
+  then to the Releases page; or directly to the [downloads page](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android/releases/).<br/>
+  Download the latest version of the `*.apk` file from your smart phone.
+
+2. Install the App<br/>
+  Proceed with the installation by opening the downloaded `*.apk` file.<br/>
+  <i>Your operating system may warn you about the potential risks of installing
+  applications from third-party sources. Accept to continue with the
+  installation.</i>
+
+3. Launch the App<br/>
+  Once installed, launch the SmartVan Mobile App.
+
+If the SmartVanBox does not appear after launching the mobile app, ensure your
+phone is connected to the same WiFi network as the SmartVanBox.

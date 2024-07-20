@@ -1,0 +1,87 @@
+---
+title: Print SmartVanBox Case
+hide_title: true
+sidebar_position: 1
+---
+
+<!--
+ FROM   @site/src/components/templates/PageHardware
+ VER    1.0.3
+-->
+
+import { HardwareTitle } from '@site/src/components/templates/PageHardware';
+import { HardwareSpecsProvidedText, HardwareSpecsProvidedTable } from '@site/src/components/templates/PageHardware';
+
+export const hardware_name = "SVBox IoT 1.0"
+export const hardware_status = "Available"
+export const hardware_code = "svbox_10"
+
+
+
+<HardwareTitle
+  name={hardware_name}
+  status={hardware_status} />
+
+## Print SmartVanBox Case
+
+If you don't have a 3D printer, find the nearest [FabLab](https://www.fablabs.io/labs)
+and print your SmartVanBox case there. Once you've downloaded the models, you can
+print them directly or ask the FabLab Manager for help.
+
+We'll start with the slowest process, but don't worry, it's mostly autonomous,
+allowing us to continue with other steps in the meantime.
+
+**Short Steps**
+
+1. Download the 3D models (*.stl files) from the [Resources > Models](../resources#cases--3d-models) section
+1. Open the downloaded files with your 3D printer software
+1. Optimize the print settings
+1. Export the print project and copy it to a USB stick
+1. Insert the USB stick into the 3D printer and start printing
+1. Remove the printed object from the printer and clean off the support material
+
+### What to Print
+
+Inside the Models directory, you'll find all the 3D models ready for printing.
+
+Here's what you need to print. The case consists of three parts:
+
+| Part  | Description | STL file | Render |
+|-------|-------------|----------|--------|
+| Base  | The main body of the SmartVanBox | [Base2.stl](/img/hardware/svbox_10/resources/cases_3d_models/SVBox%20IoT%201.0%20rev.b%20-%20Base2.stl) | <img src="/img/hardware/svbox_10/resources/cases_3d_models/Blender%20-%20Base.png" width="200px"/> |
+| Panel | A panel to be placed inside the base, housing components like the relay module | [Panel.stl](/img/hardware/svbox_10/resources/cases_3d_models/SVBox%20IoT%201.0%20rev.b%20-%20Panel.stl) | <img src="/img/hardware/svbox_10/resources/cases_3d_models/Blender%20-%20Panel.png" width="200px"/> |
+| Cover | The lid to close the SmartVanBox and hold the buttons | [Cover.stl](/img/hardware/svbox_10/resources/cases_3d_models/SVBox%20IoT%201.0%20rev.b%20-%20Cover.stl) | <img src="/img/hardware/svbox_10/resources/cases_3d_models/Blender%20-%20Cover.png" width="200px"/> |
+
+For each of these three parts, you'll find different file formats in the [Resources > Models](../resources#cases--3d-models) section:
+
+* `.stl`: The actual 3D model, useful for modification (using e.g. [Blender](https://www.blender.org)
+  or use with your 3D printer's software (e.g., [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura/))
+* `.3mf`: A project file for [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura/)
+  with the print settings used for our prototypes
+* `.ufp`: The file used directly by the 3D printer (check the printer model in
+  the corresponding `*.3mf` file)
+
+### How to Print
+
+To print a 3D object, you start with the 3D model. In our case, you need to print
+three parts: base, panel, and cover. You can find the 3D models in the [Cases & 3D Models](/docs/hardware/svbox_10/resources#cases--3d-models)
+section into the resources page.
+
+After downloading, open them with your 3D printer's software, such as [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura/)
+if you have a compatible printer. Once the 3D model is loaded, you can adjust the
+print settings. We recommend experimenting with support settings (breakaway) to
+reduce print time.
+
+You can find an example of the settings used for our prototypes in the resources
+page as *.3mf files, which can be opened with [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura/).
+
+Once you're happy with your print settings, export the print file. The file
+should be exported to a USB stick. After ejecting the USB stick from your computer
+and inserting it into the 3D printer, you can proceed to print your object. For
+more detailed instructions, refer to your printer software's guides.
+
+To optimize print time, we recommend printing the Panel and Cover in one go.
+Simply load both `*.stl` models into the print software.
+
+Once printing is complete, remove the support material (breakaway) using pliers,
+utility knives, and hooks.

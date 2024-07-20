@@ -1,0 +1,67 @@
+---
+title: Configure JOD SV Dist.
+hide_title: true
+sidebar_position: 2
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+export const software_name = "JOD Smart Van"
+export const software_status = "Development"
+export const software_code = "jod_smart_van"
+export const software_version = "1.0.0"
+export const software_category = "Object Agent"
+export const software_language = "JOD Distribution"
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Configure JOD SmartVan Distribution
+
+To alter the JOD Distribution behavior, you can edit
+the `$JOD_SV_DIST/configs/jod_configs.sh` file. This file contains the following
+variables:
+
+| Variable      | Default                    | Description                                                                  |
+|---------------|----------------------------|------------------------------------------------------------------------------|
+| `SIMULATE`    | `false`                    | Enable the firmware simulation option for all firmwares that supports it     |
+| `VENV`        | `false`                    | If true, execute all python firmware in their own virtual environment        |
+| `INLINE_LOGS` | `false`                    | If true, then it print all logging messages from firmwares                   |
+| `JOD_YML`     | `$JOD_DIR/configs/jod.yml` | Absolute or $JOD_DIR relative file path for JOD config file                  |
+| `JAVA_HOME`   | `null`                     | Absolute path to Java home folder (ex: /usr/lib/jvm/java-11-openjdk-amd64/)  |
+
+**Simulate firmware:**
+
+If `SIMULATE` is set to `true`, then all firmwares that supports the simulation
+option will be executed in simulation mode. This means that the firmware will
+not try to connect to the real device but it will simulate the device behavior
+using a random value generator.
+
+**Virtual environment:**
+
+If `VENV` is set to `true`, then all python firmwares will be executed in their
+own virtual environment. This means that the firmware will be executed in a
+separate python environment with its own dependencies. This is useful to avoid
+dependencies conflicts between firmwares.
+
+To be able to use this feature, the `python3-venv` package must be installed on
+the system. Then, for each firmware, generate his own venv folder using the
+`python3 -m venv <firmware_folder>/venv` command. It requires to be executed
+only once for each firmware and an internet connection is required.
+
+**Inline logs:**
+
+If `INLINE_LOGS` is set to `true`, then all logging messages from firmwares will
+be printed on the console when the JOD Smart Van is executed in foreground mode.
+This is useful to debug the firmware behavior.
+
+Otherwise, you can find a log file for each firmware into the `logs` folder.

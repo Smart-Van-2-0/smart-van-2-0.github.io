@@ -1,0 +1,214 @@
+---
+title: Customize the SVBox Structure
+hide_title: true
+sidebar_position: 3
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+import { MapSpecs } from '@site/src/components/WebSiteMap';
+
+export const software_name = "JOD Smart Van"
+export const software_status = "Development"
+export const software_code = "jod_smart_van"
+export const software_version = "1.0.0"
+export const software_category = "Object Agent"
+export const software_language = "JOD Distribution"
+
+
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Customize the SmartVanBox Structure
+
+The JOD Distribution is configured to expose an "object structure" to the Mobile
+App. This structure is based on the SmartVan <MapSpecs />.
+
+
+### SmartVan Specs
+
+The SmartVan <MapSpecs /> are used to define the structure of the SmartVanBox in the
+SmartVan solution. That means, both the SmartVanBox and the Mobile App must
+follow the same structure to communicate effectively.
+Not all the SmartVan Specs mandatory, moreover they can be provided from different
+hardware sources. That make the SmartVanBox easily customizable, including only
+the necessary specs for the specific hardware configuration.
+
+
+### SmartVanBox Structure
+
+The structure for a SmartVanBox is declared into the `struct.jod` file, located
+in the `$JOD_SV_DIST/configs` folder. This file contains an hierarchical
+structure of [Pillars](https://docs.johnosproject.org/references/josp/jod/specs/pillars/)
+(from the JOSP EcoSystem). Each pillar represents a state or an action that the
+SmartVanBox can perform. The pillars are grouped into groups, that allows the
+Mobile App to navigate through the SmartVanBox structure.
+
+The SmartVan Specs are published on the SmartVanBox's WebSite, here a
+summary of the SmartVan Specs:
+
+* <MapSpecs />
+  * [Position](/docs/category/position)
+    * [GNSS](/docs/specs/position/gnss)
+    * [Inertial](/docs/specs/position/inertial)
+  * [Sensors](/docs/category/sensors)
+    * [Living](/docs/specs/sensors/living)
+    * [Engine](/docs/specs/sensors/engine)
+  * [Services](/docs/category/services)
+    * [Controllers](/docs/specs/services/controllers)
+    * [Actuators](/docs/specs/services/actuators)
+  * [Energy](/docs/category/energy)
+    * [Storage](/docs/specs/energy/storage)
+    * [Generation](/docs/specs/energy/generation)
+    * [Consumption](/docs/specs/energy/consumption)
+  * [IoT Box](/docs/category/iot)
+    * [Battery](/docs/specs/iot/battery)
+    * [Internet](/docs/specs/iot/internet)
+    * [Access Point](/docs/specs/iot/accesspoint)
+    * [Media](/docs/specs/iot/media)
+    * [Monitor](/docs/specs/iot/monitor)
+
+Here an example of the SmartVanBox structure:
+
+```json
+{
+  "model": "JOD Smart Van",
+  "brand": "John OS",
+  "descr": "IoT agent for the Smart Van Box that provides the Smart Van Specifications.",
+  "descr_long": "This object's structure actually contains the 'Position', 'Sensors', 'Services', 'Energy' and the 'IoT Box > Energy + Internet' specifications groups",
+  "contains": {
+
+    "Position": {
+      "type": "JODContainer",
+      "contains": {
+        "GNSS": {
+          "type": "JODContainer",
+          "contains": {
+            "Latitude": { ... },
+            "Latitude Degrees": { ... },
+            "Longitude": { ... },
+            "Longitude Degrees": { ... },
+            ...
+          },
+        },
+        "Inertial": {
+          "type": "JODContainer",
+          "contains": {
+            "Roll": { ... },
+            "Pitch": { ... },
+            "Yaw": { ... },
+            ...
+          },
+        },
+      },
+    },
+    "Sensors": { ... },
+    "Services": { ... },
+    "Energy": { ... },
+    "IoT Box": { ... }
+  },
+}
+```
+
+Using this structure, you can easily customize the SmartVanBox structure by
+adding or removing pillars from the structure. But, remember to keep the
+structure compliant with the SmartVan Specs.
+
+### SmartVanBox Capabilities
+
+So, thanks to the "object's structure", each SmartVanBox capability, that is
+exposed to the Mobile App, is defined by a pillar.<br/>
+Each pillar is defined using different properties depending on the pillar type.
+Actually, the SmartVanBox structure is based on the following pillar types:
+
+* `Boolean State`: provide a 0/1, true/false... state
+* `Boolean Action`: like the Boolean State, but it can be set remotely
+* `Range State`: provide a value in a defined range
+* `Range Action`: like the Range State, but it can be set remotely
+
+Most of the firmwares from the SmartVan project are using the DBus protocol to
+comunicate with the JOD daemon. So, the following examples are based on the DBus
+protocol. Other protocols can be used to communicate with the JOD daemon, like
+HTTP, Shell, File, etc. Checkout the [JOSP documentation :: JOD :: workers](https://docs.johnosproject.org/references/josp/jod/specs/workers/)
+
+**Boolean State**
+
+The "Position > GNSS > Latitude" pillar is a `Boolean State` pillar that provides
+the latitude's sign (true is North, false is South). And it is defined as follows:
+
+```json
+"Latitude": {
+  "type": "BooleanState",
+  "desc": "GPS latitude (true is North, false is South)",
+  "listener": "dbus://dbus_name=com.simcom;dbus_obj_path=/sim7600;dbus_iface=com.simcom.sim7600;dbus_prop=pos_gps_lat;"
+}
+```
+
+**Range State**
+
+The "Position > GNSS > Latitude Degrees" pillar is a `Range State` pillar that
+provides the GPS latitude degrees (from -90 to 90). And it is defined as follows:
+
+```json
+"Latitude Degrees": {
+  "type": "RangeState",
+  "desc": "GPS latitude degrees",
+  "listener": "dbus://dbus_name=com.simcom;dbus_obj_path=/sim7600;dbus_iface=com.simcom.sim7600;dbus_prop=pos_gps_lat_degrees;",
+  "min": "-90",
+  "max": "90",
+  "step": "1"
+}
+```
+
+**Boolean Action**
+
+The "Position > GNSS > Power Module" pillar is a `Boolean Action` pillar that
+allows to enable/disable the GNSS module. And it is defined as follows:
+
+```json
+"Power Module": {
+  "type": "BooleanAction",
+  "desc": "Power on/off the SIM module (true is on, false if off)",
+  "listener": "dbus://dbus_name=com.simcom;dbus_obj_path=/sim7600;dbus_iface=com.simcom.sim7600;dbus_prop=power_module_state;",
+  "executor": "dbus://dbus_name=com.simcom;dbus_obj_path=/sim7600;dbus_iface=com.simcom.sim7600;dbus_method=power_module;dbus_method_params=%A_VAL%:Boolean;"
+}
+```
+
+**Range Action**
+
+The "Services > Actuators > DimmerLow > DimmerLow 1" pillar is a `Range Action`
+pillar that allows to set the dimmer's percentage (from 0 to 100). And it is
+defined as follows:
+
+```json
+"DimmerLow 1": {
+  "type": "RangeAction",
+  "desc": "Percentage actuator for low consumption services like dimmers (0 is off, 100 is completely on).",
+  "listener": "dbus://dbus_name=com.ioexp;dbus_obj_path=/io_expansion_board;dbus_iface=com.ioexp;dbus_prop=NONE;",
+  "executor": "dbus://dbus_name=com.ioexp;dbus_obj_path=/io_expansion_board;dbus_iface=com.ioexp;dbus_method=NONE;dbus_method_params=%VAL%:Boolean;"
+}
+```
+
+More info on `listeners` and `executors` can be found on the [JOSP documentation :: JOD :: workers](https://docs.johnosproject.org/references/josp/jod/specs/workers/)
+and [JOSP documentation :: JOD :: pillars](https://docs.johnosproject.org/references/josp/jod/specs/pillars/)
+pages. Otherwise, you can check directly the specific [firmwares documentation](/docs/software#other-sources-and-repositories).
+
+
+### Alternative JOD structures
+
+**In the JOD Smart Van distribution, edit the `jod.structure.path` from the
+`configs/jod.yml`** file with desired JOD structure file path. The default value
+is `configs/struct.jod`, but you can use one of the following alternative
+structures or customize your own:
+
+* `struct_fw_XY.jod`: JOD SV structure but only FW XY's related pillars
+* `struct_fw_XY_all.jod`: a JOD structure containing all FW XY's provided properties as pillars
+* `struct_specs_NAME.jod`: a JOD structure containing only pillars for the specifications with NAME sub-group
