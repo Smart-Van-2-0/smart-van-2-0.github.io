@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksmart_van_2_0_github_io=self.webpackChunksmart_van_2_0_github_io||[]).push([[2704],{5092:a=>{a.exports=JSON.parse('{"label":"panel_prototype","permalink":"/blog/tags/panel-prototype","allTagsPath":"/blog/tags","count":1}')}}]);

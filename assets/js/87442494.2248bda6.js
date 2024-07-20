@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksmart_van_2_0_github_io=self.webpackChunksmart_van_2_0_github_io||[]).push([[3210],{7276:t=>{t.exports=JSON.parse('{"permalink":"/blog/tags/svbox","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
