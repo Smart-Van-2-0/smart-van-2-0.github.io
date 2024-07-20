@@ -1,6 +1,7 @@
 # Collaborate
 
 import LinkFacebookPage from '@site/src/components/LinkFacebookPage';
+import ImageClickable from '@site/src/components/ImageClickable';
 
 Hi! Thank you for clicking on this section.
 
