@@ -78,7 +78,7 @@ export function GettingStartedStep3() {
         src="img/components/getting_started_3_connect.png"
         alt="Order the hardware" width="100px" />
       <p>
-        Get the mobile app from the app stores (not yet available), <a href="/docs/software/sv_mobile_app/android/guides/get-and-install-the-smartvan-mobile-app">download it</a> or
+        Get the mobile app from the app stores (not yet available), <a href="/docs/software/sv_mobile_app/android/guides/get_and_install_the_smartvan_mobile_app">download it</a> or
         compile from <a href="https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android">his sources</a>.
       </p>
       <p>
