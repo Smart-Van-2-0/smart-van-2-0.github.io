@@ -1,0 +1,83 @@
+---
+title: Develop the SmartVan Mobile App
+hide_title: true
+sidebar_position: 41
+---
+
+<!--
+ FROM   @site/src/components/templates/PageSoftware
+ VER    1.0.3
+-->
+
+import { SoftwareTitle, SoftwareHeader } from '@site/src/components/templates/PageSoftware';
+import { SoftwareSpecsProvidedText, SoftwareSpecsProvidedTable } from '@site/src/components/templates/PageSoftware';
+
+import { MapFeatures, MapSpecs } from '@site/src/components/WebSiteMap';
+
+export const software_name = "Smart Van for Android"
+export const software_status = "Development"
+export const software_code = "sv_mobile_app_android"
+export const software_version = "0.1.0"
+export const software_category = "Mobile App"
+export const software_language = "Java"
+
+<SoftwareTitle
+  name={software_name}
+  status={software_status} />
+
+## Develop the SmartVan Mobile App
+
+The mobile application is the main interface for the user to interact with the
+Smart Van system. It is available for both Android and iOS operating systems.
+
+The application must **implements all Smart Van <MapFeatures />**, and,
+depending on the connected Smart Van Box, it must enable/disable the available
+features based on the Smart Van <MapSpecs /> provided by the Smart Van Box.
+
+In order to contribute to the mobile application, you must have a basic
+knowledge of the Android or iOS development environment. Depending on the OS
+you want to contribute to, you must set up the respective development
+environment.<br/>
+Then you can test your application connecting a real Smart Van Box or simulating
+it directly on your computer.
+
+### Android
+
+The Android application is developed in Java and uses the Android Studio IDE.
+Follow these simple steps to get your development environment up and running:
+
+1. **Install Android Studio:**<br/>
+  Download and install Android Studio, the official IDE for Android
+  development, from the official website.
+  Follow the installation instructions for your operating system.
+2. **Open Android Studio and Configure SDK:**
+  Launch Android Studio after installation. If prompted, update the IDE to the
+  latest version.<br/>
+  Navigate to "Preferences" (on macOS) or "Settings" (on Windows/Linux).  Select
+  "Appearance & Behavior" -> "System Settings" -> "Android SDK.". Install the
+  necessary SDK Platforms and SDK Tools. Ensure you have at least one Android
+  version installed.
+3. **Set Up a Smartphone Emulator or Connect a Physical Device:**<br/>
+  Create a virtual device using the AVD Manager in Android Studio or connect
+  your Android device to your computer.
+  For the emulator, follow the prompts to set up a virtual device with the
+  desired specifications.
+4. **Clone the Smart Van App Repository:**<br/>
+  Clone the [SV Mobile App Android](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android)
+  repository to your local machine using Git or download the ZIP file.
+5. **Open the Project in Android Studio:**<br/>
+  In Android Studio, select "Open an existing Android Studio project."
+  Navigate to the location where you cloned the Smart Van app repository and
+  open it.
+6. **Sync and Build:**<br/>
+  Android Studio may prompt you to sync the project with Gradle. Allow it to do
+  so. Build the project by clicking the "Build" button or selecting "Build" -> "
+  Make Project" from the menu.
+7. **Run the App:**<br/>
+  Choose your emulator or connected device from the list.
+  Click the "Run" button or select "Run" -> "Run 'app'" to deploy the Smart Van
+  app.
+
+If you don't have a SmartVanBox available, you can always [simulate one from your workstation](simulate_svbox_on_dev_machine).
+For any other issues, refer to the [SmartVan Mobile App issues](https://github.com/Smart-Van-2-0/com.robypomper.smartvan.app.android/issues)
+page or contact us.
