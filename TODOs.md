@@ -12,7 +12,6 @@
 
 ## Content
 
-* Add missing images to the "Assembly SmartVanBox" of the SVBox_10
 * Define following Specs
   * Sensors > Engine
   * IoT > AccessPoint
@@ -23,3 +22,11 @@
 * Add Raspberry Pi configs into Panel Prototype / Guides
 * Improve software documentation
 * Add Hardware/General guides to `Docs/Hardware` section
+* Update all **Note: into ":::note Title"
+* SV Box 1.0 / Guides / Print 3D case
+    - dipendendo dal modulo rele scelto, stampare il pannello relativo
+    - aggiornare modelli a rev.C (dopo aver corretto: 4th Nuts, DC/DC, GPIO e Power In blockers)
+* SV Box 1.0 / Guides / Assembly SVBox
+    - aggiungere (7) foto pannello versione relays
+    - aggiungere (4) foto mancanti ad assembly the SVBox
+    - aggiungere (3) foto a Finall assembly

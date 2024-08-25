@@ -60,6 +60,14 @@
 
 ## Content
 
+### Version 20240825
+
+* SVBox 1.0
+  * Updated BOM's list to 1.0.1
+  * Updated 'Prepare the SD Card' guide to support Bookworm
+  * Updated 'Assembly guide' with new images and missing steps. Added also the Panel Relays' variant
+* Fixed various broken links
+
 ### Version 20240720
 
 * Updated SVBox IoT 1.0 model's image
