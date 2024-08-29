@@ -7,7 +7,7 @@ Repository that exports the [smartvanbox.org](https://www.smartvanbox.org)
 Web Site as GitHub Pages.
 
 * **WebSite Version:** 1.1.1
-* **Content Version:** 20240825
+* **Content Version:** 20240829
 
 [CHANGELOG](CHANGELOG.md) | [TODOs](TODOs.md) | [LICENCE](LICENCE.md)
 

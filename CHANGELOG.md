@@ -60,6 +60,13 @@
 
 ## Content
 
+### Version 20240829
+
+* Blog posts
+  * Added "Make your SVBox Workshop @ BITZ Fab Lab, Bolzano" blog's post robypomper 2 minutes ago 8e5999bc
+  * Added "Released the SVBox 1.0's BOM List 1.0.1" blog's post robypomper 2 minutes ago fa607536
+  * Minor updates to "Introducing the New SVBox IoT 1.0" blog's post robypomper 3 minutes ago a6c1352b
+
 ### Version 20240825
 
 * SVBox 1.0
