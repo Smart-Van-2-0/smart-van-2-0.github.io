@@ -4,12 +4,58 @@
         <title>Smart Van Project Blog</title>
         <link>https://www.smartvanbox.org/blog</link>
         <description>Smart Van Project Blog</description>
-        <lastBuildDate>Mon, 06 May 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 28 Aug 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[🚀 Introducing the New SVBox IoT 1.0]]></title>
+            <title><![CDATA[👷 Make your SVBox Workshop @ BITZ Fab Lab, Bolzano]]></title>
+            <link>https://www.smartvanbox.org/blog/2024/08/28/make-your-svbox-workshop-bitz</link>
+            <guid>https://www.smartvanbox.org/blog/2024/08/28/make-your-svbox-workshop-bitz</guid>
+            <pubDate>Wed, 28 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Yesterday, we held our first SmartVanBox workshop at the BITZ Fab Lab in Bolzano.]]></description>
+            <content:encoded><![CDATA[<p>Yesterday, we held our first SmartVanBox workshop at the BITZ Fab Lab in Bolzano.
+Our inaugural participants, Jonas and Hannelore, <strong>successfully created their own
+SmartVanBox</strong> devices during the session.</p>
+<p>The workshop began with a brief presentation of the SmartVanBox project, followed
+by a technical introduction to how it works. Once the overview was complete, we
+quickly got to work on assembling the SmartVanBox units.</p>
+<div class="img_container_ABGT"><a href="https://www.smartvanbox.org/img/blog/2024-08-28/3_svboxes_workshop.jpg" class="img_link_Hl3U"><img src="https://www.smartvanbox.org/img/blog/2024-08-28/3_svboxes_workshop.jpg" alt="" width="80%" class="img_tag_oucX"></a></div>
+<p>Thanks to the 3D printers at the BITZ Fab Lab, we had pre-prepared the cases,
+which allowed us to <strong>complete the assembly and configuration in just a couple of
+hours</strong>. While setting up, we encountered a few issues with the WiFi connection,
+but we eventually managed to install the JOD SmartVan distribution on the
+SmartVanBox devices. Once that was done, we tested the work done connecting to the
+SmartVanBox using a smartphone and the SV Mobile App.</p>
+<p>At the end of the workshop, Roberto, our lead developer, demonstrated the various
+possibilities these devices offer. Besides their obvious use in campers, the Open
+Source nature of SmartVanBox makes them incredibly easy to modify and update,
+allowing users to adapt them to whatever needs they might have on the road.</p>
+<p><strong>We’re planning another workshop soon</strong> — stay tuned and don’t miss the chance to sign up!</p>]]></content:encoded>
+            <category>workshop</category>
+            <category>svbox</category>
+            <category>fablab</category>
+            <category>bolzano</category>
+        </item>
+        <item>
+            <title><![CDATA[🚀 Released the SVBox 1.0's BOM List 1.0.1]]></title>
+            <link>https://www.smartvanbox.org/blog/2024/08/25/released-svbox-10-BOM</link>
+            <guid>https://www.smartvanbox.org/blog/2024/08/25/released-svbox-10-BOM</guid>
+            <pubDate>Sun, 25 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[We have updated the Bill of Materials (BOM) for the SVBox 1.0 model. The]]></description>
+            <content:encoded><![CDATA[<p>We have updated the <strong>Bill of Materials (BOM)</strong> for the <strong>SVBox 1.0</strong> model. The
+main change involves the module used for controlling the camper's 12V services.
+We have switched to a 10A relays module.</p>
+<p>Additionally, we have made minor updates to some components, including ports
+and various cables.</p>
+<p>You can download the <a href="https://www.smartvanbox.org/assets/files/SVBox%20BOM%20List%201.0.1-4c3a8750bdf81aa69844c13a5bfe6694.pdf" target="_blank">BOM List 1.0.1</a>
+or find it in the <a href="https://www.smartvanbox.org/docs/hardware/svbox_10/resources">Resources</a> section of the
+<a href="https://www.smartvanbox.org/blog/2024/08/25/docs/hardware/svbox_10">SV Box 1.0</a> model.</p>]]></content:encoded>
+            <category>release</category>
+            <category>svbox</category>
+        </item>
+        <item>
+            <title><![CDATA[🌟 Introducing the New SVBox IoT 1.0]]></title>
             <link>https://www.smartvanbox.org/blog/2024/05/06/published-new-svbox-iot-10</link>
             <guid>https://www.smartvanbox.org/blog/2024/05/06/published-new-svbox-iot-10</guid>
             <pubDate>Mon, 06 May 2024 00:00:00 GMT</pubDate>
@@ -17,7 +63,7 @@
             <content:encoded><![CDATA[<p>We are thrilled to announce the release of our latest model, the SVBox IoT 1.0.
 This new model is a significant upgrade from our previous versions, focusing on
 the Internet of Things (IoT) and the 'brain' of the Smart Van Box.</p>
-<img src="https://www.smartvanbox.org/img/hardware/svbox_10/dev_img.jpg" alt="JOD Smart Van logo" width="500">
+<div class="img_container_ABGT"><a href="https://www.smartvanbox.org/img/hardware/svbox_10/dev_img.jpg" class="img_link_Hl3U"><img src="https://www.smartvanbox.org/img/hardware/svbox_10/dev_img.jpg" alt="" width="80%" class="img_tag_oucX"></a></div>
 <p>The <strong>SVBox IoT 1.0 is designed for daily use within your vehicles</strong>. It is a
 compact, efficient, and powerful device that can seamlessly integrate with your
 existing vehicle systems.</p>
