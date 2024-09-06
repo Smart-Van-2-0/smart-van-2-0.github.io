@@ -2,11 +2,45 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.smartvanbox.org/blog</id>
     <title>Smart Van Project Blog</title>
-    <updated>2024-08-28T00:00:00.000Z</updated>
+    <updated>2024-09-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.smartvanbox.org/blog"/>
     <subtitle>Smart Van Project Blog</subtitle>
     <icon>https://www.smartvanbox.org/img/logos/logo_32.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[🧰 Workshop Make Your SmartVanBox at BITZ!]]></title>
+        <id>https://www.smartvanbox.org/blog/2024/09/05/workshop-make-your-smartvanbox-at-bitz</id>
+        <link href="https://www.smartvanbox.org/blog/2024/09/05/workshop-make-your-smartvanbox-at-bitz"/>
+        <updated>2024-09-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We’re excited to announce our upcoming SmartVanBox workshop, happening in]]></summary>
+        <content type="html"><![CDATA[<p>We’re excited to announce our upcoming <strong>SmartVanBox workshop</strong>, happening in
+<strong>Bolzano</strong> at the <strong>BITZ Fablab</strong> on <strong>October 5th, 2024</strong>!</p>
+<p>This 3-hour hands-on session will take place from 2 PM to 5 PM. During the
+workshop, you'll have the chance to build your very own SmartVanBox with guidance
+from our experts.</p>
+<p>The participation fee is <strong>€20</strong>, but it’s <strong>free for all UniBZ students</strong>.
+Additionally, with a small extra contribution, you'll be able to <strong>take home your
+SmartVanBox</strong> and integrate it into your camper or van!</p>
+<p>This is a great opportunity to learn more about the project, get practical
+experience, and connect with fellow makers.</p>
+<p><strong>Spaces are limited</strong>, so don’t miss out!</p>
+<ul>
+<li><strong>Where:</strong> BITZ Fablab, Bolzano</li>
+<li><strong>When:</strong> October 5th, 2024</li>
+<li><strong>Time:</strong> 2 PM - 5 PM</li>
+<li><strong>Cost:</strong> €20 (free for unibz students)</li>
+</ul>
+<p>We hope to see you there!</p>
+<div class="img_container_ABGT"><a href="https://www.smartvanbox.org/img/blog/2024-08-28/3_svboxes_workshop.jpg" class="img_link_Hl3U"><img src="https://www.smartvanbox.org/img/blog/2024-08-28/3_svboxes_workshop.jpg" alt="" width="80%" class="img_tag_oucX"></a></div>]]></content>
+        <author>
+            <name>Roberto Pompermaier</name>
+            <uri>https://www.robypomper.org</uri>
+        </author>
+        <category label="workshop" term="workshop"/>
+        <category label="svbox" term="svbox"/>
+        <category label="fablab" term="fablab"/>
+        <category label="bolzano" term="bolzano"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[👷 Make your SVBox Workshop @ BITZ Fab Lab, Bolzano]]></title>
         <id>https://www.smartvanbox.org/blog/2024/08/28/make-your-svbox-workshop-bitz</id>
@@ -53,7 +87,7 @@ We have switched to a 10A relays module.</p>
 and various cables.</p>
 <p>You can download the <a href="https://www.smartvanbox.org/assets/files/SVBox%20BOM%20List%201.0.1-4c3a8750bdf81aa69844c13a5bfe6694.pdf" target="_blank">BOM List 1.0.1</a>
 or find it in the <a href="https://www.smartvanbox.org/docs/hardware/svbox_10/resources">Resources</a> section of the
-<a href="https://www.smartvanbox.org/blog/2024/08/25/docs/hardware/svbox_10">SV Box 1.0</a> model.</p>]]></content>
+<a href="https://www.smartvanbox.org/docs/hardware/svbox_10">SV Box 1.0</a> model.</p>]]></content>
         <author>
             <name>Roberto Pompermaier</name>
             <uri>https://www.robypomper.org</uri>
