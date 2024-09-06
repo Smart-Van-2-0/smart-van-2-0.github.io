@@ -1,0 +1,137 @@
+import {default as style_lnd} from './styles.module.css';
+
+export const style_hero = {
+    position: "relative",
+    height: "400px", /* Altezza desiderata per la sezione Hero */
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "visible", /* Nasconde l'immagine in eccesso */
+}
+export const style_hero_bg = {
+    position: "absolute",
+    top: "0",
+    left: "50%",
+    width: "100vw", /* Estende l'immagine per tutta la larghezza dello schermo */
+    height: "100%",
+    backgroundImage: "url('/img/lnd/workshop/hero.jpg')", /* Inserisci il percorso dell'immagine */
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    transform: "translateX(-50%)", /* Centra l'immagine rispetto alla viewport */
+    zIndex: "1", /* Manda l'immagine dietro il contenuto */
+    marginBottom: "20px"
+}
+export const style_hero_content = {
+    position: "relative",
+    zIndex: "2", /* Mantiene il contenuto sopra l'immagine di sfondo */
+    backgroundColor: "rgba(0, 0, 0, 0.5)", /* Sfondo semi-trasparente per il testo */
+    padding: "20px",
+    color: "white",
+    textAlign: "center",
+    boxShadow: "0px 0px 40px 40px rgba(0, 0, 0, 0.5)",
+    width: "100%",
+    height: "60%",
+}
+export const style_hero_title = {
+    fontSize: "3em",
+    fontWeight: "bold",
+}
+export const style_hero_subtitle = {
+    fontSize: "2em",
+}
+export const image = {
+    display: "block",
+    margin: "16px auto",
+    width: "60%",
+}
+export const image_left = {
+    margin: "0 16px 0 0",
+    width: "30%",
+    display: "float",
+    float: "left",
+}
+export const image_right = {
+    margin: "0 0 0 16px",
+    width: "30%",
+    display: "float",
+    float: "right",
+}
+export const text_left = {
+    display: "flex",
+}
+export const text_right = {}
+
+<section className={style_lnd.style_hero}>
+  <div className={[style_lnd.style_hero_bg, style_lnd.style_hero_bg_workshop].join(" ")}/>
+  <div className={style_lnd.style_hero_content}>
+    <p className={style_lnd.style_hero_subtitle}>Build Your SmartVanBox with Expert Help</p>
+    <h1 className={style_lnd.style_hero_title}>Join a Workshop Near You!</h1>
+  </div>
+</section>
+
+<br/>
+<br/>
+
+Want to create your own SmartVanBox but prefer some hands-on guidance? Our
+workshops are perfect for anyone looking to **learn while building**. Whether
+you’re a camper enthusiast or a tech novice, **our project maintainers will guide
+you** through the process of assembling, configuring, and personalizing your
+very own SmartVanBox.
+
+With all the tools and components provided, you'll walk out with a fully
+functional SmartVanBox ready to be installed in your vehicle. Plus, with an
+additional fee (materials cost), you can take home the device you build!
+
+<br/>
+<br/>
+
+
+##  Upcoming Workshops
+
+<img
+  className={style_lnd.image_right}
+  src="/img/lnd/workshop/calendar.jpg"/>
+
+Don’t miss the chance to attend a SmartVanBox workshop near you! Below is a list
+of our scheduled workshops. Choose the one that works for you and reserve your
+spot. We can't wait to see you there!
+
+<div
+  className={style_lnd.text_right}>
+* October, 5th 2024 @ [BITZ](https://bitzfablab.unibz.it/) | Bolzano - ITALY<br/>
+  Mail to [bitzfablab@unibz.it](mailto:bitzfablab@unibz.it)<br/>
+  or call <code>+39 0471 015337</code>
+</div>
+
+Register on our [Facebook page](https://www.facebook.com/profile.php?id=100095337571720)
+to stay informed about new dates and upcoming workshops. Don’t miss out on the
+chance to join the next SmartVanBox event!
+
+<br/>
+<br/>
+
+
+## For FabLabs & MakerSpaces
+
+<img
+  className={style_lnd.image_left}
+  src="/img/lnd/workshop/fablab.jpg"/>
+
+Are you a fablab or makerspace looking to organize a SmartVanBox workshop?
+Hosting a workshop is a great way to bring the maker community together and
+introduce them to the world of smart vehicles and open-source innovation.
+
+We provide the resources, guidance, and support for you to host your own
+SmartVanBox workshop. By partnering with us, your space can be the next hub for
+this exciting project.
+
+<div
+  className={style_lnd.text_left}>
+* Full Workshop Kit: We provide all the necessary materials, guides, and support.
+* Hands-On Learning: Engage your community in a fun, educational experience.
+* Flexible Options: Tailor the workshop to suit your space and participant level.
+</div>
+
+[Contact us](mailto:info@smartvanbox.org) for more details, and together we can
+plan and organize a new workshop in your space! Let’s inspire creativity and
+innovation on the road!

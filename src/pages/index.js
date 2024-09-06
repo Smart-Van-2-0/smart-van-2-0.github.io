@@ -52,7 +52,7 @@ function HomePageWelcome() {
             camping, road trips, or work, Smart Van can help you make it happen.
         </p>
         <ImageClickable
-          src="/img/home/functional_schema.png"
+          src="/img/home/svbox_solution.png"
             alt="Hardware Functional Schema"
           width="70%" />
         <p>

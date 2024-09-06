@@ -4,11 +4,11 @@ import styles from './styles.module.css';
 // Update following lists with the latest posts and releases
 
 var array_posts = [
-  { id: 1, title: "👷 Make your SVBox Workshop @ BITZ Fab Lab, Bolzano", url: "/blog/2024/08/28/make-your-svbox-workshop-bitz" },
-  { id: 2, title: "🚀 Released the SVBox 1.0's BOM List 1.0.1s", url: "/blog/2024/08/25/released-svbox-10-BOM" },
-  { id: 3, title: "🌟 Introducing the New SVBox IoT 1.0", url: "/blog/2024/05/06/published-new-svbox-iot-10" },
-  { id: 4, title: "🚀 Released JOD Smart Van v.1.0.0", url: "/blog/2023/12/05/released-jod-smart-van" },
-  { id: 5, title: "🌐 Website Update Announcement - Version 1.1.0", url: "/blog/2023/11/28/website-update" },
+  { id: 1, title: "🧰 Workshop Make Your SmartVanBox at BITZ!", url: "/blog/2024/09/05/workshop-make-your-smartvanbox-at-bitz" },
+  { id: 2, title: "👷 Make your SVBox Workshop @ BITZ Fab Lab, Bolzano", url: "/blog/2024/08/28/make-your-svbox-workshop-bitz" },
+  { id: 3, title: "🚀 Released the SVBox 1.0's BOM List 1.0.1s", url: "/blog/2024/08/25/released-svbox-10-BOM" },
+  { id: 4, title: "🌟 Introducing the New SVBox IoT 1.0", url: "/blog/2024/05/06/published-new-svbox-iot-10" },
+  { id: 5, title: "🚀 Released JOD Smart Van v.1.0.0", url: "/blog/2023/12/05/released-jod-smart-van" },
   { id: 99, title: "More...", url: "/blog" },
 ]
 
