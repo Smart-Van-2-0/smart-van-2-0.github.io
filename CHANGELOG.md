@@ -60,6 +60,15 @@
 
 ## Content
 
+### Version 20240906
+
+* Landing pages
+  * DoItYourself
+  * Workshops
+  * CrowdFunding
+* Blog posts
+  * Added "Make your SVBox Workshop @ BITZ Fab Lab, Bolzano" blog's post
+
 ### Version 20240829
 
 * Blog posts
