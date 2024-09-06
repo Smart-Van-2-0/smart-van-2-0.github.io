@@ -1,0 +1,155 @@
+import {default as style_lnd} from './styles.module.css';
+
+export const style_hero = {
+    position: "relative",
+    height: "400px", /* Altezza desiderata per la sezione Hero */
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "visible", /* Nasconde l'immagine in eccesso */
+}
+export const style_hero_bg = {
+    position: "absolute",
+    top: "0",
+    left: "50%",
+    width: "100vw", /* Estende l'immagine per tutta la larghezza dello schermo */
+    height: "100%",
+    backgroundImage: "url('/img/lnd/diy/hero.webp')", /* Inserisci il percorso dell'immagine */
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    transform: "translateX(-50%)", /* Centra l'immagine rispetto alla viewport */
+    zIndex: "1", /* Manda l'immagine dietro il contenuto */
+    marginBottom: "20px"
+}
+export const style_hero_content = {
+    position: "relative",
+    zIndex: "2", /* Mantiene il contenuto sopra l'immagine di sfondo */
+    backgroundColor: "rgba(0, 0, 0, 0.5)", /* Sfondo semi-trasparente per il testo */
+    padding: "20px",
+    color: "white",
+    textAlign: "center",
+    boxShadow: "0px 0px 40px 40px rgba(0, 0, 0, 0.5)",
+    width: "100%",
+    height: "60%",
+}
+export const style_hero_title = {
+    fontSize: "3em",
+    fontWeight: "bold",
+}
+export const style_hero_subtitle = {
+    fontSize: "2em",
+}
+export const image = {
+    display: "block",
+    margin: "16px auto",
+    width: "60%",
+}
+export const image_left = {
+    margin: "0 16px 0 0",
+    width: "30%",
+    display: "float",
+    float: "left",
+}
+export const image_right = {
+    margin: "0 0 0 16px",
+    width: "30%",
+    display: "float",
+    float: "right",
+}
+export const text_left = {
+    display: "flex",
+}
+export const text_right = {}
+
+<section className={style_lnd.style_hero}>
+  <div className={[style_lnd.style_hero_bg, style_lnd.style_hero_bg_diy].join(" ")}/>
+  <div className={style_lnd.style_hero_content}>
+    <h1 className={style_lnd.style_hero_title}>Smart Van Box DIY</h1>
+    <p className={style_lnd.style_hero_subtitle}>Building your own SmartVanBox has never been easier</p>
+  </div>
+</section>
+
+<br/>
+<br/>
+
+With the SmartVanBox, you're not just getting a tool, you're **gaining full
+control over your vehicle**'s smart systems. Whether you're a tech enthusiast, a
+DIY lover, or an adventurer looking to enhance your camper experience, **building
+your own SmartVanBox** has never been easier.
+
+Follow our step-by-step tutorials, order the required components, and create
+a smart assistant tailored to your needs.
+
+<br/>
+<br/>
+
+
+##  What You Need
+
+<img
+  className={style_lnd.image_right}
+  src="/img/lnd/diy/requirements.jpg"/>
+
+Building your SmartVanBox requires a few essential components and tools. Don’t
+worry, we've made it simple for you. Here’s what you’ll need:
+
+<div
+  className={style_lnd.text_right}>
+* A list of all [necessary components](/img/hardware/svbox_10/resources/SVBox%20BOM%20List%201.0.1.pdf)
+* [Tools required](/img/hardware/svbox_10/resources/SVBox%20Assembly%20Tools%201.0.0.pdf) such as a 3D printer
+</div>
+
+Latest list of components and tools can be found into the
+[SVBox 1.0 > Resources](/docs/hardware/svbox_10/resources#hardware-requirements) page
+
+<br/>
+<br/>
+
+
+## Step-by-Step Tutorial
+
+<img
+  className={style_lnd.image_left}
+  src="/img/lnd/diy/assembly.jpg"/>
+
+Our detailed tutorials walk you through every step, from assembling the hardware
+to configuring the software.
+Remember to plan ahead – some components may take a few days to arrive, and 3D
+printing can take up to 20 hours. The earlier you start, the sooner you'll be on
+your way!
+
+<div
+  className={style_lnd.text_left}>
+* [Print the Case](/docs/hardware/svbox_10/guides/print_smartvanbox_case) - Get the 3D models and print them
+* [SD Card Setup](/docs/hardware/svbox_10/guides/prepare_sdcard) - Install the software that powers your SmartVanBox.
+* [Assembly the box](/docs/hardware/svbox_10/guides/assembly_smartvanbox) - Learn how to put together the parts.
+* [Install the software](/docs/software/jod_smart_van/jod_smart_van/guides/install_jod_sv_dist_remote_device)
+</div>
+
+More tutorials can be found into the [SV Box 1.0 > Guides](/docs/hardware/svbox_10/guides) and
+[JOD Smart Van > Guides](/docs/software/jod_smart_van/jod_smart_van/guides) pages.
+
+<br/>
+<br/>
+
+
+## Personalize Your Experience
+
+The SmartVanBox is open-source, so you can customize it as much as you want. Add
+new features, connect additional sensors, or tweak the software to suit your
+travel style. We provide all the tools and guidance needed to make it your own.
+
+Check out the JOD Smart Van Distribution's [guides](/docs/software/jod_smart_van/jod_smart_van/guides)
+to get started customizing your SmartVanBox.
+
+
+<img
+  className={style_lnd.image_left}
+  src="/img/lnd/diy/community.jpg"/>
+
+<b>SmartVanBox is a collaborative project.</b> Share your progress, learn from others,
+and contribute to the growing community of SmartVanBox builders. You’re not just
+creating a device – you’re joining a movement of open-source innovation on the road.
+
+Ready to start building your own SmartVanBox? Order the components, follow the
+tutorials, and hit the road with your new smart travel companion.
