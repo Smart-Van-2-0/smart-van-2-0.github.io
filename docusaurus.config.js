@@ -70,7 +70,7 @@ const config = {
         title: 'Home',
         logo: {
           alt: 'SmartVan Logo',
-          src: 'img/logos/logo_200.png',
+          src: 'img/logos/logo_256.png',
         },
         items: [
           {
