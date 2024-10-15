@@ -6,13 +6,12 @@ sidebar_class_name: hidden
 hide_table_of_contents: true
 ---
 
-<img src="/img/docs/header.png"
-  style={{
-    padding: "32px",
-    maxHeight: "500px",
-    margin: "auto",
-    display: "block"
-  }} />
+import {default as styles} from './styles.module.css';
+import {default as styles_docs} from '/docs/docs.module.css';
+
+<img
+  className={styles_docs.header_image}
+  src="/img/docs/header.png" />
 
 # SmartVan's Documentation
 
@@ -21,27 +20,6 @@ import Card from '@mui/material/Card';
 import GettingStarted from '@site/src/components/GettingStarted';
 import { MapFeatures, MapHardware, MapSoftware, MapSpecs } from '@site/src/components/WebSiteMap';
 
-export const div_style = {
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'space-around',
-  marginBottom: 'var(--ifm-leading)',
-}
-export const card_style = {
-  minWidth: `200px`,
-  maxWidth: `500px`,
-  height: '450px',
-  display: 'table-cell',
-  verticalAlign: 'middle',
-  padding: "0px var(--ifm-leading)",
-}
-export const card_div_style = {
-  textAlign: "center",
-  maxWidth: "300px",
-  padding: "var(--ifm-leading)",
-  paddingBottom: "0px",
-}
-
 Welcome to the Smart Van official documentation.
 
 Explore the Smart Van project on these pages. Start with the list of features
@@ -49,15 +27,15 @@ to see **how Smart Van can help you on your road adventures**. Or, for more
 technical users, browse the project specifications to understand **how
 information is exchanged** between the Smart Van Box and the Mobile App.
 
-<div style={div_style}>
+<div className={styles.cards_container}>
   <a href="/docs/features"
     style={{textDecoration: "none"}}>
-    <Card sx={card_style}>
+    <Card className={styles.card_style}>
       <img
         src="/img/docs/features_logo.png"
         alt="SmartVan's Features"
         width="300px" />
-      <div style={card_div_style}>
+      <div className={styles.card_div_style}>
         <MapFeatures/><br/>
         <p>
           Discover what a SmartVan can do for you. Here there's the full list of
@@ -75,15 +53,15 @@ option that best suits your needs. On the other hands, the Software section
 includes not only the firmware references, but also the documentation for the
 Smart Van Mobile App, including download links, user manuals, and source code.
 
-<div style={div_style}>
+<div className={styles.cards_container}>
   <a href="/docs/hardware"
     style={{textDecoration: "none"}}>
-    <Card sx={card_style}>
+    <Card className={styles.card_style}>
       <img
         src="/img/docs/hardware_logo.png"
         alt="SmartVan's Hardware"
         width="300px" />
-      <div style={card_div_style}>
+      <div className={styles.card_div_style}>
         <MapHardware/><br/>
         <p>
           All Smart Van Box models, tutorials and schematics to create your own.
@@ -93,12 +71,12 @@ Smart Van Mobile App, including download links, user manuals, and source code.
   </a>
   <a href="/docs/software"
     style={{textDecoration: "none"}}>
-    <Card sx={card_style}>
+    <Card className={styles.card_style}>
       <img
         src="/img/docs/software_logo.png"
         alt="SmartVan's Software"
         width="300px" />
-      <div style={card_div_style}>
+      <div className={styles.card_div_style}>
         <MapSoftware/><br/>
         <p>
           Downloads and sources of all the software used by the SmartVan project
