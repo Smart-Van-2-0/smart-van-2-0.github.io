@@ -60,6 +60,19 @@
 
 ## Content
 
+### Version 20241016
+
+* Removed "Specifications" link from index page's main menu
+* Updated Features to 2nd series
+* Removed component PageFeature
+* Landing pages
+  * Mobile App
+* Updated SVBox logo to version 2
+* Fixed header image resizing
+* Updated all **Note: into ":::note Title"
+* Blog posts
+  * Added "Published the new features list" blog's post
+
 ### Version 20240906
 
 * Landing pages
