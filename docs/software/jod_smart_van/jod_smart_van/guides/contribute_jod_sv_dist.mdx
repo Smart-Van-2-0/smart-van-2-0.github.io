@@ -119,12 +119,14 @@ can [run it locally](#run-on-development-machine)
 or [deploy it](#deploy-on-remote-machine) on an embedded device (aka Raspberry
 Pi).
 
-**NB!:** This distribution requires some features available only on the 2.2.4
+:::warning JOD 2.2.4 Required
+This distribution requires some features available only on the 2.2.4
 version of the JOD Distribution. Actually there is at least the 2.2.3 JOD
 version as public available. So, in order to build this distribution, you'll
 need to download the JOD source code and publish it locally (with the 2.2.4-DEV
 version). Then the JOD Smart Van distribution's build script will be able to
 include the 2.2.4-DEV JOD version from your local repository.
+:::
 
 ## Deploy on remote machine
 
@@ -185,8 +187,11 @@ to copy the distribution files and to start the distribution itself.
   (rpi)$ bash stop.sh
   ```
 
-NB: If the remote machine does not have any graphical server installed, the DBUS
+
+:::warning DBus system
+If the remote machine does not have any graphical server installed, the DBUS
 daemon is likely not running, and thus, it needs to be started manually.
+:::
 
 ### Configure SSH keys to avoid password usage
 

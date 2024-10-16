@@ -35,12 +35,10 @@ first boot of the Raspberry Pi. Once the SmartVanBox is assembled and powered on
 you can proceed with the manual [installation of the JOD Smart Van Distribution](/docs/software/jod_smart_van/jod_smart_van/guides/install_jod_sv_dist_remote_device).
 
 :::note Raspberry Pi OS Version = Bookworm
-
 This page is based on the Raspberry Pi OS **Bookworm** and later versions.
 If you are using the **Bullseye** version or earlier, please refer to the specific
 [Prepare the SD Card Bullseye](/docs/hardware/svbox_10/guides/prepare_sdcard_bullseye)
 page.
-
 :::
 
 **Shorts-Steps**
@@ -80,11 +78,13 @@ right SD card.
   src="/img/hardware/svbox_10/guides/prepare_sdcard/raspberry-pi-imager.png"
   width="400px"/>
 
-**Note!** At the time of writing, the latest version of Raspberry Pi OS is
+:::warning RaspberryPi OS Version
+At the time of writing, the latest version of Raspberry Pi OS is
 `Bookworm`. If you are using an older version, you must follow the steps
 described in the [Raspberry Pi Configs - DEPRECATED](prepare_sdcard_bullseye).
 If you are using the "Bookworm" version or later, you can proceed with the
 following steps.
+:::
 
 Once you've selected the SD card and the operating system, proceed by clicking
 the "Next" button. Now a new window will appear, asking you to configure the
@@ -132,9 +132,11 @@ into the Raspberry Pi of the SmartVanBox.
 
 ### Enabling I2C
 
-**Note!** With the introduction of the Raspberry Pi OS `Bookworm` version, this
+:::warning RaspberryPi OS Version
+With the introduction of the Raspberry Pi OS `Bookworm` version, this
 procedure is no longer valid. In order to enable the I2C protocol, you need to
 execute the following command after the first Raspberry Pi's boot:
+:::
 
 ```shell
 sudo raspi-config nonint do_i2c 0

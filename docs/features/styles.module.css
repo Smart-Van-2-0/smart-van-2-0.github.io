@@ -1,0 +1,43 @@
+
+.head_img {
+    display: block;
+    margin: auto;
+}
+
+.list_screenshots {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.screenshot_container {
+    width: 33%;
+}
+@media (max-width: 1200px) {
+  .screenshot_container {
+      width: 50%;
+  }
+}
+@media (max-width: 996px) {
+  .screenshot_container {
+      width: 33%;
+  }
+}
+@media (max-width: 600px) {
+  .screenshot_container {
+      width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .screenshot_container {
+      width: 100%;
+  }
+}
+
+.screenshot_image {
+    width: 90%;
+}
+.screenshot_description {
+    font-style: italic;
+    color: var(--ifm-font-color-secondary);
+}

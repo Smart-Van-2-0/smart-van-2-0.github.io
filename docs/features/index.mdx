@@ -5,15 +5,13 @@ sidebar_position: 2
 hide_table_of_contents: true
 ---
 
+import {default as styles_docs} from '/docs/docs.module.css';
+
 # Smart Van's Features
 
-<img src="/img/features/header.png"
-  style={{
-    padding: "32px",
-    maxHeight: "500px",
-    margin: "auto",
-    display: "block"
-  }} />
+<img
+  className={styles_docs.header_image}
+  src="/img/features/header.png" />
 
 import Card from '@mui/material/Card';
 import { MapSpecs } from '@site/src/components/WebSiteMap';
@@ -25,9 +23,9 @@ export const div_style = {
   marginBottom: 'var(--ifm-leading)',
 }
 export const card_style = {
-  width: `40%`,
-  '@media (max-width: 966px)': {
-    width: `60%`,
+  width: `25%`,
+  '@media (max-width: 996px)': {
+    width: `40%`,
   },
   '@media (max-width: 600px)': {
     width: `90%`,
@@ -43,29 +41,32 @@ export const link_style = {
 }
 export const text_style = {
   textAlign: "center",
-  padding: "var(--ifm-leading)",
+  paddingTop: "var(--ifm-leading)",
 }
 export const descr_style = {
-  color: "var(--ifm-font-color-base)",
+  color: "var(--ifm-font-color-secondary)",
+  fontSize: "0.85rem",
+  display: "none",
 }
 
-In this section you can find **everything a SmartVan can do for you**. From
-service control to energy and water monitoring, via security alarms and travel
-statistics. All features are grouped in 4 main blocks.
+The SmartVanBox solution provides a **360-degree assistant** that helps you stay
+in control of your vehicle and elevates your travel experience. Whether you're a
+casual camper or a seasoned maker, SmartVanBox integrates essential tools to
+keep everything running smoothly and make your trips more enjoyable.<br/>
+Here’s an overview of the key features offered by the SmartVan app.
 
 <div style={div_style}>
   <Card sx={card_style}>
     <a style={link_style}
-      href="/docs/features/remote_office">
+      href="/docs/features/monitoring">
       <img
-        src="/img/features/features_remote_office_logo_512.png"
-        alt="Remote Office"
-         width="300px"/>
+        src="/img/features/logos/features_monitoring_512.png"
+        alt="Monitoring"
+        width="100%"/>
       <div style={text_style}>
-        <h3>Remote Office</h3>
+        <h3>Monitoring</h3>
         <p style={descr_style}>
-          Discover what a SmartVan can do for you. Here there's the full list of
-          features of the Smart Van project.
+          Track the overall status and get detailed insights into each integrated system. Easily monitor energy, water, gas, and other connected systems, with an extensive list of supported integrations.
         </p>
       </div>
     </a>
@@ -73,69 +74,158 @@ statistics. All features are grouped in 4 main blocks.
 
   <Card sx={card_style}>
     <a style={link_style}
-      href="/docs/features/control">
+      href="/docs/features/automations">
       <img
-        src="/img/features/features_control_logo_512.png"
-        alt="Control and Automations"
-        width="300px" />
+        src="/img/features/logos/features_automations_512.png"
+        alt="Automations"
+        width="100%"/>
       <div style={text_style}>
-        <h3>Controls & Automations</h3>
+        <h3>Automations</h3>
         <p style={descr_style}>
-          Discover what a SmartVan can do for you
+          Create custom automations based on scenes or IFTTT logic using any value from your SVBox. Automate tasks and system behaviors for a seamless and efficient experience.
         </p>
       </div>
     </a>
   </Card>
 
+
   <Card sx={card_style}>
     <a style={link_style}
-      href="/docs/features/monitor">
+      href="/docs/features/lte_connection">
       <img
-        src="/img/features/features_monitoring_logo_512.png"
-        alt="Monitoring and Alarms"
-        width="300px" />
+        src="/img/features/logos/features_lte_connection_512.png"
+        alt="LTE Connection"
+        width="100%"/>
       <div style={text_style}>
-        <h3>Monitoring & Alarms</h3>
+        <h3>LTE Connection</h3>
         <p style={descr_style}>
-          Discover what a SmartVan can do for you. Here there's the full list of
-          features of the Smart Van project.
+          Share internet access not only with the vehicle's onboard systems but also with guests' personal devices, keeping everyone connected while on the road.
         </p>
       </div>
     </a>
   </Card>
 
+
   <Card sx={card_style}>
     <a style={link_style}
-      href="/docs/features/smart" >
+      href="/docs/features/smart_checklists">
       <img
-        src="/img/features/features_smart_logo_512.png"
-        alt="Smart Experience"
-        width="300px" />
+        src="/img/features/logos/features_smart_checklists_512.png"
+        alt="Smart Checklists"
+        width="100%"/>
       <div style={text_style}>
-        <h3>Smart Experience</h3>
+        <h3>Smart Checklists</h3>
         <p style={descr_style}>
-          Discover what a SmartVan can do for you. Here there's the full list of
-          features of the Smart Van project.
+          Never forget anything again. Create your own checklists and make them smart with auto-check features that confirm tasks as completed.
         </p>
       </div>
     </a>
   </Card>
+
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/road_planner">
+      <img
+        src="/img/features/logos/features_road_planner_512.png"
+        alt="Road Planner"
+        width="100%"/>
+      <div style={text_style}>
+        <h3>Road Planner</h3>
+        <p style={descr_style}>
+          Optimize your route based on your preferences and needs, following recommendations from your intelligent assistant to make the journey smoother and more enjoyable.
+        </p>
+      </div>
+    </a>
+  </Card>
+
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/trip_logs">
+      <img
+        src="/img/features/logos/features_trip_logs_512.png"
+        alt="Trip Logs"
+        width="100%"/>
+      <div style={text_style}>
+        <h3>Trip Logs</h3>
+        <p style={descr_style}>
+          Document your travels with detailed trip logs, capturing every experience in your travel diary.
+        </p>
+      </div>
+    </a>
+  </Card>
+
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/viral_places">
+      <img
+        src="/img/features/logos/features_viral_places_512.png"
+        alt="Viral Places"
+        width="100%"/>
+      <div style={text_style}>
+        <h3>Viral Places</h3>
+        <p style={descr_style}>
+          Discover and share popular destinations and points of interest within the camper community, enriching your travel experience.
+        </p>
+      </div>
+    </a>
+  </Card>
+
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/parking_assistant">
+      <img
+        src="/img/features/logos/features_parking_assistant_512.png"
+        alt="Parking Assistant"
+        width="100%"/>
+      <div style={text_style}>
+        <h3>Parking Assistant</h3>
+        <p style={descr_style}>
+          From finding parking spots to handling payment, your assistant ensures you don’t waste time or risk unnecessary fines.
+        </p>
+      </div>
+    </a>
+  </Card>
+
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/mode_detector">
+      <img
+        src="/img/features/logos/features_mode_detector_512.png"
+        alt="Mode Detector"
+        width="100%"/>
+      <div style={text_style}>
+        <h3>Mode Detector</h3>
+        <p style={descr_style}>
+          Automatically detect driving, parking, and even camping modes, adapting the vehicle’s systems accordingly for optimal performance.
+        </p>
+      </div>
+    </a>
+  </Card>
+
+
+  <Card sx={card_style}>
+    <a style={link_style}
+      href="/docs/features/resources_assistant">
+      <img
+        src="/img/features/logos/features_resources_assistant_512.png"
+        alt="Resources Assistant"
+        width="100%"/>
+      <div style={text_style}>
+        <h3>Resources Assistant</h3>
+        <p style={descr_style}>
+          Analyze data from various systems, cross-reference it with environmental data and your travel plans to optimize resource management for maximum efficiency.
+        </p>
+      </div>
+    </a>
+  </Card>
+
 </div>
 
-
-## Smart Van Specifications
-
-Since this is an open source project, everyone is able to create their own
-Smart Van Box and adapt it to their needs. For example, increasing the number
-of controllable services, or integrating a different solar charger. Directly on
-this site **you can find different Smart Van Boxes models to build yourself**
-or to take example from.
-
-**For each feature, its hardware requirements and related configurations are
-specified**. In some cases there are several options to choose from, such as the
-solar chargers required for energy monitoring. Or, if it will be necessary to
-make configuration changes, for example by increasing the number of managed
-services.
-
-For more technical details on the features provided by Smart Van Boxes and
-required by mobile apps, see the **Smart Van project <MapSpecs />**.
+Explore the features listed above to see how the SmartVanBox solution can
+transform your travel experience and simplify the management of your camper or
+van, offering tools for both everyday users and tech enthusiasts.
