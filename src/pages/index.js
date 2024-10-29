@@ -23,6 +23,13 @@ function HomepageHeader() {
           <h1 className={clsx('hero__title', styles.header_titles)}>Smart Van</h1>
           The open source project for building your own intelligent van.
         </p>
+        <div className={styles.header_note}>
+          <a href="https://www.kickstarter.com/projects/smartvanbox/smartvanbox" target="_blank">
+            <img className={styles.header_note_img}
+              src="/img/home/nowonks.png"
+              alt="Hardware Functional Schema" />
+          </a>
+        </div>
       </div>
     </header>
   );
