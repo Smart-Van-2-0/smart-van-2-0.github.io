@@ -60,6 +60,10 @@
 
 ## Content
 
+### Version 20241029
+
+* Added link to the crowdfunding page
+
 ### Version 20241016
 
 * Removed "Specifications" link from index page's main menu
